@@ -1,0 +1,160 @@
+JOB SS001V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS001V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS001V1_nozfiPreproc"
+VARS SS001V1_nozfi logFile = "SS001V1_nozfi.log"
+VARS SS001V1_nozfi errFile = "SS001V1_nozfi.err"
+VARS SS001V1_nozfi outFile = "SS001V1_nozfi.out"
+
+VARS SS001V1_nozfi args = "SS001V1_nozfi.mif"
+VARS SS001V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS001V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS001V1_nozfi transferOutputFiles = "SS001V1_nozfi_dwi_preprocessed.mif,SS001V1_nozfi_eddyqcdir,SS001V1_nozfi_eddyqctext,SS001V1_nozfi_tmp"
+
+JOB SS008V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS008V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS008V1_nozfiPreproc"
+VARS SS008V1_nozfi logFile = "SS008V1_nozfi.log"
+VARS SS008V1_nozfi errFile = "SS008V1_nozfi.err"
+VARS SS008V1_nozfi outFile = "SS008V1_nozfi.out"
+
+VARS SS008V1_nozfi args = "SS008V1_nozfi.mif"
+VARS SS008V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS008V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS008V1_nozfi transferOutputFiles = "SS008V1_nozfi_dwi_preprocessed.mif,SS008V1_nozfi_eddyqcdir,SS008V1_nozfi_eddyqctext,SS008V1_nozfi_tmp"
+
+JOB SS014V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS014V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS014V1_nozfiPreproc"
+VARS SS014V1_nozfi logFile = "SS014V1_nozfi.log"
+VARS SS014V1_nozfi errFile = "SS014V1_nozfi.err"
+VARS SS014V1_nozfi outFile = "SS014V1_nozfi.out"
+
+VARS SS014V1_nozfi args = "SS014V1_nozfi.mif"
+VARS SS014V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS014V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS014V1_nozfi transferOutputFiles = "SS014V1_nozfi_dwi_preprocessed.mif,SS014V1_nozfi_eddyqcdir,SS014V1_nozfi_eddyqctext,SS014V1_nozfi_tmp"
+
+JOB SS015V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS015V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS015V1_nozfiPreproc"
+VARS SS015V1_nozfi logFile = "SS015V1_nozfi.log"
+VARS SS015V1_nozfi errFile = "SS015V1_nozfi.err"
+VARS SS015V1_nozfi outFile = "SS015V1_nozfi.out"
+
+VARS SS015V1_nozfi args = "SS015V1_nozfi.mif"
+VARS SS015V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS015V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS015V1_nozfi transferOutputFiles = "SS015V1_nozfi_dwi_preprocessed.mif,SS015V1_nozfi_eddyqcdir,SS015V1_nozfi_eddyqctext,SS015V1_nozfi_tmp"
+
+JOB SS016V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS016V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS016V1_nozfiPreproc"
+VARS SS016V1_nozfi logFile = "SS016V1_nozfi.log"
+VARS SS016V1_nozfi errFile = "SS016V1_nozfi.err"
+VARS SS016V1_nozfi outFile = "SS016V1_nozfi.out"
+
+VARS SS016V1_nozfi args = "SS016V1_nozfi.mif"
+VARS SS016V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS016V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS016V1_nozfi transferOutputFiles = "SS016V1_nozfi_dwi_preprocessed.mif,SS016V1_nozfi_eddyqcdir,SS016V1_nozfi_eddyqctext,SS016V1_nozfi_tmp"
+
+JOB SS019V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS019V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS019V1_nozfiPreproc"
+VARS SS019V1_nozfi logFile = "SS019V1_nozfi.log"
+VARS SS019V1_nozfi errFile = "SS019V1_nozfi.err"
+VARS SS019V1_nozfi outFile = "SS019V1_nozfi.out"
+
+VARS SS019V1_nozfi args = "SS019V1_nozfi.mif"
+VARS SS019V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS019V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS019V1_nozfi transferOutputFiles = "SS019V1_nozfi_dwi_preprocessed.mif,SS019V1_nozfi_eddyqcdir,SS019V1_nozfi_eddyqctext,SS019V1_nozfi_tmp"
+
+JOB SS020V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS020V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS020V1_nozfiPreproc"
+VARS SS020V1_nozfi logFile = "SS020V1_nozfi.log"
+VARS SS020V1_nozfi errFile = "SS020V1_nozfi.err"
+VARS SS020V1_nozfi outFile = "SS020V1_nozfi.out"
+
+VARS SS020V1_nozfi args = "SS020V1_nozfi.mif"
+VARS SS020V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS020V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS020V1_nozfi transferOutputFiles = "SS020V1_nozfi_dwi_preprocessed.mif,SS020V1_nozfi_eddyqcdir,SS020V1_nozfi_eddyqctext,SS020V1_nozfi_tmp"
+
+JOB SS026V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS026V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS026V1_nozfiPreproc"
+VARS SS026V1_nozfi logFile = "SS026V1_nozfi.log"
+VARS SS026V1_nozfi errFile = "SS026V1_nozfi.err"
+VARS SS026V1_nozfi outFile = "SS026V1_nozfi.out"
+
+VARS SS026V1_nozfi args = "SS026V1_nozfi.mif"
+VARS SS026V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS026V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS026V1_nozfi transferOutputFiles = "SS026V1_nozfi_dwi_preprocessed.mif,SS026V1_nozfi_eddyqcdir,SS026V1_nozfi_eddyqctext,SS026V1_nozfi_tmp"
+
+JOB SS030V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS030V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS030V1_nozfiPreproc"
+VARS SS030V1_nozfi logFile = "SS030V1_nozfi.log"
+VARS SS030V1_nozfi errFile = "SS030V1_nozfi.err"
+VARS SS030V1_nozfi outFile = "SS030V1_nozfi.out"
+
+VARS SS030V1_nozfi args = "SS030V1_nozfi.mif"
+VARS SS030V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS030V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS030V1_nozfi transferOutputFiles = "SS030V1_nozfi_dwi_preprocessed.mif,SS030V1_nozfi_eddyqcdir,SS030V1_nozfi_eddyqctext,SS030V1_nozfi_tmp"
+
+JOB SS032V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS032V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS032V1_nozfiPreproc"
+VARS SS032V1_nozfi logFile = "SS032V1_nozfi.log"
+VARS SS032V1_nozfi errFile = "SS032V1_nozfi.err"
+VARS SS032V1_nozfi outFile = "SS032V1_nozfi.out"
+
+VARS SS032V1_nozfi args = "SS032V1_nozfi.mif"
+VARS SS032V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS032V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS032V1_nozfi transferOutputFiles = "SS032V1_nozfi_dwi_preprocessed.mif,SS032V1_nozfi_eddyqcdir,SS032V1_nozfi_eddyqctext,SS032V1_nozfi_tmp"
+
+JOB SS033V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS033V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS033V1_nozfiPreproc"
+VARS SS033V1_nozfi logFile = "SS033V1_nozfi.log"
+VARS SS033V1_nozfi errFile = "SS033V1_nozfi.err"
+VARS SS033V1_nozfi outFile = "SS033V1_nozfi.out"
+
+VARS SS033V1_nozfi args = "SS033V1_nozfi.mif"
+VARS SS033V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS033V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS033V1_nozfi transferOutputFiles = "SS033V1_nozfi_dwi_preprocessed.mif,SS033V1_nozfi_eddyqcdir,SS033V1_nozfi_eddyqctext,SS033V1_nozfi_tmp"
+
+JOB SS035V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS035V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS035V1_nozfiPreproc"
+VARS SS035V1_nozfi logFile = "SS035V1_nozfi.log"
+VARS SS035V1_nozfi errFile = "SS035V1_nozfi.err"
+VARS SS035V1_nozfi outFile = "SS035V1_nozfi.out"
+
+VARS SS035V1_nozfi args = "SS035V1_nozfi.mif"
+VARS SS035V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS035V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS035V1_nozfi transferOutputFiles = "SS035V1_nozfi_dwi_preprocessed.mif,SS035V1_nozfi_eddyqcdir,SS035V1_nozfi_eddyqctext,SS035V1_nozfi_tmp"
+
+JOB SS041V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS041V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS041V1_nozfiPreproc"
+VARS SS041V1_nozfi logFile = "SS041V1_nozfi.log"
+VARS SS041V1_nozfi errFile = "SS041V1_nozfi.err"
+VARS SS041V1_nozfi outFile = "SS041V1_nozfi.out"
+
+VARS SS041V1_nozfi args = "SS041V1_nozfi.mif"
+VARS SS041V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS041V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS041V1_nozfi transferOutputFiles = "SS041V1_nozfi_dwi_preprocessed.mif,SS041V1_nozfi_eddyqcdir,SS041V1_nozfi_eddyqctext,SS041V1_nozfi_tmp"
+
+JOB SS053V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS053V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS053V1_nozfiPreproc"
+VARS SS053V1_nozfi logFile = "SS053V1_nozfi.log"
+VARS SS053V1_nozfi errFile = "SS053V1_nozfi.err"
+VARS SS053V1_nozfi outFile = "SS053V1_nozfi.out"
+
+VARS SS053V1_nozfi args = "SS053V1_nozfi.mif"
+VARS SS053V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS053V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS053V1_nozfi transferOutputFiles = "SS053V1_nozfi_dwi_preprocessed.mif,SS053V1_nozfi_eddyqcdir,SS053V1_nozfi_eddyqctext,SS053V1_nozfi_tmp"
+
+JOB SS054V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS054V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS054V1_nozfiPreproc"
+VARS SS054V1_nozfi logFile = "SS054V1_nozfi.log"
+VARS SS054V1_nozfi errFile = "SS054V1_nozfi.err"
+VARS SS054V1_nozfi outFile = "SS054V1_nozfi.out"
+
+VARS SS054V1_nozfi args = "SS054V1_nozfi.mif"
+VARS SS054V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS054V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS054V1_nozfi transferOutputFiles = "SS054V1_nozfi_dwi_preprocessed.mif,SS054V1_nozfi_eddyqcdir,SS054V1_nozfi_eddyqctext,SS054V1_nozfi_tmp"
+
+JOB SS066V1_nozfi /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS066V1_nozfi initialDir = "/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS066V1_nozfiPreproc"
+VARS SS066V1_nozfi logFile = "SS066V1_nozfi.log"
+VARS SS066V1_nozfi errFile = "SS066V1_nozfi.err"
+VARS SS066V1_nozfi outFile = "SS066V1_nozfi.out"
+
+VARS SS066V1_nozfi args = "SS066V1_nozfi.mif"
+VARS SS066V1_nozfi transferInputFiles = "/mounts/data/preprocessed/modalities/dti/Strk/dti/SS066V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS066V1_nozfi transferOutputFiles = "SS066V1_nozfi_dwi_preprocessed.mif,SS066V1_nozfi_eddyqcdir,SS066V1_nozfi_eddyqctext,SS066V1_nozfi_tmp"
+

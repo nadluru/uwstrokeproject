@@ -1,0 +1,2089 @@
+03/30/19 15:29:24 ******************************************************
+03/30/19 15:29:24 ** condor_scheduniv_exec.6907.0 (CONDOR_DAGMAN) STARTING UP
+03/30/19 15:29:24 ** /usr/bin/condor_dagman
+03/30/19 15:29:24 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+03/30/19 15:29:24 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+03/30/19 15:29:24 ** $CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $
+03/30/19 15:29:24 ** $CondorPlatform: x86_64_RedHat6 $
+03/30/19 15:29:24 ** PID = 1143373
+03/30/19 15:29:24 ** Log last touched time unavailable (No such file or directory)
+03/30/19 15:29:24 ******************************************************
+03/30/19 15:29:24 Using config source: /etc/condor/condor_config
+03/30/19 15:29:24 Using local config sources: 
+03/30/19 15:29:24    /etc/condor/ephemeral/dns_domain_name.conf
+03/30/19 15:29:24    /etc/condor/condor_config.hosts
+03/30/19 15:29:24    /etc/condor/condor_config.global
+03/30/19 15:29:24    /etc/condor/condor_config.policy
+03/30/19 15:29:24    /etc/condor/condor_config.x86_64_CentOS6
+03/30/19 15:29:24    /etc/condor/condor_config.security
+03/30/19 15:29:24    /etc/condor/dns_domains/dom.wisc.edu.local
+03/30/19 15:29:24    /etc/condor/hosts/gru.dom.wisc.edu.local
+03/30/19 15:29:24    /etc/condor/include/schedd.conf
+03/30/19 15:29:24    /etc/condor/condor_config.flightworthy_testing
+03/30/19 15:29:24 config Macros = 227, Sorted = 227, StringBytes = 54043, TablesBytes = 8284
+03/30/19 15:29:24 CLASSAD_CACHING is ENABLED
+03/30/19 15:29:24 Daemon Log is logging: D_ALWAYS D_ERROR
+03/30/19 15:29:24 DaemonCore: No command port requested.
+03/30/19 15:29:24 DAGMAN_USE_STRICT setting: 1
+03/30/19 15:29:24 DAGMAN_VERBOSITY setting: 3
+03/30/19 15:29:24 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+03/30/19 15:29:24 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+03/30/19 15:29:24 DAGMAN_SUBMIT_DELAY setting: 0
+03/30/19 15:29:24 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+03/30/19 15:29:24 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+03/30/19 15:29:24 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+03/30/19 15:29:24 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+03/30/19 15:29:24 DAGMAN_DEFAULT_PRIORITY setting: 0
+03/30/19 15:29:24 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+03/30/19 15:29:24 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+03/30/19 15:29:24 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+03/30/19 15:29:24 DAGMAN_RETRY_NODE_FIRST setting: False
+03/30/19 15:29:24 DAGMAN_MAX_JOBS_IDLE setting: 1000
+03/30/19 15:29:24 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+03/30/19 15:29:24 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+03/30/19 15:29:24 DAGMAN_MAX_POST_SCRIPTS setting: 20
+03/30/19 15:29:24 DAGMAN_ALLOW_LOG_ERROR setting: False
+03/30/19 15:29:24 DAGMAN_MUNGE_NODE_NAMES setting: True
+03/30/19 15:29:24 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+03/30/19 15:29:24 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+03/30/19 15:29:24 DAGMAN_ALWAYS_RUN_POST setting: False
+03/30/19 15:29:24 DAGMAN_ABORT_DUPLICATES setting: True
+03/30/19 15:29:24 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+03/30/19 15:29:24 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+03/30/19 15:29:24 DAGMAN_AUTO_RESCUE setting: True
+03/30/19 15:29:24 DAGMAN_MAX_RESCUE_NUM setting: 100
+03/30/19 15:29:24 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+03/30/19 15:29:24 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+03/30/19 15:29:24 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+03/30/19 15:29:24 DAGMAN_MAX_JOB_HOLDS setting: 100
+03/30/19 15:29:24 DAGMAN_HOLD_CLAIM_TIME setting: 20
+03/30/19 15:29:24 ALL_DEBUG setting: 
+03/30/19 15:29:24 DAGMAN_DEBUG setting: 
+03/30/19 15:29:24 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+03/30/19 15:29:24 argv[0] == "condor_scheduniv_exec.6907.0"
+03/30/19 15:29:24 argv[1] == "-Lockfile"
+03/30/19 15:29:24 argv[2] == "DWICorrect_March302019.dag.lock"
+03/30/19 15:29:24 argv[3] == "-AutoRescue"
+03/30/19 15:29:24 argv[4] == "1"
+03/30/19 15:29:24 argv[5] == "-DoRescueFrom"
+03/30/19 15:29:24 argv[6] == "0"
+03/30/19 15:29:24 argv[7] == "-Dag"
+03/30/19 15:29:24 argv[8] == "DWICorrect_March302019.dag"
+03/30/19 15:29:24 argv[9] == "-Suppress_notification"
+03/30/19 15:29:24 argv[10] == "-CsdVersion"
+03/30/19 15:29:24 argv[11] == "$CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $"
+03/30/19 15:29:24 argv[12] == "-Dagman"
+03/30/19 15:29:24 argv[13] == "/usr/bin/condor_dagman"
+03/30/19 15:29:26 Workflow batch-name: <DWICorrect_March302019.dag+6907>
+03/30/19 15:29:26 Workflow accounting_group: <>
+03/30/19 15:29:26 Workflow accounting_group_user: <>
+03/30/19 15:29:26 Warning: failed to get attribute DAGNodeName
+03/30/19 15:29:26 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+03/30/19 15:29:26 Default node log file is: </home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log>
+03/30/19 15:29:26 DAG Lockfile will be written to DWICorrect_March302019.dag.lock
+03/30/19 15:29:26 DAG Input file is DWICorrect_March302019.dag
+03/30/19 15:29:26 Parsing 1 dagfiles
+03/30/19 15:29:26 Parsing DWICorrect_March302019.dag ...
+03/30/19 15:29:26 Dag contains 16 total jobs
+03/30/19 15:29:26 Sleeping for 3 seconds to ensure ProcessId uniqueness
+03/30/19 15:29:29 Bootstrapping...
+03/30/19 15:29:29 Number of pre-completed nodes: 0
+03/30/19 15:29:29 MultiLogFiles: truncating log file /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:29 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:29:29 Of 16 nodes total:
+03/30/19 15:29:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:29:29   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:29:29     0       0        0       0      16          0        0
+03/30/19 15:29:29 0 job proc(s) currently held
+03/30/19 15:29:29 Registering condor_event_timer...
+03/30/19 15:29:30 Submitting HTCondor Node SS001V1_nozfi job(s)...
+03/30/19 15:29:30 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:30 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS001V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS001V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS001V1_nozfiPreproc -a logFile' '=' 'SS001V1_nozfi.log -a errFile' '=' 'SS001V1_nozfi.err -a outFile' '=' 'SS001V1_nozfi.out -a args' '=' 'SS001V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS001V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS001V1_nozfi_dwi_preprocessed.mif,SS001V1_nozfi_eddyqcdir,SS001V1_nozfi_eddyqctext,SS001V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:30 From submit: Submitting job(s).
+03/30/19 15:29:30 From submit: 1 job(s) submitted to cluster 6908.
+03/30/19 15:29:30 	assigned HTCondor ID (6908.0.0)
+03/30/19 15:29:30 Submitting HTCondor Node SS008V1_nozfi job(s)...
+03/30/19 15:29:30 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:30 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS008V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS008V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS008V1_nozfiPreproc -a logFile' '=' 'SS008V1_nozfi.log -a errFile' '=' 'SS008V1_nozfi.err -a outFile' '=' 'SS008V1_nozfi.out -a args' '=' 'SS008V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS008V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS008V1_nozfi_dwi_preprocessed.mif,SS008V1_nozfi_eddyqcdir,SS008V1_nozfi_eddyqctext,SS008V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:30 From submit: Submitting job(s).
+03/30/19 15:29:30 From submit: 1 job(s) submitted to cluster 6909.
+03/30/19 15:29:30 	assigned HTCondor ID (6909.0.0)
+03/30/19 15:29:30 Submitting HTCondor Node SS014V1_nozfi job(s)...
+03/30/19 15:29:30 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:30 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS014V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS014V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS014V1_nozfiPreproc -a logFile' '=' 'SS014V1_nozfi.log -a errFile' '=' 'SS014V1_nozfi.err -a outFile' '=' 'SS014V1_nozfi.out -a args' '=' 'SS014V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS014V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS014V1_nozfi_dwi_preprocessed.mif,SS014V1_nozfi_eddyqcdir,SS014V1_nozfi_eddyqctext,SS014V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:31 From submit: Submitting job(s).
+03/30/19 15:29:31 From submit: 1 job(s) submitted to cluster 6910.
+03/30/19 15:29:31 	assigned HTCondor ID (6910.0.0)
+03/30/19 15:29:31 Submitting HTCondor Node SS015V1_nozfi job(s)...
+03/30/19 15:29:31 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:31 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS015V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS015V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS015V1_nozfiPreproc -a logFile' '=' 'SS015V1_nozfi.log -a errFile' '=' 'SS015V1_nozfi.err -a outFile' '=' 'SS015V1_nozfi.out -a args' '=' 'SS015V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS015V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS015V1_nozfi_dwi_preprocessed.mif,SS015V1_nozfi_eddyqcdir,SS015V1_nozfi_eddyqctext,SS015V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:31 From submit: Submitting job(s).
+03/30/19 15:29:31 From submit: 1 job(s) submitted to cluster 6911.
+03/30/19 15:29:31 	assigned HTCondor ID (6911.0.0)
+03/30/19 15:29:31 Submitting HTCondor Node SS016V1_nozfi job(s)...
+03/30/19 15:29:31 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:31 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS016V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS016V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS016V1_nozfiPreproc -a logFile' '=' 'SS016V1_nozfi.log -a errFile' '=' 'SS016V1_nozfi.err -a outFile' '=' 'SS016V1_nozfi.out -a args' '=' 'SS016V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS016V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS016V1_nozfi_dwi_preprocessed.mif,SS016V1_nozfi_eddyqcdir,SS016V1_nozfi_eddyqctext,SS016V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:32 From submit: Submitting job(s).
+03/30/19 15:29:32 From submit: 1 job(s) submitted to cluster 6912.
+03/30/19 15:29:32 	assigned HTCondor ID (6912.0.0)
+03/30/19 15:29:32 Just submitted 5 jobs this cycle...
+03/30/19 15:29:32 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:29:32 Reassigning the id of job SS001V1_nozfi from (6908.0.0) to (6908.0.0)
+03/30/19 15:29:32 Event: ULOG_SUBMIT for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:29:30}
+03/30/19 15:29:32 Number of idle job procs: 1
+03/30/19 15:29:32 Reassigning the id of job SS008V1_nozfi from (6909.0.0) to (6909.0.0)
+03/30/19 15:29:32 Event: ULOG_SUBMIT for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:29:30}
+03/30/19 15:29:32 Number of idle job procs: 2
+03/30/19 15:29:32 Reassigning the id of job SS014V1_nozfi from (6910.0.0) to (6910.0.0)
+03/30/19 15:29:32 Event: ULOG_SUBMIT for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:29:31}
+03/30/19 15:29:32 Number of idle job procs: 3
+03/30/19 15:29:32 Reassigning the id of job SS015V1_nozfi from (6911.0.0) to (6911.0.0)
+03/30/19 15:29:32 Event: ULOG_SUBMIT for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:29:31}
+03/30/19 15:29:32 Number of idle job procs: 4
+03/30/19 15:29:32 Reassigning the id of job SS016V1_nozfi from (6912.0.0) to (6912.0.0)
+03/30/19 15:29:32 Event: ULOG_SUBMIT for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:29:32}
+03/30/19 15:29:32 Number of idle job procs: 5
+03/30/19 15:29:32 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:29:32 Of 16 nodes total:
+03/30/19 15:29:32  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:29:32   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:29:32     0       0        5       0      11          0        0
+03/30/19 15:29:32 0 job proc(s) currently held
+03/30/19 15:29:37 Submitting HTCondor Node SS019V1_nozfi job(s)...
+03/30/19 15:29:37 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:37 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:37 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:37 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS019V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS019V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS019V1_nozfiPreproc -a logFile' '=' 'SS019V1_nozfi.log -a errFile' '=' 'SS019V1_nozfi.err -a outFile' '=' 'SS019V1_nozfi.out -a args' '=' 'SS019V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS019V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS019V1_nozfi_dwi_preprocessed.mif,SS019V1_nozfi_eddyqcdir,SS019V1_nozfi_eddyqctext,SS019V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:37 From submit: Submitting job(s).
+03/30/19 15:29:37 From submit: 1 job(s) submitted to cluster 6913.
+03/30/19 15:29:37 	assigned HTCondor ID (6913.0.0)
+03/30/19 15:29:37 Submitting HTCondor Node SS020V1_nozfi job(s)...
+03/30/19 15:29:37 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:37 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:37 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:37 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS020V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS020V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS020V1_nozfiPreproc -a logFile' '=' 'SS020V1_nozfi.log -a errFile' '=' 'SS020V1_nozfi.err -a outFile' '=' 'SS020V1_nozfi.out -a args' '=' 'SS020V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS020V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS020V1_nozfi_dwi_preprocessed.mif,SS020V1_nozfi_eddyqcdir,SS020V1_nozfi_eddyqctext,SS020V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:38 From submit: Submitting job(s).
+03/30/19 15:29:38 From submit: 1 job(s) submitted to cluster 6914.
+03/30/19 15:29:38 	assigned HTCondor ID (6914.0.0)
+03/30/19 15:29:38 Submitting HTCondor Node SS026V1_nozfi job(s)...
+03/30/19 15:29:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS026V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS026V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS026V1_nozfiPreproc -a logFile' '=' 'SS026V1_nozfi.log -a errFile' '=' 'SS026V1_nozfi.err -a outFile' '=' 'SS026V1_nozfi.out -a args' '=' 'SS026V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS026V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS026V1_nozfi_dwi_preprocessed.mif,SS026V1_nozfi_eddyqcdir,SS026V1_nozfi_eddyqctext,SS026V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:38 From submit: Submitting job(s).
+03/30/19 15:29:38 From submit: 1 job(s) submitted to cluster 6915.
+03/30/19 15:29:38 	assigned HTCondor ID (6915.0.0)
+03/30/19 15:29:38 Submitting HTCondor Node SS030V1_nozfi job(s)...
+03/30/19 15:29:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS030V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS030V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS030V1_nozfiPreproc -a logFile' '=' 'SS030V1_nozfi.log -a errFile' '=' 'SS030V1_nozfi.err -a outFile' '=' 'SS030V1_nozfi.out -a args' '=' 'SS030V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS030V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS030V1_nozfi_dwi_preprocessed.mif,SS030V1_nozfi_eddyqcdir,SS030V1_nozfi_eddyqctext,SS030V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:38 From submit: Submitting job(s).
+03/30/19 15:29:38 From submit: 1 job(s) submitted to cluster 6916.
+03/30/19 15:29:38 	assigned HTCondor ID (6916.0.0)
+03/30/19 15:29:38 Submitting HTCondor Node SS032V1_nozfi job(s)...
+03/30/19 15:29:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS032V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS032V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS032V1_nozfiPreproc -a logFile' '=' 'SS032V1_nozfi.log -a errFile' '=' 'SS032V1_nozfi.err -a outFile' '=' 'SS032V1_nozfi.out -a args' '=' 'SS032V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS032V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS032V1_nozfi_dwi_preprocessed.mif,SS032V1_nozfi_eddyqcdir,SS032V1_nozfi_eddyqctext,SS032V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:38 From submit: Submitting job(s).
+03/30/19 15:29:38 From submit: 1 job(s) submitted to cluster 6917.
+03/30/19 15:29:38 	assigned HTCondor ID (6917.0.0)
+03/30/19 15:29:38 Just submitted 5 jobs this cycle...
+03/30/19 15:29:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:29:38 Reassigning the id of job SS019V1_nozfi from (6913.0.0) to (6913.0.0)
+03/30/19 15:29:38 Event: ULOG_SUBMIT for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:29:37}
+03/30/19 15:29:38 Number of idle job procs: 6
+03/30/19 15:29:38 Reassigning the id of job SS020V1_nozfi from (6914.0.0) to (6914.0.0)
+03/30/19 15:29:38 Event: ULOG_SUBMIT for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:29:38}
+03/30/19 15:29:38 Number of idle job procs: 7
+03/30/19 15:29:38 Reassigning the id of job SS026V1_nozfi from (6915.0.0) to (6915.0.0)
+03/30/19 15:29:38 Event: ULOG_SUBMIT for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:29:38}
+03/30/19 15:29:38 Number of idle job procs: 8
+03/30/19 15:29:38 Reassigning the id of job SS030V1_nozfi from (6916.0.0) to (6916.0.0)
+03/30/19 15:29:38 Event: ULOG_SUBMIT for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:29:38}
+03/30/19 15:29:38 Number of idle job procs: 9
+03/30/19 15:29:38 Reassigning the id of job SS032V1_nozfi from (6917.0.0) to (6917.0.0)
+03/30/19 15:29:38 Event: ULOG_SUBMIT for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:29:38}
+03/30/19 15:29:38 Number of idle job procs: 10
+03/30/19 15:29:38 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:29:38 Of 16 nodes total:
+03/30/19 15:29:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:29:38   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:29:38     0       0       10       0       6          0        0
+03/30/19 15:29:38 0 job proc(s) currently held
+03/30/19 15:29:43 Submitting HTCondor Node SS033V1_nozfi job(s)...
+03/30/19 15:29:43 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:43 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:43 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:43 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS033V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS033V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS033V1_nozfiPreproc -a logFile' '=' 'SS033V1_nozfi.log -a errFile' '=' 'SS033V1_nozfi.err -a outFile' '=' 'SS033V1_nozfi.out -a args' '=' 'SS033V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS033V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS033V1_nozfi_dwi_preprocessed.mif,SS033V1_nozfi_eddyqcdir,SS033V1_nozfi_eddyqctext,SS033V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:44 From submit: Submitting job(s).
+03/30/19 15:29:44 From submit: 1 job(s) submitted to cluster 6918.
+03/30/19 15:29:44 	assigned HTCondor ID (6918.0.0)
+03/30/19 15:29:44 Submitting HTCondor Node SS035V1_nozfi job(s)...
+03/30/19 15:29:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS035V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS035V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS035V1_nozfiPreproc -a logFile' '=' 'SS035V1_nozfi.log -a errFile' '=' 'SS035V1_nozfi.err -a outFile' '=' 'SS035V1_nozfi.out -a args' '=' 'SS035V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS035V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS035V1_nozfi_dwi_preprocessed.mif,SS035V1_nozfi_eddyqcdir,SS035V1_nozfi_eddyqctext,SS035V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:44 From submit: Submitting job(s).
+03/30/19 15:29:44 From submit: 1 job(s) submitted to cluster 6919.
+03/30/19 15:29:44 	assigned HTCondor ID (6919.0.0)
+03/30/19 15:29:44 Submitting HTCondor Node SS041V1_nozfi job(s)...
+03/30/19 15:29:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS041V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS041V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS041V1_nozfiPreproc -a logFile' '=' 'SS041V1_nozfi.log -a errFile' '=' 'SS041V1_nozfi.err -a outFile' '=' 'SS041V1_nozfi.out -a args' '=' 'SS041V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS041V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS041V1_nozfi_dwi_preprocessed.mif,SS041V1_nozfi_eddyqcdir,SS041V1_nozfi_eddyqctext,SS041V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:44 From submit: Submitting job(s).
+03/30/19 15:29:44 From submit: 1 job(s) submitted to cluster 6920.
+03/30/19 15:29:44 	assigned HTCondor ID (6920.0.0)
+03/30/19 15:29:44 Submitting HTCondor Node SS053V1_nozfi job(s)...
+03/30/19 15:29:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS053V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS053V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS053V1_nozfiPreproc -a logFile' '=' 'SS053V1_nozfi.log -a errFile' '=' 'SS053V1_nozfi.err -a outFile' '=' 'SS053V1_nozfi.out -a args' '=' 'SS053V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS053V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS053V1_nozfi_dwi_preprocessed.mif,SS053V1_nozfi_eddyqcdir,SS053V1_nozfi_eddyqctext,SS053V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:44 From submit: Submitting job(s).
+03/30/19 15:29:44 From submit: 1 job(s) submitted to cluster 6921.
+03/30/19 15:29:44 	assigned HTCondor ID (6921.0.0)
+03/30/19 15:29:44 Submitting HTCondor Node SS054V1_nozfi job(s)...
+03/30/19 15:29:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS054V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS054V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS054V1_nozfiPreproc -a logFile' '=' 'SS054V1_nozfi.log -a errFile' '=' 'SS054V1_nozfi.err -a outFile' '=' 'SS054V1_nozfi.out -a args' '=' 'SS054V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS054V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS054V1_nozfi_dwi_preprocessed.mif,SS054V1_nozfi_eddyqcdir,SS054V1_nozfi_eddyqctext,SS054V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:44 From submit: Submitting job(s).
+03/30/19 15:29:44 From submit: 1 job(s) submitted to cluster 6922.
+03/30/19 15:29:44 	assigned HTCondor ID (6922.0.0)
+03/30/19 15:29:44 Just submitted 5 jobs this cycle...
+03/30/19 15:29:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:29:44 Reassigning the id of job SS033V1_nozfi from (6918.0.0) to (6918.0.0)
+03/30/19 15:29:44 Event: ULOG_SUBMIT for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:29:44}
+03/30/19 15:29:44 Number of idle job procs: 11
+03/30/19 15:29:44 Reassigning the id of job SS035V1_nozfi from (6919.0.0) to (6919.0.0)
+03/30/19 15:29:44 Event: ULOG_SUBMIT for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:29:44}
+03/30/19 15:29:44 Number of idle job procs: 12
+03/30/19 15:29:44 Reassigning the id of job SS041V1_nozfi from (6920.0.0) to (6920.0.0)
+03/30/19 15:29:44 Event: ULOG_SUBMIT for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:29:44}
+03/30/19 15:29:44 Number of idle job procs: 13
+03/30/19 15:29:44 Reassigning the id of job SS053V1_nozfi from (6921.0.0) to (6921.0.0)
+03/30/19 15:29:44 Event: ULOG_SUBMIT for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 15:29:44}
+03/30/19 15:29:44 Number of idle job procs: 14
+03/30/19 15:29:44 Reassigning the id of job SS054V1_nozfi from (6922.0.0) to (6922.0.0)
+03/30/19 15:29:44 Event: ULOG_SUBMIT for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:29:44}
+03/30/19 15:29:44 Number of idle job procs: 15
+03/30/19 15:29:44 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:29:44 Of 16 nodes total:
+03/30/19 15:29:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:29:44   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:29:44     0       0       15       0       1          0        0
+03/30/19 15:29:44 0 job proc(s) currently held
+03/30/19 15:29:49 Submitting HTCondor Node SS066V1_nozfi job(s)...
+03/30/19 15:29:49 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log
+03/30/19 15:29:49 Masking the events recorded in the DAGMAN workflow log
+03/30/19 15:29:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 15:29:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS066V1_nozfi -a +DAGManJobId' '=' '6907 -a DAGManJobId' '=' '6907 -batch-name DWICorrect_March302019.dag+6907 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS066V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC1/SS066V1_nozfiPreproc -a logFile' '=' 'SS066V1_nozfi.log -a errFile' '=' 'SS066V1_nozfi.err -a outFile' '=' 'SS066V1_nozfi.out -a args' '=' 'SS066V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS066V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS066V1_nozfi_dwi_preprocessed.mif,SS066V1_nozfi_eddyqcdir,SS066V1_nozfi_eddyqctext,SS066V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 15:29:50 From submit: Submitting job(s).
+03/30/19 15:29:50 From submit: 1 job(s) submitted to cluster 6923.
+03/30/19 15:29:50 	assigned HTCondor ID (6923.0.0)
+03/30/19 15:29:50 Just submitted 1 job this cycle...
+03/30/19 15:29:50 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:29:50 Reassigning the id of job SS066V1_nozfi from (6923.0.0) to (6923.0.0)
+03/30/19 15:29:50 Event: ULOG_SUBMIT for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:29:50}
+03/30/19 15:29:50 Number of idle job procs: 16
+03/30/19 15:29:50 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:29:50 Of 16 nodes total:
+03/30/19 15:29:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:29:50   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:29:50     0       0       16       0       0          0        0
+03/30/19 15:29:50 0 job proc(s) currently held
+03/30/19 15:37:30 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:37:30 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:37:29}
+03/30/19 15:37:30 Number of idle job procs: 15
+03/30/19 15:39:50 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:39:50 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:39:49}
+03/30/19 15:39:50 Number of idle job procs: 14
+03/30/19 15:39:50 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:39:49}
+03/30/19 15:39:50 Number of idle job procs: 13
+03/30/19 15:39:50 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:39:49}
+03/30/19 15:39:50 Number of idle job procs: 12
+03/30/19 15:39:50 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:39:49}
+03/30/19 15:39:50 Number of idle job procs: 11
+03/30/19 15:39:50 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:39:49}
+03/30/19 15:39:50 Number of idle job procs: 10
+03/30/19 15:41:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:41:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:41:12}
+03/30/19 15:41:16 Number of idle job procs: 11
+03/30/19 15:41:16 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:41:12}
+03/30/19 15:41:16   Hold reason: Error from slot1_1@aci-231.chtc.wisc.edu: STARTER at 128.104.102.196 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_27010/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.196:33863>
+03/30/19 15:41:16 Number of idle job procs: 11
+03/30/19 15:41:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:41:16 Of 16 nodes total:
+03/30/19 15:41:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:41:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:41:16     0       0       16       0       0          0        0
+03/30/19 15:41:16 1 job proc(s) currently held
+03/30/19 15:41:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:41:36 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:41:31}
+03/30/19 15:41:36 Number of idle job procs: 10
+03/30/19 15:41:36 Event: ULOG_JOB_EVICTED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:41:35}
+03/30/19 15:41:36 Number of idle job procs: 11
+03/30/19 15:43:06 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:43:06 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:43:03}
+03/30/19 15:43:06 Number of idle job procs: 12
+03/30/19 15:43:06 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:43:03}
+03/30/19 15:43:06   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11198/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:46612>
+03/30/19 15:43:06 Number of idle job procs: 12
+03/30/19 15:43:06 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:43:06 Of 16 nodes total:
+03/30/19 15:43:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:43:06   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:43:06     0       0       16       0       0          0        0
+03/30/19 15:43:06 2 job proc(s) currently held
+03/30/19 15:43:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:43:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:43:12}
+03/30/19 15:43:16 Number of idle job procs: 13
+03/30/19 15:43:16 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:43:12}
+03/30/19 15:43:16   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86984/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:33394>
+03/30/19 15:43:16 Number of idle job procs: 13
+03/30/19 15:43:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:43:14}
+03/30/19 15:43:16 Number of idle job procs: 14
+03/30/19 15:43:16 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:43:14}
+03/30/19 15:43:16   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_4450/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:32783>
+03/30/19 15:43:16 Number of idle job procs: 14
+03/30/19 15:43:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:43:14}
+03/30/19 15:43:16 Number of idle job procs: 15
+03/30/19 15:43:16 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:43:14}
+03/30/19 15:43:16   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_46698/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:43494>
+03/30/19 15:43:16 Number of idle job procs: 15
+03/30/19 15:43:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:43:16 Of 16 nodes total:
+03/30/19 15:43:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:43:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:43:16     0       0       16       0       0          0        0
+03/30/19 15:43:16 5 job proc(s) currently held
+03/30/19 15:43:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:43:41 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:43:40}
+03/30/19 15:43:41 Number of idle job procs: 14
+03/30/19 15:43:41 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:43:41}
+03/30/19 15:43:41 Number of idle job procs: 13
+03/30/19 15:43:46 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:43:46 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:43:41}
+03/30/19 15:43:46 Number of idle job procs: 12
+03/30/19 15:43:46 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:43:42}
+03/30/19 15:43:46 Number of idle job procs: 13
+03/30/19 15:43:46 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:43:42}
+03/30/19 15:43:46   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_2344/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:38365>
+03/30/19 15:43:46 Number of idle job procs: 13
+03/30/19 15:43:46 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:43:42}
+03/30/19 15:43:46 Number of idle job procs: 12
+03/30/19 15:43:46 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:43:46 Of 16 nodes total:
+03/30/19 15:43:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:43:46   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:43:46     0       0       16       0       0          0        0
+03/30/19 15:43:46 6 job proc(s) currently held
+03/30/19 15:44:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:44:01 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:43:59}
+03/30/19 15:44:01 Number of idle job procs: 11
+03/30/19 15:45:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:45:08}
+03/30/19 15:45:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:45:11 Of 16 nodes total:
+03/30/19 15:45:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:45:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:45:11     0       0       16       0       0          0        0
+03/30/19 15:45:11 0 job proc(s) currently held
+03/30/19 15:46:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:46:31 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:46:27}
+03/30/19 15:46:31 Number of idle job procs: 12
+03/30/19 15:46:31 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:46:27}
+03/30/19 15:46:31   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_87511/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:34806>
+03/30/19 15:46:31 Number of idle job procs: 12
+03/30/19 15:46:31 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:46:31 Of 16 nodes total:
+03/30/19 15:46:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:46:31   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:46:31     0       0       16       0       0          0        0
+03/30/19 15:46:31 1 job proc(s) currently held
+03/30/19 15:46:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:46:36 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:46:31}
+03/30/19 15:46:36 Number of idle job procs: 13
+03/30/19 15:46:36 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:46:31}
+03/30/19 15:46:36   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_4977/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:35756>
+03/30/19 15:46:36 Number of idle job procs: 13
+03/30/19 15:46:36 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:46:33}
+03/30/19 15:46:36 Number of idle job procs: 14
+03/30/19 15:46:36 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:46:33}
+03/30/19 15:46:36   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_47226/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:32992>
+03/30/19 15:46:36 Number of idle job procs: 14
+03/30/19 15:46:36 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:46:34}
+03/30/19 15:46:36 Number of idle job procs: 15
+03/30/19 15:46:36 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:46:34}
+03/30/19 15:46:36   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11732/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:35418>
+03/30/19 15:46:36 Number of idle job procs: 15
+03/30/19 15:46:36 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:46:36 Of 16 nodes total:
+03/30/19 15:46:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:46:36   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:46:36     0       0       16       0       0          0        0
+03/30/19 15:46:36 4 job proc(s) currently held
+03/30/19 15:47:06 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:47:06 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:47:01}
+03/30/19 15:47:06 Number of idle job procs: 14
+03/30/19 15:47:06 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:47:02}
+03/30/19 15:47:06 Number of idle job procs: 13
+03/30/19 15:47:06 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:47:03}
+03/30/19 15:47:06 Number of idle job procs: 12
+03/30/19 15:47:06 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:47:05}
+03/30/19 15:47:06 Number of idle job procs: 11
+03/30/19 15:47:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:47:36 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:47:35}
+03/30/19 15:47:36 Number of idle job procs: 12
+03/30/19 15:47:36 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:47:35}
+03/30/19 15:47:36   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_2893/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:39633>
+03/30/19 15:47:36 Number of idle job procs: 12
+03/30/19 15:47:36 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:47:36 Of 16 nodes total:
+03/30/19 15:47:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:47:36   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:47:36     0       0       16       0       0          0        0
+03/30/19 15:47:36 5 job proc(s) currently held
+03/30/19 15:47:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:47:56 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:47:56}
+03/30/19 15:47:56 Number of idle job procs: 11
+03/30/19 15:49:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:49:51 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:49:47}
+03/30/19 15:49:51 Number of idle job procs: 12
+03/30/19 15:49:51 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:49:47}
+03/30/19 15:49:51   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_6764/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:38821>
+03/30/19 15:49:51 Number of idle job procs: 12
+03/30/19 15:49:51 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:49:50}
+03/30/19 15:49:51 Number of idle job procs: 13
+03/30/19 15:49:51 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:49:50}
+03/30/19 15:49:51   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_48996/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:45721>
+03/30/19 15:49:51 Number of idle job procs: 13
+03/30/19 15:49:51 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:49:51 Of 16 nodes total:
+03/30/19 15:49:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:49:51   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:49:51     0       0       16       0       0          0        0
+03/30/19 15:49:51 7 job proc(s) currently held
+03/30/19 15:49:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:49:56 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:49:53}
+03/30/19 15:49:56 Number of idle job procs: 14
+03/30/19 15:49:56 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:49:53}
+03/30/19 15:49:56   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_13500/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:46526>
+03/30/19 15:49:56 Number of idle job procs: 14
+03/30/19 15:49:56 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:49:56 Of 16 nodes total:
+03/30/19 15:49:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:49:56   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:49:56     0       0       16       0       0          0        0
+03/30/19 15:49:56 8 job proc(s) currently held
+03/30/19 15:50:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:50:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:50:01}
+03/30/19 15:50:01 Number of idle job procs: 15
+03/30/19 15:50:01 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:50:01}
+03/30/19 15:50:01   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_89270/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:40567>
+03/30/19 15:50:01 Number of idle job procs: 15
+03/30/19 15:50:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:50:01 Of 16 nodes total:
+03/30/19 15:50:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:50:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:50:01     0       0       16       0       0          0        0
+03/30/19 15:50:01 9 job proc(s) currently held
+03/30/19 15:50:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:50:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:50:09}
+03/30/19 15:50:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:50:09}
+03/30/19 15:50:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:50:09}
+03/30/19 15:50:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:50:10}
+03/30/19 15:50:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:50:10}
+03/30/19 15:50:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:50:11 Of 16 nodes total:
+03/30/19 15:50:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:50:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:50:11     0       0       16       0       0          0        0
+03/30/19 15:50:11 4 job proc(s) currently held
+03/30/19 15:50:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:50:31 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:50:28}
+03/30/19 15:50:31 Number of idle job procs: 14
+03/30/19 15:50:31 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:50:28}
+03/30/19 15:50:31 Number of idle job procs: 13
+03/30/19 15:50:31 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:50:29}
+03/30/19 15:50:31 Number of idle job procs: 12
+03/30/19 15:50:31 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:50:30}
+03/30/19 15:50:31 Number of idle job procs: 11
+03/30/19 15:50:31 Event: ULOG_EXECUTE for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 15:50:30}
+03/30/19 15:50:31 Number of idle job procs: 10
+03/30/19 15:50:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:50:36 Event: ULOG_EXECUTE for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:50:34}
+03/30/19 15:50:36 Number of idle job procs: 9
+03/30/19 15:51:06 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:51:06 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:51:04}
+03/30/19 15:51:06 Number of idle job procs: 10
+03/30/19 15:51:06 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:51:04}
+03/30/19 15:51:06   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_4787/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:35757>
+03/30/19 15:51:06 Number of idle job procs: 10
+03/30/19 15:51:06 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:51:06 Of 16 nodes total:
+03/30/19 15:51:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:51:06   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:51:06     0       0       16       0       0          0        0
+03/30/19 15:51:06 5 job proc(s) currently held
+03/30/19 15:51:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:51:41 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:51:38}
+03/30/19 15:51:41 Number of idle job procs: 9
+03/30/19 15:53:26 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:53:26 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:53:25}
+03/30/19 15:53:26 Number of idle job procs: 10
+03/30/19 15:53:26 Event: ULOG_JOB_HELD for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:53:25}
+03/30/19 15:53:26   Hold reason: Error from slot1_1@aci-041.chtc.wisc.edu: STARTER at 128.104.101.191 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_58611/SS035V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.191:40600>
+03/30/19 15:53:26 Number of idle job procs: 10
+03/30/19 15:53:26 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:53:26 Of 16 nodes total:
+03/30/19 15:53:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:53:26   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:53:26     0       0       16       0       0          0        0
+03/30/19 15:53:26 6 job proc(s) currently held
+03/30/19 15:53:46 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:53:46 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:53:46}
+03/30/19 15:53:46 Number of idle job procs: 9
+03/30/19 15:53:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:53:51 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:53:49}
+03/30/19 15:53:51 Number of idle job procs: 10
+03/30/19 15:53:51 Event: ULOG_JOB_HELD for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:53:49}
+03/30/19 15:53:51   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_13974/SS054V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:35674>
+03/30/19 15:53:51 Number of idle job procs: 10
+03/30/19 15:53:51 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:53:51 Of 16 nodes total:
+03/30/19 15:53:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:53:51   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:53:51     0       0       16       0       0          0        0
+03/30/19 15:53:51 7 job proc(s) currently held
+03/30/19 15:54:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:54:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:53:58}
+03/30/19 15:54:01 Number of idle job procs: 11
+03/30/19 15:54:01 Event: ULOG_JOB_HELD for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:53:58}
+03/30/19 15:54:01   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_7212/SS041V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:40990>
+03/30/19 15:54:01 Number of idle job procs: 11
+03/30/19 15:54:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:53:58}
+03/30/19 15:54:01 Number of idle job procs: 12
+03/30/19 15:54:01 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:53:58}
+03/30/19 15:54:01   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53393/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:37355>
+03/30/19 15:54:01 Number of idle job procs: 12
+03/30/19 15:54:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:54:01 Of 16 nodes total:
+03/30/19 15:54:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:54:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:54:01     0       0       16       0       0          0        0
+03/30/19 15:54:01 9 job proc(s) currently held
+03/30/19 15:54:06 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:54:06 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:54:01}
+03/30/19 15:54:06 Number of idle job procs: 13
+03/30/19 15:54:06 Event: ULOG_JOB_HELD for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:54:01}
+03/30/19 15:54:06   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_89760/SS066V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:39563>
+03/30/19 15:54:06 Number of idle job procs: 13
+03/30/19 15:54:06 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:54:06 Of 16 nodes total:
+03/30/19 15:54:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:54:06   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:54:06     0       0       16       0       0          0        0
+03/30/19 15:54:06 10 job proc(s) currently held
+03/30/19 15:54:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:54:16 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:54:15}
+03/30/19 15:54:16 Number of idle job procs: 12
+03/30/19 15:54:21 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:54:21 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:54:20}
+03/30/19 15:54:21 Number of idle job procs: 11
+03/30/19 15:54:21 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:54:20}
+03/30/19 15:54:21 Number of idle job procs: 10
+03/30/19 15:54:46 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:54:46 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 15:54:42}
+03/30/19 15:54:46 Number of idle job procs: 11
+03/30/19 15:54:46 Event: ULOG_JOB_HELD for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 15:54:42}
+03/30/19 15:54:46   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_49451/SS053V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:41372>
+03/30/19 15:54:46 Number of idle job procs: 11
+03/30/19 15:54:46 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:54:46 Of 16 nodes total:
+03/30/19 15:54:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:54:46   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:54:46     0       0       16       0       0          0        0
+03/30/19 15:54:46 11 job proc(s) currently held
+03/30/19 15:55:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:55:10}
+03/30/19 15:55:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:55:11 Of 16 nodes total:
+03/30/19 15:55:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:55:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:55:11     0       0       16       0       0          0        0
+03/30/19 15:55:11 1 job proc(s) currently held
+03/30/19 15:56:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:56:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:55:57}
+03/30/19 15:56:01 Number of idle job procs: 12
+03/30/19 15:56:01 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 15:55:57}
+03/30/19 15:56:01   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_5273/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:34391>
+03/30/19 15:56:01 Number of idle job procs: 12
+03/30/19 15:56:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:56:01 Of 16 nodes total:
+03/30/19 15:56:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:56:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:56:01     0       0       16       0       0          0        0
+03/30/19 15:56:01 2 job proc(s) currently held
+03/30/19 15:56:26 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:56:26 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:56:23}
+03/30/19 15:56:26 Number of idle job procs: 11
+03/30/19 15:56:26 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:56:24}
+03/30/19 15:56:26 Number of idle job procs: 10
+03/30/19 15:56:26 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:56:24}
+03/30/19 15:56:26 Number of idle job procs: 9
+03/30/19 15:56:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:56:41 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:56:39}
+03/30/19 15:56:41 Number of idle job procs: 10
+03/30/19 15:56:41 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 15:56:39}
+03/30/19 15:56:41   Hold reason: Error from slot1_1@aci-041.chtc.wisc.edu: STARTER at 128.104.101.191 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_59189/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.191:42296>
+03/30/19 15:56:41 Number of idle job procs: 10
+03/30/19 15:56:41 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:56:41 Of 16 nodes total:
+03/30/19 15:56:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:56:41   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:56:41     0       0       16       0       0          0        0
+03/30/19 15:56:41 3 job proc(s) currently held
+03/30/19 15:57:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:01 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:56:59}
+03/30/19 15:57:01 Number of idle job procs: 9
+03/30/19 15:57:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:11 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:57:09}
+03/30/19 15:57:11 Number of idle job procs: 10
+03/30/19 15:57:11 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 15:57:09}
+03/30/19 15:57:11   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_15934/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:37018>
+03/30/19 15:57:11 Number of idle job procs: 10
+03/30/19 15:57:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:57:11 Of 16 nodes total:
+03/30/19 15:57:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:57:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:57:11     0       0       16       0       0          0        0
+03/30/19 15:57:11 4 job proc(s) currently held
+03/30/19 15:57:26 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:26 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:57:21}
+03/30/19 15:57:26 Number of idle job procs: 11
+03/30/19 15:57:26 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 15:57:21}
+03/30/19 15:57:26   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_9233/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:32879>
+03/30/19 15:57:26 Number of idle job procs: 11
+03/30/19 15:57:26 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:57:26 Of 16 nodes total:
+03/30/19 15:57:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:57:26   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:57:26     0       0       16       0       0          0        0
+03/30/19 15:57:26 5 job proc(s) currently held
+03/30/19 15:57:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:31 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 15:57:28}
+03/30/19 15:57:31 Number of idle job procs: 10
+03/30/19 15:57:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:36 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:57:31}
+03/30/19 15:57:36 Number of idle job procs: 11
+03/30/19 15:57:36 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 15:57:31}
+03/30/19 15:57:36   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53987/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:45385>
+03/30/19 15:57:36 Number of idle job procs: 11
+03/30/19 15:57:36 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:57:36 Of 16 nodes total:
+03/30/19 15:57:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:57:36   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:57:36     0       0       16       0       0          0        0
+03/30/19 15:57:36 6 job proc(s) currently held
+03/30/19 15:57:46 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:46 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 15:57:42}
+03/30/19 15:57:46 Number of idle job procs: 10
+03/30/19 15:57:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:57:51 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 15:57:49}
+03/30/19 15:57:51 Number of idle job procs: 9
+03/30/19 15:59:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:59:11 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:59:09}
+03/30/19 15:59:11 Number of idle job procs: 10
+03/30/19 15:59:11 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 15:59:09}
+03/30/19 15:59:11   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_91837/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:45626>
+03/30/19 15:59:11 Number of idle job procs: 10
+03/30/19 15:59:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:59:11 Of 16 nodes total:
+03/30/19 15:59:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:59:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:59:11     0       0       16       0       0          0        0
+03/30/19 15:59:11 7 job proc(s) currently held
+03/30/19 15:59:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:59:31 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 15:59:28}
+03/30/19 15:59:31 Number of idle job procs: 9
+03/30/19 15:59:31 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:59:28}
+03/30/19 15:59:31 Number of idle job procs: 10
+03/30/19 15:59:31 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 15:59:28}
+03/30/19 15:59:31   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_51599/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:36345>
+03/30/19 15:59:31 Number of idle job procs: 10
+03/30/19 15:59:31 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:59:31 Of 16 nodes total:
+03/30/19 15:59:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:59:31   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:59:31     0       0       16       0       0          0        0
+03/30/19 15:59:31 8 job proc(s) currently held
+03/30/19 15:59:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:59:41 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:59:37}
+03/30/19 15:59:41 Number of idle job procs: 11
+03/30/19 15:59:41 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 15:59:37}
+03/30/19 15:59:41   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_7349/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:46569>
+03/30/19 15:59:41 Number of idle job procs: 11
+03/30/19 15:59:41 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:59:41 Of 16 nodes total:
+03/30/19 15:59:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:59:41   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:59:41     0       0       16       0       0          0        0
+03/30/19 15:59:41 9 job proc(s) currently held
+03/30/19 15:59:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:59:51 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 15:59:48}
+03/30/19 15:59:51 Number of idle job procs: 10
+03/30/19 15:59:51 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:59:50}
+03/30/19 15:59:51 Number of idle job procs: 11
+03/30/19 15:59:51 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 15:59:50}
+03/30/19 15:59:51   Hold reason: Error from slot1_1@aci-041.chtc.wisc.edu: STARTER at 128.104.101.191 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_59703/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.191:44535>
+03/30/19 15:59:51 Number of idle job procs: 11
+03/30/19 15:59:51 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 15:59:51 Of 16 nodes total:
+03/30/19 15:59:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 15:59:51   ===     ===      ===     ===     ===        ===      ===
+03/30/19 15:59:51     0       0       16       0       0          0        0
+03/30/19 15:59:51 10 job proc(s) currently held
+03/30/19 15:59:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 15:59:56 Event: ULOG_EXECUTE for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 15:59:56}
+03/30/19 15:59:56 Number of idle job procs: 10
+03/30/19 16:00:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:00:10}
+03/30/19 16:00:11 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:00:11}
+03/30/19 16:00:11 Number of idle job procs: 11
+03/30/19 16:00:11 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:00:11}
+03/30/19 16:00:11   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_17785/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:38131>
+03/30/19 16:00:11 Number of idle job procs: 11
+03/30/19 16:00:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:00:11 Of 16 nodes total:
+03/30/19 16:00:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:00:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:00:11     0       0       16       0       0          0        0
+03/30/19 16:00:11 2 job proc(s) currently held
+03/30/19 16:00:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:00:31 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:00:28}
+03/30/19 16:00:31 Number of idle job procs: 12
+03/30/19 16:00:31 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:00:29}
+03/30/19 16:00:31   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11052/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:36864>
+03/30/19 16:00:31 Number of idle job procs: 12
+03/30/19 16:00:31 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:00:30}
+03/30/19 16:00:31 Number of idle job procs: 11
+03/30/19 16:00:31 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:00:31 Of 16 nodes total:
+03/30/19 16:00:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:00:31   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:00:31     0       0       16       0       0          0        0
+03/30/19 16:00:31 3 job proc(s) currently held
+03/30/19 16:00:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:00:51 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:00:50}
+03/30/19 16:00:51 Number of idle job procs: 10
+03/30/19 16:00:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:00:56 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:00:53}
+03/30/19 16:00:56 Number of idle job procs: 9
+03/30/19 16:02:06 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:06 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:02:05}
+03/30/19 16:02:06 Number of idle job procs: 10
+03/30/19 16:02:06 Event: ULOG_JOB_HELD for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:02:05}
+03/30/19 16:02:06   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_54448/SS035V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:43133>
+03/30/19 16:02:06 Number of idle job procs: 10
+03/30/19 16:02:06 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:02:06 Of 16 nodes total:
+03/30/19 16:02:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:02:06   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:02:06     0       0       16       0       0          0        0
+03/30/19 16:02:06 4 job proc(s) currently held
+03/30/19 16:02:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:02:14}
+03/30/19 16:02:16 Number of idle job procs: 11
+03/30/19 16:02:16 Event: ULOG_JOB_HELD for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:02:14}
+03/30/19 16:02:16   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_93747/SS041V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:43060>
+03/30/19 16:02:16 Number of idle job procs: 11
+03/30/19 16:02:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:02:16 Of 16 nodes total:
+03/30/19 16:02:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:02:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:02:16     0       0       16       0       0          0        0
+03/30/19 16:02:16 5 job proc(s) currently held
+03/30/19 16:02:31 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:31 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:02:27}
+03/30/19 16:02:31 Number of idle job procs: 10
+03/30/19 16:02:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:36 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:02:33}
+03/30/19 16:02:36 Number of idle job procs: 9
+03/30/19 16:02:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:41 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:02:41}
+03/30/19 16:02:41 Number of idle job procs: 10
+03/30/19 16:02:41 Event: ULOG_JOB_HELD for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:02:41}
+03/30/19 16:02:41   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53394/SS054V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:40444>
+03/30/19 16:02:41 Number of idle job procs: 10
+03/30/19 16:02:41 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:02:41 Of 16 nodes total:
+03/30/19 16:02:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:02:41   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:02:41     0       0       16       0       0          0        0
+03/30/19 16:02:41 6 job proc(s) currently held
+03/30/19 16:02:57 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:02:57 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:02:56}
+03/30/19 16:02:57 Number of idle job procs: 11
+03/30/19 16:02:57 Event: ULOG_JOB_HELD for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:02:56}
+03/30/19 16:02:57   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_9218/SS066V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:43875>
+03/30/19 16:02:57 Number of idle job procs: 11
+03/30/19 16:02:57 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:02:57 Of 16 nodes total:
+03/30/19 16:02:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:02:57   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:02:57     0       0       16       0       0          0        0
+03/30/19 16:02:57 7 job proc(s) currently held
+03/30/19 16:03:02 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:02 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:02:58}
+03/30/19 16:03:02 Number of idle job procs: 10
+03/30/19 16:03:17 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:17 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:03:12}
+03/30/19 16:03:17 Number of idle job procs: 11
+03/30/19 16:03:17 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:03:12}
+03/30/19 16:03:17   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_18306/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:34884>
+03/30/19 16:03:17 Number of idle job procs: 11
+03/30/19 16:03:17 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:03:14}
+03/30/19 16:03:17 Number of idle job procs: 10
+03/30/19 16:03:17 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:03:17 Of 16 nodes total:
+03/30/19 16:03:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:03:17   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:03:17     0       0       16       0       0          0        0
+03/30/19 16:03:17 8 job proc(s) currently held
+03/30/19 16:03:32 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:32 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:03:30}
+03/30/19 16:03:32 Number of idle job procs: 9
+03/30/19 16:03:37 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:37 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:03:35}
+03/30/19 16:03:37 Number of idle job procs: 10
+03/30/19 16:03:37 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:03:35}
+03/30/19 16:03:37   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11546/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:38388>
+03/30/19 16:03:37 Number of idle job procs: 10
+03/30/19 16:03:37 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:03:37 Of 16 nodes total:
+03/30/19 16:03:37  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:03:37   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:03:37     0       0       16       0       0          0        0
+03/30/19 16:03:37 9 job proc(s) currently held
+03/30/19 16:03:47 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:47 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:03:44}
+03/30/19 16:03:47 Number of idle job procs: 11
+03/30/19 16:03:47 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:03:44}
+03/30/19 16:03:47   Hold reason: Error from slot1_1@aci-041.chtc.wisc.edu: STARTER at 128.104.101.191 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61614/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.191:41629>
+03/30/19 16:03:47 Number of idle job procs: 11
+03/30/19 16:03:47 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:03:47 Of 16 nodes total:
+03/30/19 16:03:47  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:03:47   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:03:47     0       0       16       0       0          0        0
+03/30/19 16:03:47 10 job proc(s) currently held
+03/30/19 16:03:57 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:03:57 Event: ULOG_EXECUTE for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:03:52}
+03/30/19 16:03:57 Number of idle job procs: 10
+03/30/19 16:05:12 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:05:11}
+03/30/19 16:05:12 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:05:12 Of 16 nodes total:
+03/30/19 16:05:12  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:05:12   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:05:12     0       0       16       0       0          0        0
+03/30/19 16:05:12 0 job proc(s) currently held
+03/30/19 16:05:17 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:05:17 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:05:16}
+03/30/19 16:05:17 Number of idle job procs: 11
+03/30/19 16:05:17 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:05:16}
+03/30/19 16:05:17   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_94214/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:37274>
+03/30/19 16:05:17 Number of idle job procs: 11
+03/30/19 16:05:17 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:05:17 Of 16 nodes total:
+03/30/19 16:05:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:05:17   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:05:17     0       0       16       0       0          0        0
+03/30/19 16:05:17 1 job proc(s) currently held
+03/30/19 16:05:27 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:05:27 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:05:23}
+03/30/19 16:05:27 Number of idle job procs: 12
+03/30/19 16:05:27 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:05:23}
+03/30/19 16:05:27   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_56360/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:39102>
+03/30/19 16:05:27 Number of idle job procs: 12
+03/30/19 16:05:27 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:05:27 Of 16 nodes total:
+03/30/19 16:05:27  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:05:27   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:05:27     0       0       16       0       0          0        0
+03/30/19 16:05:27 2 job proc(s) currently held
+03/30/19 16:05:42 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:05:42 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:05:38}
+03/30/19 16:05:42 Number of idle job procs: 11
+03/30/19 16:05:47 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:05:47 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:05:42}
+03/30/19 16:05:47 Number of idle job procs: 10
+03/30/19 16:06:02 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:06:02 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:06:01}
+03/30/19 16:06:02 Number of idle job procs: 11
+03/30/19 16:06:02 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:06:01}
+03/30/19 16:06:02   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53980/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:38179>
+03/30/19 16:06:02 Number of idle job procs: 11
+03/30/19 16:06:02 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:06:02 Of 16 nodes total:
+03/30/19 16:06:02  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:06:02   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:06:02     0       0       16       0       0          0        0
+03/30/19 16:06:02 3 job proc(s) currently held
+03/30/19 16:06:17 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:06:17 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:06:13}
+03/30/19 16:06:17 Number of idle job procs: 12
+03/30/19 16:06:17 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:06:13}
+03/30/19 16:06:17   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_9739/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:37494>
+03/30/19 16:06:17 Number of idle job procs: 12
+03/30/19 16:06:17 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:06:14}
+03/30/19 16:06:17 Number of idle job procs: 13
+03/30/19 16:06:17 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:06:14}
+03/30/19 16:06:17   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_18750/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:39227>
+03/30/19 16:06:17 Number of idle job procs: 13
+03/30/19 16:06:17 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:06:17 Of 16 nodes total:
+03/30/19 16:06:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:06:17   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:06:17     0       0       16       0       0          0        0
+03/30/19 16:06:17 5 job proc(s) currently held
+03/30/19 16:06:37 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:06:37 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:06:33}
+03/30/19 16:06:37 Number of idle job procs: 12
+03/30/19 16:06:37 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:06:35}
+03/30/19 16:06:37 Number of idle job procs: 11
+03/30/19 16:06:37 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:06:36}
+03/30/19 16:06:37 Number of idle job procs: 10
+03/30/19 16:06:42 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:06:42 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:06:38}
+03/30/19 16:06:42 Number of idle job procs: 11
+03/30/19 16:06:42 Event: ULOG_JOB_HELD for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:06:38}
+03/30/19 16:06:42   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11996/SS053V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:42768>
+03/30/19 16:06:42 Number of idle job procs: 11
+03/30/19 16:06:42 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:06:42 Of 16 nodes total:
+03/30/19 16:06:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:06:42   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:06:42     0       0       16       0       0          0        0
+03/30/19 16:06:42 6 job proc(s) currently held
+03/30/19 16:07:02 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:07:02 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:06:57}
+03/30/19 16:07:02 Number of idle job procs: 10
+03/30/19 16:08:22 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:08:22 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:08:21}
+03/30/19 16:08:22 Number of idle job procs: 11
+03/30/19 16:08:22 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:08:21}
+03/30/19 16:08:22   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_94642/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:46486>
+03/30/19 16:08:22 Number of idle job procs: 11
+03/30/19 16:08:22 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:08:22 Of 16 nodes total:
+03/30/19 16:08:22  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:08:22   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:08:22     0       0       16       0       0          0        0
+03/30/19 16:08:22 7 job proc(s) currently held
+03/30/19 16:08:42 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:08:42 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:08:39}
+03/30/19 16:08:42 Number of idle job procs: 10
+03/30/19 16:08:42 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:08:41}
+03/30/19 16:08:42 Number of idle job procs: 11
+03/30/19 16:08:42 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:08:41}
+03/30/19 16:08:42   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_56811/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:43979>
+03/30/19 16:08:42 Number of idle job procs: 11
+03/30/19 16:08:42 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:08:42 Of 16 nodes total:
+03/30/19 16:08:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:08:42   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:08:42     0       0       16       0       0          0        0
+03/30/19 16:08:42 8 job proc(s) currently held
+03/30/19 16:08:57 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:08:57 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:08:56}
+03/30/19 16:08:57 Number of idle job procs: 10
+03/30/19 16:09:02 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:09:02 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:09:00}
+03/30/19 16:09:02 Number of idle job procs: 9
+03/30/19 16:09:22 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:09:22 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:09:18}
+03/30/19 16:09:22 Number of idle job procs: 10
+03/30/19 16:09:22 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:09:18}
+03/30/19 16:09:22   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_20476/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:34812>
+03/30/19 16:09:22 Number of idle job procs: 10
+03/30/19 16:09:22 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:09:22 Of 16 nodes total:
+03/30/19 16:09:22  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:09:22   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:09:22     0       0       16       0       0          0        0
+03/30/19 16:09:22 9 job proc(s) currently held
+03/30/19 16:09:27 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:09:27 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:09:23}
+03/30/19 16:09:27 Number of idle job procs: 11
+03/30/19 16:09:27 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:09:23}
+03/30/19 16:09:27   Hold reason: Error from slot1_1@aci-325.chtc.wisc.edu: STARTER at 128.104.102.49 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_54432/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.49:37124>
+03/30/19 16:09:27 Number of idle job procs: 11
+03/30/19 16:09:27 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:09:27 Of 16 nodes total:
+03/30/19 16:09:27  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:09:27   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:09:27     0       0       16       0       0          0        0
+03/30/19 16:09:27 10 job proc(s) currently held
+03/30/19 16:09:37 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:09:37 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:09:33}
+03/30/19 16:09:37 Number of idle job procs: 12
+03/30/19 16:09:37 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:09:33}
+03/30/19 16:09:37   Hold reason: Error from slot1_1@aci-335.chtc.wisc.edu: STARTER at 128.104.102.73 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_10159/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.73:41719>
+03/30/19 16:09:37 Number of idle job procs: 12
+03/30/19 16:09:37 Event: ULOG_EXECUTE for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:09:35}
+03/30/19 16:09:37 Number of idle job procs: 11
+03/30/19 16:09:37 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:09:37 Of 16 nodes total:
+03/30/19 16:09:37  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:09:37   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:09:37     0       0       16       0       0          0        0
+03/30/19 16:09:37 11 job proc(s) currently held
+03/30/19 16:09:42 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:09:42 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:09:40}
+03/30/19 16:09:42 Number of idle job procs: 12
+03/30/19 16:09:42 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:09:40}
+03/30/19 16:09:42   Hold reason: Error from slot1_1@aci-326.chtc.wisc.edu: STARTER at 128.104.102.63 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_13776/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.63:37763>
+03/30/19 16:09:42 Number of idle job procs: 12
+03/30/19 16:09:42 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:09:42 Of 16 nodes total:
+03/30/19 16:09:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:09:42   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:09:42     0       0       16       0       0          0        0
+03/30/19 16:09:42 12 job proc(s) currently held
+03/30/19 16:10:12 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:10:12}
+03/30/19 16:10:12 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:10:12 Of 16 nodes total:
+03/30/19 16:10:12  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:10:12   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:10:12     0       0       16       0       0          0        0
+03/30/19 16:10:12 0 job proc(s) currently held
+03/30/19 16:11:27 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:11:27 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:11:26}
+03/30/19 16:11:27 Number of idle job procs: 13
+03/30/19 16:11:27 Event: ULOG_JOB_HELD for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:11:26}
+03/30/19 16:11:27   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_96356/SS035V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:46343>
+03/30/19 16:11:27 Number of idle job procs: 13
+03/30/19 16:11:27 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:11:27 Of 16 nodes total:
+03/30/19 16:11:27  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:11:27   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:11:27     0       0       16       0       0          0        0
+03/30/19 16:11:27 1 job proc(s) currently held
+03/30/19 16:12:02 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:12:02 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:12:00}
+03/30/19 16:12:02 Number of idle job procs: 14
+03/30/19 16:12:02 Event: ULOG_JOB_HELD for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:12:00}
+03/30/19 16:12:02   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_58532/SS054V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:38293>
+03/30/19 16:12:02 Number of idle job procs: 14
+03/30/19 16:12:02 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:12:02 Of 16 nodes total:
+03/30/19 16:12:02  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:12:02   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:12:02     0       0       16       0       0          0        0
+03/30/19 16:12:02 2 job proc(s) currently held
+03/30/19 16:12:22 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:12:22 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:12:19}
+03/30/19 16:12:22 Number of idle job procs: 15
+03/30/19 16:12:22 Event: ULOG_JOB_HELD for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:12:19}
+03/30/19 16:12:22   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_20888/SS066V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:41982>
+03/30/19 16:12:22 Number of idle job procs: 15
+03/30/19 16:12:22 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:12:20}
+03/30/19 16:12:22 Number of idle job procs: 14
+03/30/19 16:12:22 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:12:22 Of 16 nodes total:
+03/30/19 16:12:22  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:12:22   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:12:22     0       0       16       0       0          0        0
+03/30/19 16:12:22 3 job proc(s) currently held
+03/30/19 16:12:37 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:12:37 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:12:36}
+03/30/19 16:12:37 Number of idle job procs: 13
+03/30/19 16:12:52 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:12:52 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:12:49}
+03/30/19 16:12:52 Number of idle job procs: 14
+03/30/19 16:12:52 Event: ULOG_JOB_HELD for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:12:50}
+03/30/19 16:12:52   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_167866/SS041V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:35928>
+03/30/19 16:12:52 Number of idle job procs: 14
+03/30/19 16:12:52 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:12:52 Of 16 nodes total:
+03/30/19 16:12:52  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:12:52   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:12:52     0       0       16       0       0          0        0
+03/30/19 16:12:52 4 job proc(s) currently held
+03/30/19 16:13:13 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:13:13 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:13:09}
+03/30/19 16:13:13 Number of idle job procs: 13
+03/30/19 16:13:13 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:13:12}
+03/30/19 16:13:13 Number of idle job procs: 12
+03/30/19 16:15:13 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:15:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:15:12}
+03/30/19 16:15:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:15:12}
+03/30/19 16:15:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:15:12}
+03/30/19 16:15:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:15:12}
+03/30/19 16:15:13 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:15:13 Of 16 nodes total:
+03/30/19 16:15:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:15:13   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:15:13     0       0       16       0       0          0        0
+03/30/19 16:15:13 0 job proc(s) currently held
+03/30/19 16:15:23 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:15:23 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:15:18}
+03/30/19 16:15:23 Number of idle job procs: 13
+03/30/19 16:15:23 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:15:18}
+03/30/19 16:15:23 Number of idle job procs: 14
+03/30/19 16:15:23 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:15:18}
+03/30/19 16:15:23   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_59023/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:34313>
+03/30/19 16:15:23 Number of idle job procs: 14
+03/30/19 16:15:23 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:15:18}
+03/30/19 16:15:23   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_21327/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:36573>
+03/30/19 16:15:23 Number of idle job procs: 14
+03/30/19 16:15:23 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:15:23 Of 16 nodes total:
+03/30/19 16:15:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:15:23   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:15:23     0       0       16       0       0          0        0
+03/30/19 16:15:23 2 job proc(s) currently held
+03/30/19 16:15:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:15:38 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:15:38}
+03/30/19 16:15:38 Number of idle job procs: 13
+03/30/19 16:15:43 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:15:43 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:15:38}
+03/30/19 16:15:43 Number of idle job procs: 12
+03/30/19 16:16:08 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:16:08 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:16:07}
+03/30/19 16:16:08 Number of idle job procs: 13
+03/30/19 16:16:08 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:16:07}
+03/30/19 16:16:08   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_96856/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:46252>
+03/30/19 16:16:08 Number of idle job procs: 13
+03/30/19 16:16:08 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:16:08 Of 16 nodes total:
+03/30/19 16:16:08  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:16:08   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:16:08     0       0       16       0       0          0        0
+03/30/19 16:16:08 3 job proc(s) currently held
+03/30/19 16:16:28 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:16:28 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:16:25}
+03/30/19 16:16:28 Number of idle job procs: 12
+03/30/19 16:16:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:16:38 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:16:34}
+03/30/19 16:16:38 Number of idle job procs: 13
+03/30/19 16:16:38 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:16:34}
+03/30/19 16:16:38   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_168378/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:45793>
+03/30/19 16:16:38 Number of idle job procs: 13
+03/30/19 16:16:38 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:16:38 Of 16 nodes total:
+03/30/19 16:16:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:16:38   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:16:38     0       0       16       0       0          0        0
+03/30/19 16:16:38 4 job proc(s) currently held
+03/30/19 16:16:53 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:16:53 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:16:52}
+03/30/19 16:16:53 Number of idle job procs: 12
+03/30/19 16:18:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:18:38 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:18:37}
+03/30/19 16:18:38 Number of idle job procs: 13
+03/30/19 16:18:38 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:18:37}
+03/30/19 16:18:38   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_59480/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:36768>
+03/30/19 16:18:38 Number of idle job procs: 13
+03/30/19 16:18:38 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:18:38 Of 16 nodes total:
+03/30/19 16:18:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:18:38   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:18:38     0       0       16       0       0          0        0
+03/30/19 16:18:38 5 job proc(s) currently held
+03/30/19 16:18:58 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:18:58 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:18:56}
+03/30/19 16:18:58 Number of idle job procs: 12
+03/30/19 16:19:33 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:19:33 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:19:29}
+03/30/19 16:19:33 Number of idle job procs: 13
+03/30/19 16:19:33 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:19:29}
+03/30/19 16:19:33   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_21749/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:33837>
+03/30/19 16:19:33 Number of idle job procs: 13
+03/30/19 16:19:33 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:19:33 Of 16 nodes total:
+03/30/19 16:19:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:19:33   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:19:33     0       0       16       0       0          0        0
+03/30/19 16:19:33 6 job proc(s) currently held
+03/30/19 16:19:48 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:19:48 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:19:47}
+03/30/19 16:19:48 Number of idle job procs: 12
+03/30/19 16:20:13 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:20:12}
+03/30/19 16:20:13 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:20:13 Of 16 nodes total:
+03/30/19 16:20:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:20:13   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:20:13     0       0       16       0       0          0        0
+03/30/19 16:20:13 0 job proc(s) currently held
+03/30/19 16:20:23 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:20:23 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:20:20}
+03/30/19 16:20:23 Number of idle job procs: 13
+03/30/19 16:20:23 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:20:20}
+03/30/19 16:20:23   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_97332/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:46867>
+03/30/19 16:20:23 Number of idle job procs: 13
+03/30/19 16:20:23 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:20:23 Of 16 nodes total:
+03/30/19 16:20:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:20:23   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:20:23     0       0       16       0       0          0        0
+03/30/19 16:20:23 1 job proc(s) currently held
+03/30/19 16:20:33 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:20:33 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:20:32}
+03/30/19 16:20:33 Number of idle job procs: 14
+03/30/19 16:20:33 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:20:32}
+03/30/19 16:20:33   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_168875/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:45495>
+03/30/19 16:20:33 Number of idle job procs: 14
+03/30/19 16:20:33 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:20:33 Of 16 nodes total:
+03/30/19 16:20:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:20:33   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:20:33     0       0       16       0       0          0        0
+03/30/19 16:20:33 2 job proc(s) currently held
+03/30/19 16:20:43 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:20:43 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:20:40}
+03/30/19 16:20:43 Number of idle job procs: 13
+03/30/19 16:20:53 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:20:53 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:20:51}
+03/30/19 16:20:53 Number of idle job procs: 12
+03/30/19 16:21:58 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:21:58 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:21:56}
+03/30/19 16:21:58 Number of idle job procs: 13
+03/30/19 16:21:58 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:21:56}
+03/30/19 16:21:58   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61201/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:35535>
+03/30/19 16:21:58 Number of idle job procs: 13
+03/30/19 16:21:58 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:21:58 Of 16 nodes total:
+03/30/19 16:21:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:21:58   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:21:58     0       0       16       0       0          0        0
+03/30/19 16:21:58 3 job proc(s) currently held
+03/30/19 16:22:18 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:22:18 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:22:15}
+03/30/19 16:22:18 Number of idle job procs: 12
+03/30/19 16:22:48 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:22:48 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:22:45}
+03/30/19 16:22:48 Number of idle job procs: 13
+03/30/19 16:22:48 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:22:45}
+03/30/19 16:22:48   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_24238/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:40179>
+03/30/19 16:22:48 Number of idle job procs: 13
+03/30/19 16:22:48 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:22:48 Of 16 nodes total:
+03/30/19 16:22:48  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:22:48   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:22:48     0       0       16       0       0          0        0
+03/30/19 16:22:48 4 job proc(s) currently held
+03/30/19 16:23:03 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:23:03 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:23:03}
+03/30/19 16:23:03 Number of idle job procs: 12
+03/30/19 16:23:43 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:23:43 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:23:41}
+03/30/19 16:23:43 Number of idle job procs: 13
+03/30/19 16:23:43 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:23:41}
+03/30/19 16:23:43   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_100073/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:43869>
+03/30/19 16:23:43 Number of idle job procs: 13
+03/30/19 16:23:43 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:23:43 Of 16 nodes total:
+03/30/19 16:23:43  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:23:43   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:23:43     0       0       16       0       0          0        0
+03/30/19 16:23:43 5 job proc(s) currently held
+03/30/19 16:24:03 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:24:03 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:24:00}
+03/30/19 16:24:03 Number of idle job procs: 12
+03/30/19 16:24:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:24:38 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:24:35}
+03/30/19 16:24:38 Number of idle job procs: 13
+03/30/19 16:24:38 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:24:35}
+03/30/19 16:24:38   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_170687/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:43197>
+03/30/19 16:24:38 Number of idle job procs: 13
+03/30/19 16:24:38 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:24:38 Of 16 nodes total:
+03/30/19 16:24:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:24:38   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:24:38     0       0       16       0       0          0        0
+03/30/19 16:24:38 6 job proc(s) currently held
+03/30/19 16:24:54 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:24:54 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:24:53}
+03/30/19 16:24:54 Number of idle job procs: 12
+03/30/19 16:25:14 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:25:13}
+03/30/19 16:25:14 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:25:14 Of 16 nodes total:
+03/30/19 16:25:14  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:25:14   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:25:14     0       0       16       0       0          0        0
+03/30/19 16:25:14 0 job proc(s) currently held
+03/30/19 16:25:34 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:25:34 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:25:33}
+03/30/19 16:25:34 Number of idle job procs: 13
+03/30/19 16:25:34 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:25:33}
+03/30/19 16:25:34   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61692/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:45600>
+03/30/19 16:25:34 Number of idle job procs: 13
+03/30/19 16:25:34 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:25:34 Of 16 nodes total:
+03/30/19 16:25:34  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:25:34   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:25:34     0       0       16       0       0          0        0
+03/30/19 16:25:34 1 job proc(s) currently held
+03/30/19 16:25:54 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:25:54 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:25:49}
+03/30/19 16:25:54 Number of idle job procs: 14
+03/30/19 16:25:54 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:25:49}
+03/30/19 16:25:54   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_25493/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:34142>
+03/30/19 16:25:54 Number of idle job procs: 14
+03/30/19 16:25:54 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:25:54}
+03/30/19 16:25:54 Number of idle job procs: 13
+03/30/19 16:25:54 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:25:54 Of 16 nodes total:
+03/30/19 16:25:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:25:54   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:25:54     0       0       16       0       0          0        0
+03/30/19 16:25:54 2 job proc(s) currently held
+03/30/19 16:26:09 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:26:09 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:26:08}
+03/30/19 16:26:09 Number of idle job procs: 12
+03/30/19 16:26:49 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:26:49 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:26:47}
+03/30/19 16:26:49 Number of idle job procs: 13
+03/30/19 16:26:49 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:26:47}
+03/30/19 16:26:49   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_101065/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:34990>
+03/30/19 16:26:49 Number of idle job procs: 13
+03/30/19 16:26:49 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:26:49 Of 16 nodes total:
+03/30/19 16:26:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:26:49   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:26:49     0       0       16       0       0          0        0
+03/30/19 16:26:49 3 job proc(s) currently held
+03/30/19 16:28:39 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:28:39 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:28:38}
+03/30/19 16:28:39 Number of idle job procs: 14
+03/30/19 16:28:39 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:28:38}
+03/30/19 16:28:39   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_171158/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:44656>
+03/30/19 16:28:39 Number of idle job procs: 14
+03/30/19 16:28:39 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:28:39 Of 16 nodes total:
+03/30/19 16:28:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:28:39   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:28:39     0       0       16       0       0          0        0
+03/30/19 16:28:39 4 job proc(s) currently held
+03/30/19 16:28:54 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:28:54 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:28:50}
+03/30/19 16:28:54 Number of idle job procs: 15
+03/30/19 16:28:54 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:28:50}
+03/30/19 16:28:54   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_26065/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:38410>
+03/30/19 16:28:54 Number of idle job procs: 15
+03/30/19 16:28:54 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:28:53}
+03/30/19 16:28:54 Number of idle job procs: 16
+03/30/19 16:28:54 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:28:53}
+03/30/19 16:28:54   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_62155/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:38212>
+03/30/19 16:28:54 Number of idle job procs: 16
+03/30/19 16:28:54 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:28:54 Of 16 nodes total:
+03/30/19 16:28:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:28:54   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:28:54     0       0       16       0       0          0        0
+03/30/19 16:28:54 6 job proc(s) currently held
+03/30/19 16:29:09 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:29:09 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:29:07}
+03/30/19 16:29:09 Number of idle job procs: 15
+03/30/19 16:29:24 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:29:24 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:29:22}
+03/30/19 16:29:24 Number of idle job procs: 14
+03/30/19 16:30:09 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:30:09 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:30:04}
+03/30/19 16:30:09 Number of idle job procs: 13
+03/30/19 16:30:14 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:30:13}
+03/30/19 16:30:14 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:30:14 Of 16 nodes total:
+03/30/19 16:30:14  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:30:14   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:30:14     0       0       16       0       0          0        0
+03/30/19 16:30:14 0 job proc(s) currently held
+03/30/19 16:30:59 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:30:59 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:30:56}
+03/30/19 16:30:59 Number of idle job procs: 12
+03/30/19 16:32:04 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:32:04 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:32:00}
+03/30/19 16:32:04 Number of idle job procs: 13
+03/30/19 16:32:04 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:32:00}
+03/30/19 16:32:04   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_27775/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:33685>
+03/30/19 16:32:04 Number of idle job procs: 13
+03/30/19 16:32:04 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:32:04 Of 16 nodes total:
+03/30/19 16:32:04  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:32:04   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:32:04     0       0       16       0       0          0        0
+03/30/19 16:32:04 1 job proc(s) currently held
+03/30/19 16:32:24 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:32:24 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:32:20}
+03/30/19 16:32:24 Number of idle job procs: 12
+03/30/19 16:32:54 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:32:54 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:32:52}
+03/30/19 16:32:54 Number of idle job procs: 13
+03/30/19 16:32:54 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:32:53}
+03/30/19 16:32:54   Hold reason: Error from slot1_1@aci-327.chtc.wisc.edu: STARTER at 128.104.102.64 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_103113/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.64:43577>
+03/30/19 16:32:54 Number of idle job procs: 13
+03/30/19 16:32:54 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:32:54 Of 16 nodes total:
+03/30/19 16:32:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:32:54   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:32:54     0       0       16       0       0          0        0
+03/30/19 16:32:54 2 job proc(s) currently held
+03/30/19 16:33:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 12
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 11
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 10
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 9
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 8
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 7
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 6
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:33:43}
+03/30/19 16:33:44 Number of idle job procs: 5
+03/30/19 16:33:44 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:33:44}
+03/30/19 16:33:44 Number of idle job procs: 4
+03/30/19 16:33:49 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:33:49 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:33:45}
+03/30/19 16:33:49 Number of idle job procs: 3
+03/30/19 16:33:49 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:33:48}
+03/30/19 16:33:49 Number of idle job procs: 2
+03/30/19 16:33:54 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:33:54 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:33:51}
+03/30/19 16:33:54 Number of idle job procs: 3
+03/30/19 16:33:54 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:33:51}
+03/30/19 16:33:54   Hold reason: Error from slot1_1@aci-333.chtc.wisc.edu: STARTER at 128.104.102.70 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_172957/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.70:40244>
+03/30/19 16:33:54 Number of idle job procs: 3
+03/30/19 16:33:54 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:33:54 Of 16 nodes total:
+03/30/19 16:33:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:33:54   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:33:54     0       0       16       0       0          0        0
+03/30/19 16:33:54 3 job proc(s) currently held
+03/30/19 16:33:59 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:33:59 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:33:56}
+03/30/19 16:33:59 Number of idle job procs: 4
+03/30/19 16:33:59 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:33:56}
+03/30/19 16:33:59   Hold reason: Error from slot1_1@aci-042.chtc.wisc.edu: STARTER at 128.104.101.192 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_64019/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.192:45511>
+03/30/19 16:33:59 Number of idle job procs: 4
+03/30/19 16:33:59 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:33:59 Of 16 nodes total:
+03/30/19 16:33:59  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:33:59   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:33:59     0       0       16       0       0          0        0
+03/30/19 16:33:59 4 job proc(s) currently held
+03/30/19 16:35:15 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:35:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:35:14}
+03/30/19 16:35:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:35:14}
+03/30/19 16:35:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:35:14}
+03/30/19 16:35:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:35:14}
+03/30/19 16:35:15 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:35:15 Of 16 nodes total:
+03/30/19 16:35:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:35:15   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:35:15     0       0       16       0       0          0        0
+03/30/19 16:35:15 0 job proc(s) currently held
+03/30/19 16:35:40 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:35:40 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:35:37}
+03/30/19 16:35:40 Number of idle job procs: 5
+03/30/19 16:35:40 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:35:37}
+03/30/19 16:35:40   Hold reason: Error from slot1_1@aci-328.chtc.wisc.edu: STARTER at 128.104.102.65 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_28257/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.65:45500>
+03/30/19 16:35:40 Number of idle job procs: 5
+03/30/19 16:35:40 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:35:40 Of 16 nodes total:
+03/30/19 16:35:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:35:40   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:35:40     0       0       16       0       0          0        0
+03/30/19 16:35:40 1 job proc(s) currently held
+03/30/19 16:36:10 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:36:10 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:36:07}
+03/30/19 16:36:10 Number of idle job procs: 4
+03/30/19 16:36:55 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:36:55 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:36:55}
+03/30/19 16:36:55 Number of idle job procs: 5
+03/30/19 16:36:55 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:36:55}
+03/30/19 16:36:55   Hold reason: Error from slot1_1@aci-300.chtc.wisc.edu: STARTER at 128.104.102.24 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_48966/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.24:38793>
+03/30/19 16:36:55 Number of idle job procs: 5
+03/30/19 16:36:55 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:36:55 Of 16 nodes total:
+03/30/19 16:36:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:36:55   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:36:55     0       0       16       0       0          0        0
+03/30/19 16:36:55 2 job proc(s) currently held
+03/30/19 16:37:05 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:05 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:37:04}
+03/30/19 16:37:05 Number of idle job procs: 6
+03/30/19 16:37:05 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:37:04}
+03/30/19 16:37:05   Hold reason: Error from slot1_1@aci-298.chtc.wisc.edu: STARTER at 128.104.102.20 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_87868/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.20:41526>
+03/30/19 16:37:05 Number of idle job procs: 6
+03/30/19 16:37:05 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:05 Of 16 nodes total:
+03/30/19 16:37:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:05   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:05     0       0       16       0       0          0        0
+03/30/19 16:37:05 3 job proc(s) currently held
+03/30/19 16:37:10 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:10 Event: ULOG_JOB_EVICTED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:37:05}
+03/30/19 16:37:10 Number of idle job procs: 7
+03/30/19 16:37:10 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:37:06}
+03/30/19 16:37:10 Number of idle job procs: 8
+03/30/19 16:37:10 Event: ULOG_JOB_EVICTED for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:37:06}
+03/30/19 16:37:10 Number of idle job procs: 9
+03/30/19 16:37:10 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:37:06}
+03/30/19 16:37:10   Hold reason: Error from slot1_1@aci-064.chtc.wisc.edu: STARTER at 128.104.101.222 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_228538/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.222:39518>
+03/30/19 16:37:10 Number of idle job procs: 9
+03/30/19 16:37:10 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:37:09}
+03/30/19 16:37:10 Number of idle job procs: 10
+03/30/19 16:37:10 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:37:09}
+03/30/19 16:37:10   Hold reason: Error from slot1_1@aci-299.chtc.wisc.edu: STARTER at 128.104.102.23 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_26746/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.23:36944>
+03/30/19 16:37:10 Number of idle job procs: 10
+03/30/19 16:37:10 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:10 Of 16 nodes total:
+03/30/19 16:37:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:10   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:10     0       0       16       0       0          0        0
+03/30/19 16:37:10 5 job proc(s) currently held
+03/30/19 16:37:25 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:25 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:37:21}
+03/30/19 16:37:25 Number of idle job procs: 11
+03/30/19 16:37:25 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:37:21}
+03/30/19 16:37:25   Hold reason: Error from slot1_1@aci-297.chtc.wisc.edu: STARTER at 128.104.102.19 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_110366/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.19:40453>
+03/30/19 16:37:25 Number of idle job procs: 11
+03/30/19 16:37:25 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:25 Of 16 nodes total:
+03/30/19 16:37:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:25   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:25     0       0       16       0       0          0        0
+03/30/19 16:37:25 6 job proc(s) currently held
+03/30/19 16:37:35 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:35 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:37:31}
+03/30/19 16:37:35 Number of idle job procs: 10
+03/30/19 16:37:35 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:37:34}
+03/30/19 16:37:35 Number of idle job procs: 11
+03/30/19 16:37:35 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:37:34}
+03/30/19 16:37:35   Hold reason: Error from slot1_1@aci-289.chtc.wisc.edu: STARTER at 128.104.102.11 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_83405/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.11:38922>
+03/30/19 16:37:35 Number of idle job procs: 11
+03/30/19 16:37:35 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:35 Of 16 nodes total:
+03/30/19 16:37:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:35   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:35     0       0       16       0       0          0        0
+03/30/19 16:37:35 7 job proc(s) currently held
+03/30/19 16:37:40 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:40 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:37:36}
+03/30/19 16:37:40 Number of idle job procs: 10
+03/30/19 16:37:40 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:37:38}
+03/30/19 16:37:40 Number of idle job procs: 11
+03/30/19 16:37:40 Event: ULOG_JOB_HELD for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:37:38}
+03/30/19 16:37:40   Hold reason: Error from slot1_1@aci-290.chtc.wisc.edu: STARTER at 128.104.102.12 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_25009/SS066V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.12:40245>
+03/30/19 16:37:40 Number of idle job procs: 11
+03/30/19 16:37:40 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:37:39}
+03/30/19 16:37:40 Number of idle job procs: 10
+03/30/19 16:37:40 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:37:39}
+03/30/19 16:37:40 Number of idle job procs: 9
+03/30/19 16:37:40 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:40 Of 16 nodes total:
+03/30/19 16:37:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:40   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:40     0       0       16       0       0          0        0
+03/30/19 16:37:40 8 job proc(s) currently held
+03/30/19 16:37:45 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:45 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:37:43}
+03/30/19 16:37:45 Number of idle job procs: 8
+03/30/19 16:37:50 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:37:50 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:37:49}
+03/30/19 16:37:50 Number of idle job procs: 9
+03/30/19 16:37:50 Event: ULOG_JOB_HELD for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:37:49}
+03/30/19 16:37:50   Hold reason: Error from slot1_1@aci-292.chtc.wisc.edu: STARTER at 128.104.102.14 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_47515/SS035V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.14:33643>
+03/30/19 16:37:50 Number of idle job procs: 9
+03/30/19 16:37:50 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:37:50 Of 16 nodes total:
+03/30/19 16:37:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:37:50   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:37:50     0       0       16       0       0          0        0
+03/30/19 16:37:50 9 job proc(s) currently held
+03/30/19 16:38:00 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:38:00 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:37:57}
+03/30/19 16:38:00 Number of idle job procs: 10
+03/30/19 16:38:00 Event: ULOG_JOB_HELD for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:37:57}
+03/30/19 16:38:00   Hold reason: Error from slot1_1@aci-291.chtc.wisc.edu: STARTER at 128.104.102.13 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_38569/SS041V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.13:45481>
+03/30/19 16:38:00 Number of idle job procs: 10
+03/30/19 16:38:00 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:38:00 Of 16 nodes total:
+03/30/19 16:38:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:38:00   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:38:00     0       0       16       0       0          0        0
+03/30/19 16:38:00 10 job proc(s) currently held
+03/30/19 16:38:15 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:38:15 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:38:13}
+03/30/19 16:38:15 Number of idle job procs: 11
+03/30/19 16:38:15 Event: ULOG_JOB_HELD for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:38:13}
+03/30/19 16:38:15   Hold reason: Error from slot1_1@aci-279.chtc.wisc.edu: STARTER at 128.104.101.255 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_38163/SS053V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.255:39108>
+03/30/19 16:38:15 Number of idle job procs: 11
+03/30/19 16:38:15 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:38:15 Of 16 nodes total:
+03/30/19 16:38:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:38:15   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:38:15     0       0       16       0       0          0        0
+03/30/19 16:38:15 11 job proc(s) currently held
+03/30/19 16:40:15 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:40:15}
+03/30/19 16:40:15 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:40:15 Of 16 nodes total:
+03/30/19 16:40:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:40:15   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:40:15     0       0       16       0       0          0        0
+03/30/19 16:40:15 0 job proc(s) currently held
+03/30/19 16:40:20 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:40:20 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:40:16}
+03/30/19 16:40:20 Number of idle job procs: 12
+03/30/19 16:40:20 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:40:16}
+03/30/19 16:40:20   Hold reason: Error from slot1_1@aci-300.chtc.wisc.edu: STARTER at 128.104.102.24 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_49517/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.24:35266>
+03/30/19 16:40:20 Number of idle job procs: 12
+03/30/19 16:40:20 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:40:20 Of 16 nodes total:
+03/30/19 16:40:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:40:20   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:40:20     0       0       16       0       0          0        0
+03/30/19 16:40:20 1 job proc(s) currently held
+03/30/19 16:40:35 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:40:35 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:40:32}
+03/30/19 16:40:35 Number of idle job procs: 13
+03/30/19 16:40:35 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:40:32}
+03/30/19 16:40:35   Hold reason: Error from slot1_1@aci-064.chtc.wisc.edu: STARTER at 128.104.101.222 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_229153/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.222:44776>
+03/30/19 16:40:35 Number of idle job procs: 13
+03/30/19 16:40:35 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:40:35 Of 16 nodes total:
+03/30/19 16:40:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:40:35   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:40:35     0       0       16       0       0          0        0
+03/30/19 16:40:35 2 job proc(s) currently held
+03/30/19 16:40:40 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:40:40 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:40:35}
+03/30/19 16:40:40 Number of idle job procs: 12
+03/30/19 16:40:40 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:40:37}
+03/30/19 16:40:40 Number of idle job procs: 13
+03/30/19 16:40:40 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:40:38}
+03/30/19 16:40:40   Hold reason: Error from slot1_1@aci-299.chtc.wisc.edu: STARTER at 128.104.102.23 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_27351/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.23:40465>
+03/30/19 16:40:40 Number of idle job procs: 13
+03/30/19 16:40:40 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:40:40 Of 16 nodes total:
+03/30/19 16:40:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:40:40   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:40:40     0       0       16       0       0          0        0
+03/30/19 16:40:40 3 job proc(s) currently held
+03/30/19 16:41:00 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:41:00 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:40:55}
+03/30/19 16:41:00 Number of idle job procs: 12
+03/30/19 16:41:00 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:40:56}
+03/30/19 16:41:00 Number of idle job procs: 13
+03/30/19 16:41:00 Event: ULOG_JOB_HELD for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:40:56}
+03/30/19 16:41:00   Hold reason: Error from slot1_1@aci-297.chtc.wisc.edu: STARTER at 128.104.102.19 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_110967/SS054V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.19:41494>
+03/30/19 16:41:00 Number of idle job procs: 13
+03/30/19 16:41:00 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:41:00 Of 16 nodes total:
+03/30/19 16:41:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:41:00   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:41:00     0       0       16       0       0          0        0
+03/30/19 16:41:00 4 job proc(s) currently held
+03/30/19 16:41:10 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:41:10 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:41:09}
+03/30/19 16:41:10 Number of idle job procs: 14
+03/30/19 16:41:10 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:41:09}
+03/30/19 16:41:10   Hold reason: Error from slot1_1@aci-298.chtc.wisc.edu: STARTER at 128.104.102.20 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_88433/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.20:45418>
+03/30/19 16:41:10 Number of idle job procs: 14
+03/30/19 16:41:10 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:41:10 Of 16 nodes total:
+03/30/19 16:41:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:41:10   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:41:10     0       0       16       0       0          0        0
+03/30/19 16:41:10 5 job proc(s) currently held
+03/30/19 16:41:25 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:41:25 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:41:22}
+03/30/19 16:41:25 Number of idle job procs: 13
+03/30/19 16:41:30 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:41:30 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:41:27}
+03/30/19 16:41:30 Number of idle job procs: 12
+03/30/19 16:41:30 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:41:30}
+03/30/19 16:41:30 Number of idle job procs: 11
+03/30/19 16:42:20 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:42:20 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:42:20}
+03/30/19 16:42:20 Number of idle job procs: 10
+03/30/19 16:42:20 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:42:20}
+03/30/19 16:42:20 Number of idle job procs: 9
+03/30/19 16:42:25 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:42:25 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:42:20}
+03/30/19 16:42:25 Number of idle job procs: 8
+03/30/19 16:43:30 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:43:30 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:43:28}
+03/30/19 16:43:30 Number of idle job procs: 9
+03/30/19 16:43:30 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:43:28}
+03/30/19 16:43:30   Hold reason: Error from slot1_1@aci-300.chtc.wisc.edu: STARTER at 128.104.102.24 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_49974/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.24:43550>
+03/30/19 16:43:30 Number of idle job procs: 9
+03/30/19 16:43:30 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:43:30 Of 16 nodes total:
+03/30/19 16:43:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:43:30   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:43:30     0       0       16       0       0          0        0
+03/30/19 16:43:30 6 job proc(s) currently held
+03/30/19 16:43:50 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:43:50 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:43:46}
+03/30/19 16:43:50 Number of idle job procs: 8
+03/30/19 16:44:05 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:44:05 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:44:02}
+03/30/19 16:44:05 Number of idle job procs: 9
+03/30/19 16:44:05 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:44:02}
+03/30/19 16:44:05   Hold reason: Error from slot1_1@aci-299.chtc.wisc.edu: STARTER at 128.104.102.23 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_27801/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.23:35423>
+03/30/19 16:44:05 Number of idle job procs: 9
+03/30/19 16:44:05 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:44:05 Of 16 nodes total:
+03/30/19 16:44:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:44:05   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:44:05     0       0       16       0       0          0        0
+03/30/19 16:44:05 7 job proc(s) currently held
+03/30/19 16:44:30 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:44:30 Event: ULOG_EXECUTE for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:44:26}
+03/30/19 16:44:30 Number of idle job procs: 8
+03/30/19 16:45:05 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:45:05 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:45:01}
+03/30/19 16:45:05 Number of idle job procs: 9
+03/30/19 16:45:05 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:45:01}
+03/30/19 16:45:05   Hold reason: Error from slot1_1@aci-298.chtc.wisc.edu: STARTER at 128.104.102.20 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_90229/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.20:34986>
+03/30/19 16:45:05 Number of idle job procs: 9
+03/30/19 16:45:05 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:45:05}
+03/30/19 16:45:05 Number of idle job procs: 10
+03/30/19 16:45:05 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:45:05}
+03/30/19 16:45:05   Hold reason: Error from slot1_1@aci-297.chtc.wisc.edu: STARTER at 128.104.102.19 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_111419/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.19:44265>
+03/30/19 16:45:05 Number of idle job procs: 10
+03/30/19 16:45:05 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:45:05 Of 16 nodes total:
+03/30/19 16:45:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:45:05   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:45:05     0       0       16       0       0          0        0
+03/30/19 16:45:05 9 job proc(s) currently held
+03/30/19 16:45:15 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 Event: ULOG_JOB_RELEASED for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:45:15}
+03/30/19 16:45:15 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:45:15 Of 16 nodes total:
+03/30/19 16:45:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:45:15   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:45:15     0       0       16       0       0          0        0
+03/30/19 16:45:15 2 job proc(s) currently held
+03/30/19 16:45:35 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:45:35 Event: ULOG_EXECUTE for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:45:35}
+03/30/19 16:45:35 Number of idle job procs: 9
+03/30/19 16:45:40 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:45:40 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:45:39}
+03/30/19 16:45:40 Number of idle job procs: 10
+03/30/19 16:45:40 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:45:39}
+03/30/19 16:45:40   Hold reason: Error from slot1_1@aci-064.chtc.wisc.edu: STARTER at 128.104.101.222 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_230933/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.222:44577>
+03/30/19 16:45:40 Number of idle job procs: 10
+03/30/19 16:45:40 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:45:40 Of 16 nodes total:
+03/30/19 16:45:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:45:40   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:45:40     0       0       16       0       0          0        0
+03/30/19 16:45:40 3 job proc(s) currently held
+03/30/19 16:45:55 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:45:55 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:45:53}
+03/30/19 16:45:55 Number of idle job procs: 9
+03/30/19 16:46:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:11 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:46:06}
+03/30/19 16:46:11 Number of idle job procs: 8
+03/30/19 16:46:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:46:12}
+03/30/19 16:46:16 Number of idle job procs: 9
+03/30/19 16:46:16 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:46:12}
+03/30/19 16:46:16   Hold reason: Error from slot1_1@aci-361.chtc.wisc.edu: STARTER at 128.104.101.15 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_34101/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.15:35074>
+03/30/19 16:46:16 Number of idle job procs: 9
+03/30/19 16:46:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:46:12}
+03/30/19 16:46:16 Number of idle job procs: 10
+03/30/19 16:46:16 Event: ULOG_JOB_HELD for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:46:12}
+03/30/19 16:46:16   Hold reason: Error from slot1_1@aci-360.chtc.wisc.edu: STARTER at 128.104.101.14 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_127916/SS035V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.14:35536>
+03/30/19 16:46:16 Number of idle job procs: 10
+03/30/19 16:46:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:46:16 Of 16 nodes total:
+03/30/19 16:46:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:46:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:46:16     0       0       16       0       0          0        0
+03/30/19 16:46:16 5 job proc(s) currently held
+03/30/19 16:46:21 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:21 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:46:20}
+03/30/19 16:46:21 Number of idle job procs: 11
+03/30/19 16:46:21 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:46:20}
+03/30/19 16:46:21   Hold reason: Error from slot1_1@aci-359.chtc.wisc.edu: STARTER at 128.104.101.13 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_99408/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.13:45159>
+03/30/19 16:46:21 Number of idle job procs: 11
+03/30/19 16:46:21 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:46:21 Of 16 nodes total:
+03/30/19 16:46:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:46:21   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:46:21     0       0       16       0       0          0        0
+03/30/19 16:46:21 6 job proc(s) currently held
+03/30/19 16:46:41 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:41 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:46:39}
+03/30/19 16:46:41 Number of idle job procs: 10
+03/30/19 16:46:41 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:46:39}
+03/30/19 16:46:41 Number of idle job procs: 9
+03/30/19 16:46:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:51 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:46:46}
+03/30/19 16:46:51 Number of idle job procs: 8
+03/30/19 16:46:51 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:46:49}
+03/30/19 16:46:51 Number of idle job procs: 7
+03/30/19 16:46:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:46:56 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:46:53}
+03/30/19 16:46:56 Number of idle job procs: 8
+03/30/19 16:46:56 Event: ULOG_JOB_HELD for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:46:53}
+03/30/19 16:46:56   Hold reason: Error from slot1_1@aci-300.chtc.wisc.edu: STARTER at 128.104.102.24 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_51713/SS041V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.24:43506>
+03/30/19 16:46:56 Number of idle job procs: 8
+03/30/19 16:46:56 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:46:56 Of 16 nodes total:
+03/30/19 16:46:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:46:56   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:46:56     0       0       16       0       0          0        0
+03/30/19 16:46:56 7 job proc(s) currently held
+03/30/19 16:47:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:47:11 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:47:10}
+03/30/19 16:47:11 Number of idle job procs: 7
+03/30/19 16:48:21 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:48:21 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:48:17}
+03/30/19 16:48:21 Number of idle job procs: 8
+03/30/19 16:48:21 Event: ULOG_JOB_HELD for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:48:17}
+03/30/19 16:48:21   Hold reason: Error from slot1_1@aci-299.chtc.wisc.edu: STARTER at 128.104.102.23 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_29574/SS053V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.23:42445>
+03/30/19 16:48:21 Number of idle job procs: 8
+03/30/19 16:48:21 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:48:21 Of 16 nodes total:
+03/30/19 16:48:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:48:21   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:48:21     0       0       16       0       0          0        0
+03/30/19 16:48:21 8 job proc(s) currently held
+03/30/19 16:49:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:49:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:48:56}
+03/30/19 16:49:01 Number of idle job procs: 9
+03/30/19 16:49:01 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:48:56}
+03/30/19 16:49:01   Hold reason: Error from slot1_1@aci-297.chtc.wisc.edu: STARTER at 128.104.102.19 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_114782/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.19:35239>
+03/30/19 16:49:01 Number of idle job procs: 9
+03/30/19 16:49:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:49:01 Of 16 nodes total:
+03/30/19 16:49:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:49:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:49:01     0       0       16       0       0          0        0
+03/30/19 16:49:01 9 job proc(s) currently held
+03/30/19 16:49:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:49:16 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:49:12}
+03/30/19 16:49:16 Number of idle job procs: 10
+03/30/19 16:49:16 Event: ULOG_JOB_HELD for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:49:12}
+03/30/19 16:49:16   Hold reason: Error from slot1_1@aci-298.chtc.wisc.edu: STARTER at 128.104.102.20 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_90742/SS066V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.20:42929>
+03/30/19 16:49:16 Number of idle job procs: 10
+03/30/19 16:49:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:49:16 Of 16 nodes total:
+03/30/19 16:49:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:49:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:49:16     0       0       16       0       0          0        0
+03/30/19 16:49:16 10 job proc(s) currently held
+03/30/19 16:49:21 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:49:21 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:49:16}
+03/30/19 16:49:21 Number of idle job procs: 11
+03/30/19 16:49:21 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:49:16}
+03/30/19 16:49:21   Hold reason: Error from slot1_1@aci-064.chtc.wisc.edu: STARTER at 128.104.101.222 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_232261/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.222:43830>
+03/30/19 16:49:21 Number of idle job procs: 11
+03/30/19 16:49:21 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:49:21 Of 16 nodes total:
+03/30/19 16:49:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:49:21   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:49:21     0       0       16       0       0          0        0
+03/30/19 16:49:21 11 job proc(s) currently held
+03/30/19 16:49:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:49:56 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:49:55}
+03/30/19 16:49:56 Number of idle job procs: 12
+03/30/19 16:49:56 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6913.0.0) {03/30/19 16:49:55}
+03/30/19 16:49:56   Hold reason: Error from slot1_1@aci-360.chtc.wisc.edu: STARTER at 128.104.101.14 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_128501/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.14:42385>
+03/30/19 16:49:56 Number of idle job procs: 12
+03/30/19 16:49:56 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:49:56 Of 16 nodes total:
+03/30/19 16:49:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:49:56   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:49:56     0       0       16       0       0          0        0
+03/30/19 16:49:56 12 job proc(s) currently held
+03/30/19 16:50:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:50:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:49:57}
+03/30/19 16:50:01 Number of idle job procs: 13
+03/30/19 16:50:01 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6910.0.0) {03/30/19 16:49:57}
+03/30/19 16:50:01   Hold reason: Error from slot1_1@aci-361.chtc.wisc.edu: STARTER at 128.104.101.15 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_34652/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.15:40976>
+03/30/19 16:50:01 Number of idle job procs: 13
+03/30/19 16:50:01 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:49:59}
+03/30/19 16:50:01 Number of idle job procs: 14
+03/30/19 16:50:01 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6915.0.0) {03/30/19 16:49:59}
+03/30/19 16:50:01   Hold reason: Error from slot1_1@aci-359.chtc.wisc.edu: STARTER at 128.104.101.13 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_100002/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.101.13:44891>
+03/30/19 16:50:01 Number of idle job procs: 14
+03/30/19 16:50:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:50:01 Of 16 nodes total:
+03/30/19 16:50:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:50:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:50:01     0       0       16       0       0          0        0
+03/30/19 16:50:01 14 job proc(s) currently held
+03/30/19 16:50:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:50:11 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:50:09}
+03/30/19 16:50:11 Number of idle job procs: 15
+03/30/19 16:50:11 Event: ULOG_JOB_HELD for HTCondor Node SS054V1_nozfi (6922.0.0) {03/30/19 16:50:09}
+03/30/19 16:50:11   Hold reason: Error from slot1_1@aci-300.chtc.wisc.edu: STARTER at 128.104.102.24 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53669/SS054V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.24:43118>
+03/30/19 16:50:11 Number of idle job procs: 15
+03/30/19 16:50:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:50:11 Of 16 nodes total:
+03/30/19 16:50:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:50:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:50:11     0       0       16       0       0          0        0
+03/30/19 16:50:11 15 job proc(s) currently held
+03/30/19 16:50:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS053V1_nozfi (6921.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS041V1_nozfi (6920.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS035V1_nozfi (6919.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS033V1_nozfi (6918.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6916.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6914.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 Event: ULOG_JOB_RELEASED for HTCondor Node SS066V1_nozfi (6923.0.0) {03/30/19 16:50:15}
+03/30/19 16:50:16 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:50:16 Of 16 nodes total:
+03/30/19 16:50:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:50:16   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:50:16     0       0       16       0       0          0        0
+03/30/19 16:50:16 4 job proc(s) currently held
+03/30/19 16:50:26 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:50:26 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:50:24}
+03/30/19 16:50:26 Number of idle job procs: 16
+03/30/19 16:50:26 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6917.0.0) {03/30/19 16:50:24}
+03/30/19 16:50:26   Hold reason: Error from slot1_1@aci-334.chtc.wisc.edu: STARTER at 128.104.102.72 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_107255/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.72:44549>
+03/30/19 16:50:26 Number of idle job procs: 16
+03/30/19 16:50:26 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 16:50:26 Of 16 nodes total:
+03/30/19 16:50:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:50:26   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:50:26     0       0       16       0       0          0        0
+03/30/19 16:50:26 5 job proc(s) currently held
+03/30/19 16:50:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:50:56 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6908.0.0) {03/30/19 16:50:54}
+03/30/19 16:50:56 Number of idle job procs: 15
+03/30/19 16:51:21 Currently monitoring 1 HTCondor log file(s)
+03/30/19 16:51:21 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6909.0.0) {03/30/19 16:51:18}
+03/30/19 16:51:21 Number of idle job procs: 14
+03/30/19 16:51:21 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6911.0.0) {03/30/19 16:51:18}
+03/30/19 16:51:21 Number of idle job procs: 13
+03/30/19 16:51:21 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6912.0.0) {03/30/19 16:51:18}
+03/30/19 16:51:21 Number of idle job procs: 12
+03/30/19 16:51:29 Received SIGUSR1
+03/30/19 16:51:29 Aborting DAG...
+03/30/19 16:51:29 Writing Rescue DAG to DWICorrect_March302019.dag.rescue001...
+03/30/19 16:51:29 Removing submitted jobs...
+03/30/19 16:51:29 Note: 0 total job deferrals because of -MaxJobs limit (0)
+03/30/19 16:51:29 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+03/30/19 16:51:29 Note: 0 total job deferrals because of node category throttles
+03/30/19 16:51:29 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+03/30/19 16:51:29 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+03/30/19 16:51:29 DAG status: 4 (DAG_STATUS_RM)
+03/30/19 16:51:29 Of 16 nodes total:
+03/30/19 16:51:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 16:51:29   ===     ===      ===     ===     ===        ===      ===
+03/30/19 16:51:29     0       0       16       0       0          0        0
+03/30/19 16:51:29 5 job proc(s) currently held
+03/30/19 16:51:29 Wrote metrics file DWICorrect_March302019.dag.metrics.
+03/30/19 16:51:29 Metrics not sent because of PEGASUS_METRICS or CONDOR_DEVELOPERS setting.
+03/30/19 16:51:29 **** condor_scheduniv_exec.6907.0 (condor_DAGMAN) pid 1143373 EXITING WITH STATUS 2

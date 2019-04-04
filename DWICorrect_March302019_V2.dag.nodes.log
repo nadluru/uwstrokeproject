@@ -1,0 +1,361 @@
+000 (6942.000.000) 03/30 17:24:44 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS001V1_nozfi
+...
+000 (6943.000.000) 03/30 17:24:44 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS008V1_nozfi
+...
+000 (6944.000.000) 03/30 17:24:44 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS014V1_nozfi
+...
+000 (6945.000.000) 03/30 17:24:44 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS015V1_nozfi
+...
+000 (6946.000.000) 03/30 17:24:44 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS016V1_nozfi
+...
+000 (6947.000.000) 03/30 17:24:49 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS019V1_nozfi
+...
+000 (6948.000.000) 03/30 17:24:50 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS020V1_nozfi
+...
+000 (6949.000.000) 03/30 17:24:50 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS026V1_nozfi
+...
+000 (6950.000.000) 03/30 17:24:50 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS030V1_nozfi
+...
+000 (6951.000.000) 03/30 17:24:50 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS032V1_nozfi
+...
+000 (6952.000.000) 03/30 17:24:55 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS033V1_nozfi
+...
+000 (6953.000.000) 03/30 17:24:55 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS035V1_nozfi
+...
+000 (6954.000.000) 03/30 17:24:56 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS041V1_nozfi
+...
+000 (6955.000.000) 03/30 17:24:56 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS053V1_nozfi
+...
+000 (6956.000.000) 03/30 17:24:56 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS054V1_nozfi
+...
+000 (6957.000.000) 03/30 17:25:01 Job submitted from host: <144.92.151.238:9618?addrs=144.92.151.238-9618+[--1]-9618&noUDP&sock=4802_eb1f_3>
+    DAG Node: SS066V1_nozfi
+...
+001 (6942.000.000) 03/30 17:53:50 Job executing on host: <128.104.102.74:9618?addrs=128.104.102.74-9618&noUDP&sock=4552_df32_203>
+...
+007 (6942.000.000) 03/30 17:56:57 Shadow exception!
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11893/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:43986>
+	4503084  -  Run Bytes Sent By Job
+	883544832  -  Run Bytes Received By Job
+...
+012 (6942.000.000) 03/30 17:56:57 Job was held.
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11893/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:43986>
+	Code 13 Subcode 2
+...
+001 (6943.000.000) 03/30 17:57:16 Job executing on host: <128.104.102.74:9618?addrs=128.104.102.74-9618&noUDP&sock=4552_df32_203>
+...
+013 (6942.000.000) 03/30 18:00:23 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+007 (6943.000.000) 03/30 18:00:33 Shadow exception!
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_12671/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:32799>
+	4503176  -  Run Bytes Sent By Job
+	885707520  -  Run Bytes Received By Job
+...
+012 (6943.000.000) 03/30 18:00:33 Job was held.
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_12671/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:32799>
+	Code 13 Subcode 2
+...
+013 (6943.000.000) 03/30 18:05:23 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+001 (6947.000.000) 03/30 18:12:09 Job executing on host: <128.104.102.34:9618?addrs=128.104.102.34-9618&noUDP&sock=4541_53a7_693>
+...
+001 (6945.000.000) 03/30 18:12:09 Job executing on host: <128.104.102.38:9618?addrs=128.104.102.38-9618&noUDP&sock=4543_b2d7_503>
+...
+001 (6944.000.000) 03/30 18:12:09 Job executing on host: <128.104.102.31:9618?addrs=128.104.102.31-9618&noUDP&sock=4448_8958_696>
+...
+001 (6946.000.000) 03/30 18:12:09 Job executing on host: <128.104.102.39:9618?addrs=128.104.102.39-9618&noUDP&sock=4548_20d1_491>
+...
+001 (6943.000.000) 03/30 18:12:09 Job executing on host: <128.104.102.40:9618?addrs=128.104.102.40-9618&noUDP&sock=4453_f751_471>
+...
+007 (6945.000.000) 03/30 18:15:34 Shadow exception!
+	Error from slot1_1@aci-314.chtc.wisc.edu: STARTER at 128.104.102.38 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_85846/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.38:43901>
+	4503242  -  Run Bytes Sent By Job
+	885707520  -  Run Bytes Received By Job
+...
+012 (6945.000.000) 03/30 18:15:34 Job was held.
+	Error from slot1_1@aci-314.chtc.wisc.edu: STARTER at 128.104.102.38 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_85846/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.38:43901>
+	Code 13 Subcode 2
+...
+007 (6944.000.000) 03/30 18:15:40 Shadow exception!
+	Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53504/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:36262>
+	4503240  -  Run Bytes Sent By Job
+	883544832  -  Run Bytes Received By Job
+...
+012 (6944.000.000) 03/30 18:15:40 Job was held.
+	Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53504/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:36262>
+	Code 13 Subcode 2
+...
+007 (6946.000.000) 03/30 18:15:47 Shadow exception!
+	Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86062/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:44855>
+	4503294  -  Run Bytes Sent By Job
+	885707520  -  Run Bytes Received By Job
+...
+012 (6946.000.000) 03/30 18:15:47 Job was held.
+	Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86062/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:44855>
+	Code 13 Subcode 2
+...
+007 (6947.000.000) 03/30 18:15:56 Shadow exception!
+	Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_82265/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:43571>
+	4503398  -  Run Bytes Sent By Job
+	885707520  -  Run Bytes Received By Job
+...
+012 (6947.000.000) 03/30 18:15:56 Job was held.
+	Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_82265/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:43571>
+	Code 13 Subcode 2
+...
+001 (6942.000.000) 03/30 18:16:10 Job executing on host: <128.104.102.38:9618?addrs=128.104.102.38-9618&noUDP&sock=4543_b2d7_503>
+...
+001 (6948.000.000) 03/30 18:16:13 Job executing on host: <128.104.102.31:9618?addrs=128.104.102.31-9618&noUDP&sock=4448_8958_696>
+...
+001 (6949.000.000) 03/30 18:16:17 Job executing on host: <128.104.102.39:9618?addrs=128.104.102.39-9618&noUDP&sock=4548_20d1_491>
+...
+001 (6950.000.000) 03/30 18:16:18 Job executing on host: <128.104.102.74:9618?addrs=128.104.102.74-9618&noUDP&sock=4552_df32_203>
+...
+001 (6951.000.000) 03/30 18:16:21 Job executing on host: <128.104.102.34:9618?addrs=128.104.102.34-9618&noUDP&sock=4541_53a7_693>
+...
+007 (6943.000.000) 03/30 18:16:24 Shadow exception!
+	Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61985/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:36445>
+	4503600  -  Run Bytes Sent By Job
+	885707520  -  Run Bytes Received By Job
+...
+012 (6943.000.000) 03/30 18:16:24 Job was held.
+	Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61985/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:36445>
+	Code 13 Subcode 2
+...
+001 (6952.000.000) 03/30 18:17:02 Job executing on host: <128.104.102.40:9618?addrs=128.104.102.40-9618&noUDP&sock=4453_f751_471>
+...
+007 (6949.000.000) 03/30 18:19:13 Shadow exception!
+	Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_87138/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:34267>
+	4502988  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+...
+012 (6949.000.000) 03/30 18:19:13 Job was held.
+	Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_87138/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:34267>
+	Code 13 Subcode 2
+...
+007 (6950.000.000) 03/30 18:19:22 Shadow exception!
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_18274/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:33798>
+	4503078  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+...
+012 (6950.000.000) 03/30 18:19:22 Job was held.
+	Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_18274/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:33798>
+	Code 13 Subcode 2
+...
+001 (6953.000.000) 03/30 18:19:34 Job executing on host: <128.104.102.39:9618?addrs=128.104.102.39-9618&noUDP&sock=4548_20d1_491>
+...
+007 (6951.000.000) 03/30 18:19:38 Shadow exception!
+	Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_83367/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:37950>
+	4503130  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+...
+012 (6951.000.000) 03/30 18:19:38 Job was held.
+	Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_83367/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:37950>
+	Code 13 Subcode 2
+...
+001 (6954.000.000) 03/30 18:19:40 Job executing on host: <128.104.102.74:9618?addrs=128.104.102.74-9618&noUDP&sock=4552_df32_203>
+...
+007 (6948.000.000) 03/30 18:19:41 Shadow exception!
+	Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_55097/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:42509>
+	4503244  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+...
+012 (6948.000.000) 03/30 18:19:41 Job was held.
+	Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_55097/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:42509>
+	Code 13 Subcode 2
+...
+001 (6956.000.000) 03/30 18:20:01 Job executing on host: <128.104.102.31:9618?addrs=128.104.102.31-9618&noUDP&sock=4448_8958_696>
+...
+001 (6955.000.000) 03/30 18:20:05 Job executing on host: <128.104.102.34:9618?addrs=128.104.102.34-9618&noUDP&sock=4541_53a7_693>
+...
+013 (6951.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6950.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6949.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6948.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6947.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6946.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6945.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6944.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+013 (6943.000.000) 03/30 18:20:26 Job was released.
+	The job attribute PeriodicRelease expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 30 ) && ( NumSystemHolds < 10 )' evaluated to TRUE
+...
+007 (6952.000.000) 03/30 18:20:39 Shadow exception!
+	Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_62831/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:33867>
+	4503182  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+...
+012 (6952.000.000) 03/30 18:20:39 Job was held.
+	Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_62831/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:33867>
+	Code 13 Subcode 2
+...
+007 (6942.000.000) 03/30 18:21:09 Shadow exception!
+	Error from slot1_1@aci-314.chtc.wisc.edu: STARTER at 128.104.102.38 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86647/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.38:33107>
+	4503350  -  Run Bytes Sent By Job
+	883544832  -  Run Bytes Received By Job
+...
+012 (6942.000.000) 03/30 18:21:10 Job was held.
+	Error from slot1_1@aci-314.chtc.wisc.edu: STARTER at 128.104.102.38 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86647/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.38:33107>
+	Code 13 Subcode 2
+...
+009 (6957.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+009 (6952.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+009 (6951.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+009 (6950.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+004 (6956.000.000) 03/30 18:21:12 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:05, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  2362244 52428800  54172040
+	   Ioheavy              :                           1
+	   Memory (MB)          :       10    32768     32768
+...
+009 (6949.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+004 (6955.000.000) 03/30 18:21:12 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:05, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  2087839 52428800  58368624
+	   Ioheavy              :                           1
+	   Memory (MB)          :       10    32768     32768
+...
+009 (6948.000.000) 03/30 18:21:12 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+004 (6954.000.000) 03/30 18:21:12 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:14, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  3349179 52428800  58151464
+	   Ioheavy              :                           1
+	   Memory (MB)          :       11    32768     32768
+...
+009 (6947.000.000) 03/30 18:21:13 Job was aborted by the user.
+	via condor_rm (by user nadluru)
+...
+009 (6942.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6945.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6946.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6947.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+004 (6944.000.000) 03/30 18:21:13 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:01:04, Sys 0 00:00:22  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  1250000 52428800  54171984
+	   Ioheavy              :                           1
+	   Memory (MB)          :       10    32768     32768
+...
+009 (6956.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6946.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+004 (6953.000.000) 03/30 18:21:13 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:08, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	835965696  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  3187099 52428800  58907024
+	   Ioheavy              :                           1
+	   Memory (MB)          :       10    32768     32768
+...
+009 (6954.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6955.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6945.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6944.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+009 (6953.000.000) 03/30 18:21:13 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...
+004 (6943.000.000) 03/30 18:21:14 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:01:07, Sys 0 00:00:23  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                12        12
+	   Disk (KB)            :  1250000 52428800  58907104
+	   Ioheavy              :                           1
+	   Memory (MB)          :       10    32768     32768
+...
+009 (6943.000.000) 03/30 18:21:14 Job was aborted by the user.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 6941> fired when job (6941.0) was removed
+...

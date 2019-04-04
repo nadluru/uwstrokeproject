@@ -1,0 +1,938 @@
+03/30/19 17:00:31 ******************************************************
+03/30/19 17:00:31 ** condor_scheduniv_exec.6924.0 (CONDOR_DAGMAN) STARTING UP
+03/30/19 17:00:31 ** /usr/bin/condor_dagman
+03/30/19 17:00:31 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+03/30/19 17:00:31 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+03/30/19 17:00:31 ** $CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $
+03/30/19 17:00:31 ** $CondorPlatform: x86_64_RedHat6 $
+03/30/19 17:00:31 ** PID = 1153454
+03/30/19 17:00:31 ** Log last touched time unavailable (No such file or directory)
+03/30/19 17:00:31 ******************************************************
+03/30/19 17:00:31 Using config source: /etc/condor/condor_config
+03/30/19 17:00:31 Using local config sources: 
+03/30/19 17:00:31    /etc/condor/ephemeral/dns_domain_name.conf
+03/30/19 17:00:31    /etc/condor/condor_config.hosts
+03/30/19 17:00:31    /etc/condor/condor_config.global
+03/30/19 17:00:31    /etc/condor/condor_config.policy
+03/30/19 17:00:31    /etc/condor/condor_config.x86_64_CentOS6
+03/30/19 17:00:31    /etc/condor/condor_config.security
+03/30/19 17:00:31    /etc/condor/dns_domains/dom.wisc.edu.local
+03/30/19 17:00:31    /etc/condor/hosts/gru.dom.wisc.edu.local
+03/30/19 17:00:31    /etc/condor/include/schedd.conf
+03/30/19 17:00:31    /etc/condor/condor_config.flightworthy_testing
+03/30/19 17:00:31 config Macros = 227, Sorted = 227, StringBytes = 54046, TablesBytes = 8284
+03/30/19 17:00:31 CLASSAD_CACHING is ENABLED
+03/30/19 17:00:31 Daemon Log is logging: D_ALWAYS D_ERROR
+03/30/19 17:00:31 DaemonCore: No command port requested.
+03/30/19 17:00:31 DAGMAN_USE_STRICT setting: 1
+03/30/19 17:00:31 DAGMAN_VERBOSITY setting: 3
+03/30/19 17:00:31 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+03/30/19 17:00:31 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+03/30/19 17:00:31 DAGMAN_SUBMIT_DELAY setting: 0
+03/30/19 17:00:31 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+03/30/19 17:00:31 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+03/30/19 17:00:31 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+03/30/19 17:00:31 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+03/30/19 17:00:31 DAGMAN_DEFAULT_PRIORITY setting: 0
+03/30/19 17:00:31 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+03/30/19 17:00:31 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+03/30/19 17:00:31 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+03/30/19 17:00:31 DAGMAN_RETRY_NODE_FIRST setting: False
+03/30/19 17:00:31 DAGMAN_MAX_JOBS_IDLE setting: 1000
+03/30/19 17:00:31 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+03/30/19 17:00:31 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+03/30/19 17:00:31 DAGMAN_MAX_POST_SCRIPTS setting: 20
+03/30/19 17:00:31 DAGMAN_ALLOW_LOG_ERROR setting: False
+03/30/19 17:00:31 DAGMAN_MUNGE_NODE_NAMES setting: True
+03/30/19 17:00:31 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+03/30/19 17:00:31 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+03/30/19 17:00:31 DAGMAN_ALWAYS_RUN_POST setting: False
+03/30/19 17:00:31 DAGMAN_ABORT_DUPLICATES setting: True
+03/30/19 17:00:31 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+03/30/19 17:00:31 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+03/30/19 17:00:31 DAGMAN_AUTO_RESCUE setting: True
+03/30/19 17:00:31 DAGMAN_MAX_RESCUE_NUM setting: 100
+03/30/19 17:00:31 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+03/30/19 17:00:31 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+03/30/19 17:00:31 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+03/30/19 17:00:31 DAGMAN_MAX_JOB_HOLDS setting: 100
+03/30/19 17:00:31 DAGMAN_HOLD_CLAIM_TIME setting: 20
+03/30/19 17:00:31 ALL_DEBUG setting: 
+03/30/19 17:00:31 DAGMAN_DEBUG setting: 
+03/30/19 17:00:31 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+03/30/19 17:00:31 argv[0] == "condor_scheduniv_exec.6924.0"
+03/30/19 17:00:31 argv[1] == "-Lockfile"
+03/30/19 17:00:31 argv[2] == "DWICorrect_March302019_V2.dag.lock"
+03/30/19 17:00:31 argv[3] == "-AutoRescue"
+03/30/19 17:00:31 argv[4] == "1"
+03/30/19 17:00:31 argv[5] == "-DoRescueFrom"
+03/30/19 17:00:31 argv[6] == "0"
+03/30/19 17:00:31 argv[7] == "-Dag"
+03/30/19 17:00:31 argv[8] == "DWICorrect_March302019_V2.dag"
+03/30/19 17:00:31 argv[9] == "-Suppress_notification"
+03/30/19 17:00:31 argv[10] == "-CsdVersion"
+03/30/19 17:00:31 argv[11] == "$CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $"
+03/30/19 17:00:31 argv[12] == "-Dagman"
+03/30/19 17:00:31 argv[13] == "/usr/bin/condor_dagman"
+03/30/19 17:00:33 Workflow batch-name: <DWICorrect_March302019_V2.dag+6924>
+03/30/19 17:00:33 Workflow accounting_group: <>
+03/30/19 17:00:33 Workflow accounting_group_user: <>
+03/30/19 17:00:33 Warning: failed to get attribute DAGNodeName
+03/30/19 17:00:33 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+03/30/19 17:00:33 Default node log file is: </home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log>
+03/30/19 17:00:33 DAG Lockfile will be written to DWICorrect_March302019_V2.dag.lock
+03/30/19 17:00:33 DAG Input file is DWICorrect_March302019_V2.dag
+03/30/19 17:00:33 Parsing 1 dagfiles
+03/30/19 17:00:33 Parsing DWICorrect_March302019_V2.dag ...
+03/30/19 17:00:33 Dag contains 16 total jobs
+03/30/19 17:00:33 Sleeping for 3 seconds to ensure ProcessId uniqueness
+03/30/19 17:00:36 Bootstrapping...
+03/30/19 17:00:36 Number of pre-completed nodes: 0
+03/30/19 17:00:36 MultiLogFiles: truncating log file /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:36 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:00:36 Of 16 nodes total:
+03/30/19 17:00:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:00:36   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:00:36     0       0        0       0      16          0        0
+03/30/19 17:00:36 0 job proc(s) currently held
+03/30/19 17:00:36 Registering condor_event_timer...
+03/30/19 17:00:37 Submitting HTCondor Node SS001V1_nozfi job(s)...
+03/30/19 17:00:37 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:37 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:37 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:37 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS001V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS001V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS001V1_nozfiPreproc -a logFile' '=' 'SS001V1_nozfi.log -a errFile' '=' 'SS001V1_nozfi.err -a outFile' '=' 'SS001V1_nozfi.out -a args' '=' 'SS001V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS001V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS001V1_nozfi_dwi_preprocessed.mif,SS001V1_nozfi_eddyqcdir,SS001V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:38 From submit: Submitting job(s).
+03/30/19 17:00:38 From submit: 1 job(s) submitted to cluster 6925.
+03/30/19 17:00:38 	assigned HTCondor ID (6925.0.0)
+03/30/19 17:00:38 Submitting HTCondor Node SS008V1_nozfi job(s)...
+03/30/19 17:00:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS008V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS008V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS008V1_nozfiPreproc -a logFile' '=' 'SS008V1_nozfi.log -a errFile' '=' 'SS008V1_nozfi.err -a outFile' '=' 'SS008V1_nozfi.out -a args' '=' 'SS008V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS008V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS008V1_nozfi_dwi_preprocessed.mif,SS008V1_nozfi_eddyqcdir,SS008V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:38 From submit: Submitting job(s).
+03/30/19 17:00:38 From submit: 1 job(s) submitted to cluster 6926.
+03/30/19 17:00:38 	assigned HTCondor ID (6926.0.0)
+03/30/19 17:00:38 Submitting HTCondor Node SS014V1_nozfi job(s)...
+03/30/19 17:00:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS014V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS014V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS014V1_nozfiPreproc -a logFile' '=' 'SS014V1_nozfi.log -a errFile' '=' 'SS014V1_nozfi.err -a outFile' '=' 'SS014V1_nozfi.out -a args' '=' 'SS014V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS014V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS014V1_nozfi_dwi_preprocessed.mif,SS014V1_nozfi_eddyqcdir,SS014V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:38 From submit: Submitting job(s).
+03/30/19 17:00:38 From submit: 1 job(s) submitted to cluster 6927.
+03/30/19 17:00:38 	assigned HTCondor ID (6927.0.0)
+03/30/19 17:00:38 Submitting HTCondor Node SS015V1_nozfi job(s)...
+03/30/19 17:00:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS015V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS015V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS015V1_nozfiPreproc -a logFile' '=' 'SS015V1_nozfi.log -a errFile' '=' 'SS015V1_nozfi.err -a outFile' '=' 'SS015V1_nozfi.out -a args' '=' 'SS015V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS015V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS015V1_nozfi_dwi_preprocessed.mif,SS015V1_nozfi_eddyqcdir,SS015V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:38 From submit: Submitting job(s).
+03/30/19 17:00:38 From submit: 1 job(s) submitted to cluster 6928.
+03/30/19 17:00:38 	assigned HTCondor ID (6928.0.0)
+03/30/19 17:00:38 Submitting HTCondor Node SS016V1_nozfi job(s)...
+03/30/19 17:00:38 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:38 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:38 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:38 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS016V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS016V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS016V1_nozfiPreproc -a logFile' '=' 'SS016V1_nozfi.log -a errFile' '=' 'SS016V1_nozfi.err -a outFile' '=' 'SS016V1_nozfi.out -a args' '=' 'SS016V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS016V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS016V1_nozfi_dwi_preprocessed.mif,SS016V1_nozfi_eddyqcdir,SS016V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:38 From submit: Submitting job(s).
+03/30/19 17:00:38 From submit: 1 job(s) submitted to cluster 6929.
+03/30/19 17:00:38 	assigned HTCondor ID (6929.0.0)
+03/30/19 17:00:38 Just submitted 5 jobs this cycle...
+03/30/19 17:00:38 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:00:38 Reassigning the id of job SS001V1_nozfi from (6925.0.0) to (6925.0.0)
+03/30/19 17:00:38 Event: ULOG_SUBMIT for HTCondor Node SS001V1_nozfi (6925.0.0) {03/30/19 17:00:38}
+03/30/19 17:00:38 Number of idle job procs: 1
+03/30/19 17:00:38 Reassigning the id of job SS008V1_nozfi from (6926.0.0) to (6926.0.0)
+03/30/19 17:00:38 Event: ULOG_SUBMIT for HTCondor Node SS008V1_nozfi (6926.0.0) {03/30/19 17:00:38}
+03/30/19 17:00:38 Number of idle job procs: 2
+03/30/19 17:00:38 Reassigning the id of job SS014V1_nozfi from (6927.0.0) to (6927.0.0)
+03/30/19 17:00:38 Event: ULOG_SUBMIT for HTCondor Node SS014V1_nozfi (6927.0.0) {03/30/19 17:00:38}
+03/30/19 17:00:38 Number of idle job procs: 3
+03/30/19 17:00:38 Reassigning the id of job SS015V1_nozfi from (6928.0.0) to (6928.0.0)
+03/30/19 17:00:38 Event: ULOG_SUBMIT for HTCondor Node SS015V1_nozfi (6928.0.0) {03/30/19 17:00:38}
+03/30/19 17:00:38 Number of idle job procs: 4
+03/30/19 17:00:38 Reassigning the id of job SS016V1_nozfi from (6929.0.0) to (6929.0.0)
+03/30/19 17:00:38 Event: ULOG_SUBMIT for HTCondor Node SS016V1_nozfi (6929.0.0) {03/30/19 17:00:38}
+03/30/19 17:00:38 Number of idle job procs: 5
+03/30/19 17:00:38 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:00:38 Of 16 nodes total:
+03/30/19 17:00:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:00:38   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:00:38     0       0        5       0      11          0        0
+03/30/19 17:00:38 0 job proc(s) currently held
+03/30/19 17:00:43 Submitting HTCondor Node SS019V1_nozfi job(s)...
+03/30/19 17:00:43 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:43 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:43 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:43 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS019V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS019V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS019V1_nozfiPreproc -a logFile' '=' 'SS019V1_nozfi.log -a errFile' '=' 'SS019V1_nozfi.err -a outFile' '=' 'SS019V1_nozfi.out -a args' '=' 'SS019V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS019V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS019V1_nozfi_dwi_preprocessed.mif,SS019V1_nozfi_eddyqcdir,SS019V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:44 From submit: Submitting job(s).
+03/30/19 17:00:44 From submit: 1 job(s) submitted to cluster 6930.
+03/30/19 17:00:44 	assigned HTCondor ID (6930.0.0)
+03/30/19 17:00:44 Submitting HTCondor Node SS020V1_nozfi job(s)...
+03/30/19 17:00:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS020V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS020V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS020V1_nozfiPreproc -a logFile' '=' 'SS020V1_nozfi.log -a errFile' '=' 'SS020V1_nozfi.err -a outFile' '=' 'SS020V1_nozfi.out -a args' '=' 'SS020V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS020V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS020V1_nozfi_dwi_preprocessed.mif,SS020V1_nozfi_eddyqcdir,SS020V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:44 From submit: Submitting job(s).
+03/30/19 17:00:44 From submit: 1 job(s) submitted to cluster 6931.
+03/30/19 17:00:44 	assigned HTCondor ID (6931.0.0)
+03/30/19 17:00:44 Submitting HTCondor Node SS026V1_nozfi job(s)...
+03/30/19 17:00:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS026V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS026V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS026V1_nozfiPreproc -a logFile' '=' 'SS026V1_nozfi.log -a errFile' '=' 'SS026V1_nozfi.err -a outFile' '=' 'SS026V1_nozfi.out -a args' '=' 'SS026V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS026V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS026V1_nozfi_dwi_preprocessed.mif,SS026V1_nozfi_eddyqcdir,SS026V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:44 From submit: Submitting job(s).
+03/30/19 17:00:44 From submit: 1 job(s) submitted to cluster 6932.
+03/30/19 17:00:44 	assigned HTCondor ID (6932.0.0)
+03/30/19 17:00:44 Submitting HTCondor Node SS030V1_nozfi job(s)...
+03/30/19 17:00:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS030V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS030V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS030V1_nozfiPreproc -a logFile' '=' 'SS030V1_nozfi.log -a errFile' '=' 'SS030V1_nozfi.err -a outFile' '=' 'SS030V1_nozfi.out -a args' '=' 'SS030V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS030V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS030V1_nozfi_dwi_preprocessed.mif,SS030V1_nozfi_eddyqcdir,SS030V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:44 From submit: Submitting job(s).
+03/30/19 17:00:44 From submit: 1 job(s) submitted to cluster 6933.
+03/30/19 17:00:44 	assigned HTCondor ID (6933.0.0)
+03/30/19 17:00:44 Submitting HTCondor Node SS032V1_nozfi job(s)...
+03/30/19 17:00:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS032V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS032V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS032V1_nozfiPreproc -a logFile' '=' 'SS032V1_nozfi.log -a errFile' '=' 'SS032V1_nozfi.err -a outFile' '=' 'SS032V1_nozfi.out -a args' '=' 'SS032V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS032V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS032V1_nozfi_dwi_preprocessed.mif,SS032V1_nozfi_eddyqcdir,SS032V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:44 From submit: Submitting job(s).
+03/30/19 17:00:44 From submit: 1 job(s) submitted to cluster 6934.
+03/30/19 17:00:44 	assigned HTCondor ID (6934.0.0)
+03/30/19 17:00:44 Just submitted 5 jobs this cycle...
+03/30/19 17:00:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:00:44 Reassigning the id of job SS019V1_nozfi from (6930.0.0) to (6930.0.0)
+03/30/19 17:00:44 Event: ULOG_SUBMIT for HTCondor Node SS019V1_nozfi (6930.0.0) {03/30/19 17:00:44}
+03/30/19 17:00:44 Number of idle job procs: 6
+03/30/19 17:00:44 Reassigning the id of job SS020V1_nozfi from (6931.0.0) to (6931.0.0)
+03/30/19 17:00:44 Event: ULOG_SUBMIT for HTCondor Node SS020V1_nozfi (6931.0.0) {03/30/19 17:00:44}
+03/30/19 17:00:44 Number of idle job procs: 7
+03/30/19 17:00:44 Reassigning the id of job SS026V1_nozfi from (6932.0.0) to (6932.0.0)
+03/30/19 17:00:44 Event: ULOG_SUBMIT for HTCondor Node SS026V1_nozfi (6932.0.0) {03/30/19 17:00:44}
+03/30/19 17:00:44 Number of idle job procs: 8
+03/30/19 17:00:44 Reassigning the id of job SS030V1_nozfi from (6933.0.0) to (6933.0.0)
+03/30/19 17:00:44 Event: ULOG_SUBMIT for HTCondor Node SS030V1_nozfi (6933.0.0) {03/30/19 17:00:44}
+03/30/19 17:00:44 Number of idle job procs: 9
+03/30/19 17:00:44 Reassigning the id of job SS032V1_nozfi from (6934.0.0) to (6934.0.0)
+03/30/19 17:00:44 Event: ULOG_SUBMIT for HTCondor Node SS032V1_nozfi (6934.0.0) {03/30/19 17:00:44}
+03/30/19 17:00:44 Number of idle job procs: 10
+03/30/19 17:00:44 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:00:44 Of 16 nodes total:
+03/30/19 17:00:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:00:44   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:00:44     0       0       10       0       6          0        0
+03/30/19 17:00:44 0 job proc(s) currently held
+03/30/19 17:00:49 Submitting HTCondor Node SS033V1_nozfi job(s)...
+03/30/19 17:00:49 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:49 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS033V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS033V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS033V1_nozfiPreproc -a logFile' '=' 'SS033V1_nozfi.log -a errFile' '=' 'SS033V1_nozfi.err -a outFile' '=' 'SS033V1_nozfi.out -a args' '=' 'SS033V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS033V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS033V1_nozfi_dwi_preprocessed.mif,SS033V1_nozfi_eddyqcdir,SS033V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:49 From submit: Submitting job(s).
+03/30/19 17:00:49 From submit: 1 job(s) submitted to cluster 6935.
+03/30/19 17:00:49 	assigned HTCondor ID (6935.0.0)
+03/30/19 17:00:49 Submitting HTCondor Node SS035V1_nozfi job(s)...
+03/30/19 17:00:49 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:49 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS035V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS035V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS035V1_nozfiPreproc -a logFile' '=' 'SS035V1_nozfi.log -a errFile' '=' 'SS035V1_nozfi.err -a outFile' '=' 'SS035V1_nozfi.out -a args' '=' 'SS035V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS035V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS035V1_nozfi_dwi_preprocessed.mif,SS035V1_nozfi_eddyqcdir,SS035V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:50 From submit: Submitting job(s).
+03/30/19 17:00:50 From submit: 1 job(s) submitted to cluster 6936.
+03/30/19 17:00:50 	assigned HTCondor ID (6936.0.0)
+03/30/19 17:00:50 Submitting HTCondor Node SS041V1_nozfi job(s)...
+03/30/19 17:00:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS041V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS041V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS041V1_nozfiPreproc -a logFile' '=' 'SS041V1_nozfi.log -a errFile' '=' 'SS041V1_nozfi.err -a outFile' '=' 'SS041V1_nozfi.out -a args' '=' 'SS041V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS041V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS041V1_nozfi_dwi_preprocessed.mif,SS041V1_nozfi_eddyqcdir,SS041V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:50 From submit: Submitting job(s).
+03/30/19 17:00:50 From submit: 1 job(s) submitted to cluster 6937.
+03/30/19 17:00:50 	assigned HTCondor ID (6937.0.0)
+03/30/19 17:00:50 Submitting HTCondor Node SS053V1_nozfi job(s)...
+03/30/19 17:00:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS053V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS053V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS053V1_nozfiPreproc -a logFile' '=' 'SS053V1_nozfi.log -a errFile' '=' 'SS053V1_nozfi.err -a outFile' '=' 'SS053V1_nozfi.out -a args' '=' 'SS053V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS053V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS053V1_nozfi_dwi_preprocessed.mif,SS053V1_nozfi_eddyqcdir,SS053V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:50 From submit: Submitting job(s).
+03/30/19 17:00:50 From submit: 1 job(s) submitted to cluster 6938.
+03/30/19 17:00:50 	assigned HTCondor ID (6938.0.0)
+03/30/19 17:00:50 Submitting HTCondor Node SS054V1_nozfi job(s)...
+03/30/19 17:00:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS054V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS054V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS054V1_nozfiPreproc -a logFile' '=' 'SS054V1_nozfi.log -a errFile' '=' 'SS054V1_nozfi.err -a outFile' '=' 'SS054V1_nozfi.out -a args' '=' 'SS054V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS054V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS054V1_nozfi_dwi_preprocessed.mif,SS054V1_nozfi_eddyqcdir,SS054V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:51 From submit: Submitting job(s).
+03/30/19 17:00:51 From submit: 1 job(s) submitted to cluster 6939.
+03/30/19 17:00:51 	assigned HTCondor ID (6939.0.0)
+03/30/19 17:00:51 Just submitted 5 jobs this cycle...
+03/30/19 17:00:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:00:51 Reassigning the id of job SS033V1_nozfi from (6935.0.0) to (6935.0.0)
+03/30/19 17:00:51 Event: ULOG_SUBMIT for HTCondor Node SS033V1_nozfi (6935.0.0) {03/30/19 17:00:49}
+03/30/19 17:00:51 Number of idle job procs: 11
+03/30/19 17:00:51 Reassigning the id of job SS035V1_nozfi from (6936.0.0) to (6936.0.0)
+03/30/19 17:00:51 Event: ULOG_SUBMIT for HTCondor Node SS035V1_nozfi (6936.0.0) {03/30/19 17:00:50}
+03/30/19 17:00:51 Number of idle job procs: 12
+03/30/19 17:00:51 Reassigning the id of job SS041V1_nozfi from (6937.0.0) to (6937.0.0)
+03/30/19 17:00:51 Event: ULOG_SUBMIT for HTCondor Node SS041V1_nozfi (6937.0.0) {03/30/19 17:00:50}
+03/30/19 17:00:51 Number of idle job procs: 13
+03/30/19 17:00:51 Reassigning the id of job SS053V1_nozfi from (6938.0.0) to (6938.0.0)
+03/30/19 17:00:51 Event: ULOG_SUBMIT for HTCondor Node SS053V1_nozfi (6938.0.0) {03/30/19 17:00:50}
+03/30/19 17:00:51 Number of idle job procs: 14
+03/30/19 17:00:51 Reassigning the id of job SS054V1_nozfi from (6939.0.0) to (6939.0.0)
+03/30/19 17:00:51 Event: ULOG_SUBMIT for HTCondor Node SS054V1_nozfi (6939.0.0) {03/30/19 17:00:51}
+03/30/19 17:00:51 Number of idle job procs: 15
+03/30/19 17:00:51 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:00:51 Of 16 nodes total:
+03/30/19 17:00:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:00:51   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:00:51     0       0       15       0       1          0        0
+03/30/19 17:00:51 0 job proc(s) currently held
+03/30/19 17:00:56 Submitting HTCondor Node SS066V1_nozfi job(s)...
+03/30/19 17:00:56 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:00:56 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:00:56 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:00:56 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS066V1_nozfi -a +DAGManJobId' '=' '6924 -a DAGManJobId' '=' '6924 -batch-name DWICorrect_March302019_V2.dag+6924 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS066V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS066V1_nozfiPreproc -a logFile' '=' 'SS066V1_nozfi.log -a errFile' '=' 'SS066V1_nozfi.err -a outFile' '=' 'SS066V1_nozfi.out -a args' '=' 'SS066V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS066V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS066V1_nozfi_dwi_preprocessed.mif,SS066V1_nozfi_eddyqcdir,SS066V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:00:56 From submit: Submitting job(s).
+03/30/19 17:00:56 From submit: 1 job(s) submitted to cluster 6940.
+03/30/19 17:00:56 	assigned HTCondor ID (6940.0.0)
+03/30/19 17:00:56 Just submitted 1 job this cycle...
+03/30/19 17:00:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:00:56 Reassigning the id of job SS066V1_nozfi from (6940.0.0) to (6940.0.0)
+03/30/19 17:00:56 Event: ULOG_SUBMIT for HTCondor Node SS066V1_nozfi (6940.0.0) {03/30/19 17:00:56}
+03/30/19 17:00:56 Number of idle job procs: 16
+03/30/19 17:00:56 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:00:56 Of 16 nodes total:
+03/30/19 17:00:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:00:56   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:00:56     0       0       16       0       0          0        0
+03/30/19 17:00:56 0 job proc(s) currently held
+03/30/19 17:05:36 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:05:36 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6926.0.0) {03/30/19 17:05:34}
+03/30/19 17:05:36 Number of idle job procs: 15
+03/30/19 17:05:36 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6925.0.0) {03/30/19 17:05:34}
+03/30/19 17:05:36 Number of idle job procs: 14
+03/30/19 17:09:51 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:09:51 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6926.0.0) {03/30/19 17:09:47}
+03/30/19 17:09:51 Number of idle job procs: 15
+03/30/19 17:09:51 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6926.0.0) {03/30/19 17:09:47}
+03/30/19 17:09:51   Hold reason: Error from slot1_1@aci-351.chtc.wisc.edu: STARTER at 128.104.102.59 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_104478/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.59:33186>
+03/30/19 17:09:51 Number of idle job procs: 15
+03/30/19 17:09:51 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:09:51 Of 16 nodes total:
+03/30/19 17:09:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:09:51   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:09:51     0       0       16       0       0          0        0
+03/30/19 17:09:51 1 job proc(s) currently held
+03/30/19 17:10:11 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:10:11 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6925.0.0) {03/30/19 17:10:10}
+03/30/19 17:10:11 Number of idle job procs: 16
+03/30/19 17:10:11 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6925.0.0) {03/30/19 17:10:10}
+03/30/19 17:10:11   Hold reason: Error from slot1_1@aci-352.chtc.wisc.edu: STARTER at 128.104.102.60 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_163704/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.60:45570>
+03/30/19 17:10:11 Number of idle job procs: 16
+03/30/19 17:10:11 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:10:11 Of 16 nodes total:
+03/30/19 17:10:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:10:11   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:10:11     0       0       16       0       0          0        0
+03/30/19 17:10:11 2 job proc(s) currently held
+03/30/19 17:10:16 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:10:16 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6927.0.0) {03/30/19 17:10:14}
+03/30/19 17:10:16 Number of idle job procs: 15
+03/30/19 17:10:52 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:10:52 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6928.0.0) {03/30/19 17:10:51}
+03/30/19 17:10:52 Number of idle job procs: 14
+03/30/19 17:12:05 Received SIGUSR1
+03/30/19 17:12:05 Aborting DAG...
+03/30/19 17:12:05 Writing Rescue DAG to DWICorrect_March302019_V2.dag.rescue001...
+03/30/19 17:12:05 Removing submitted jobs...
+03/30/19 17:12:05 Note: 0 total job deferrals because of -MaxJobs limit (0)
+03/30/19 17:12:05 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+03/30/19 17:12:05 Note: 0 total job deferrals because of node category throttles
+03/30/19 17:12:05 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+03/30/19 17:12:05 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+03/30/19 17:12:05 DAG status: 4 (DAG_STATUS_RM)
+03/30/19 17:12:05 Of 16 nodes total:
+03/30/19 17:12:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:12:05   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:12:05     0       0       16       0       0          0        0
+03/30/19 17:12:05 2 job proc(s) currently held
+03/30/19 17:12:05 Wrote metrics file DWICorrect_March302019_V2.dag.metrics.
+03/30/19 17:12:05 Metrics not sent because of PEGASUS_METRICS or CONDOR_DEVELOPERS setting.
+03/30/19 17:12:05 **** condor_scheduniv_exec.6924.0 (condor_DAGMAN) pid 1153454 EXITING WITH STATUS 2
+03/30/19 17:24:38 ******************************************************
+03/30/19 17:24:38 ** condor_scheduniv_exec.6941.0 (CONDOR_DAGMAN) STARTING UP
+03/30/19 17:24:38 ** /usr/bin/condor_dagman
+03/30/19 17:24:38 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+03/30/19 17:24:38 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+03/30/19 17:24:38 ** $CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $
+03/30/19 17:24:38 ** $CondorPlatform: x86_64_RedHat6 $
+03/30/19 17:24:38 ** PID = 1154731
+03/30/19 17:24:38 ** Log last touched 3/30 17:12:05
+03/30/19 17:24:38 ******************************************************
+03/30/19 17:24:38 Using config source: /etc/condor/condor_config
+03/30/19 17:24:38 Using local config sources: 
+03/30/19 17:24:38    /etc/condor/ephemeral/dns_domain_name.conf
+03/30/19 17:24:38    /etc/condor/condor_config.hosts
+03/30/19 17:24:38    /etc/condor/condor_config.global
+03/30/19 17:24:38    /etc/condor/condor_config.policy
+03/30/19 17:24:38    /etc/condor/condor_config.x86_64_CentOS6
+03/30/19 17:24:38    /etc/condor/condor_config.security
+03/30/19 17:24:38    /etc/condor/dns_domains/dom.wisc.edu.local
+03/30/19 17:24:38    /etc/condor/hosts/gru.dom.wisc.edu.local
+03/30/19 17:24:38    /etc/condor/include/schedd.conf
+03/30/19 17:24:38    /etc/condor/condor_config.flightworthy_testing
+03/30/19 17:24:38 config Macros = 227, Sorted = 227, StringBytes = 54046, TablesBytes = 8284
+03/30/19 17:24:38 CLASSAD_CACHING is ENABLED
+03/30/19 17:24:38 Daemon Log is logging: D_ALWAYS D_ERROR
+03/30/19 17:24:38 DaemonCore: No command port requested.
+03/30/19 17:24:38 DAGMAN_USE_STRICT setting: 1
+03/30/19 17:24:38 DAGMAN_VERBOSITY setting: 3
+03/30/19 17:24:38 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+03/30/19 17:24:38 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+03/30/19 17:24:38 DAGMAN_SUBMIT_DELAY setting: 0
+03/30/19 17:24:38 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+03/30/19 17:24:38 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+03/30/19 17:24:38 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+03/30/19 17:24:38 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+03/30/19 17:24:38 DAGMAN_DEFAULT_PRIORITY setting: 0
+03/30/19 17:24:38 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+03/30/19 17:24:38 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+03/30/19 17:24:38 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+03/30/19 17:24:38 DAGMAN_RETRY_NODE_FIRST setting: False
+03/30/19 17:24:38 DAGMAN_MAX_JOBS_IDLE setting: 1000
+03/30/19 17:24:38 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+03/30/19 17:24:38 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+03/30/19 17:24:38 DAGMAN_MAX_POST_SCRIPTS setting: 20
+03/30/19 17:24:38 DAGMAN_ALLOW_LOG_ERROR setting: False
+03/30/19 17:24:38 DAGMAN_MUNGE_NODE_NAMES setting: True
+03/30/19 17:24:38 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+03/30/19 17:24:38 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+03/30/19 17:24:38 DAGMAN_ALWAYS_RUN_POST setting: False
+03/30/19 17:24:38 DAGMAN_ABORT_DUPLICATES setting: True
+03/30/19 17:24:38 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+03/30/19 17:24:38 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+03/30/19 17:24:38 DAGMAN_AUTO_RESCUE setting: True
+03/30/19 17:24:38 DAGMAN_MAX_RESCUE_NUM setting: 100
+03/30/19 17:24:38 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+03/30/19 17:24:38 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+03/30/19 17:24:38 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+03/30/19 17:24:38 DAGMAN_MAX_JOB_HOLDS setting: 100
+03/30/19 17:24:38 DAGMAN_HOLD_CLAIM_TIME setting: 20
+03/30/19 17:24:38 ALL_DEBUG setting: 
+03/30/19 17:24:38 DAGMAN_DEBUG setting: 
+03/30/19 17:24:38 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+03/30/19 17:24:38 argv[0] == "condor_scheduniv_exec.6941.0"
+03/30/19 17:24:38 argv[1] == "-Lockfile"
+03/30/19 17:24:38 argv[2] == "DWICorrect_March302019_V2.dag.lock"
+03/30/19 17:24:38 argv[3] == "-AutoRescue"
+03/30/19 17:24:38 argv[4] == "1"
+03/30/19 17:24:38 argv[5] == "-DoRescueFrom"
+03/30/19 17:24:38 argv[6] == "0"
+03/30/19 17:24:38 argv[7] == "-Dag"
+03/30/19 17:24:38 argv[8] == "DWICorrect_March302019_V2.dag"
+03/30/19 17:24:38 argv[9] == "-Suppress_notification"
+03/30/19 17:24:38 argv[10] == "-CsdVersion"
+03/30/19 17:24:38 argv[11] == "$CondorVersion: 8.5.7 Sep 29 2016 BuildID: 382922 $"
+03/30/19 17:24:38 argv[12] == "-Force"
+03/30/19 17:24:38 argv[13] == "-Dagman"
+03/30/19 17:24:38 argv[14] == "/usr/bin/condor_dagman"
+03/30/19 17:24:39 Workflow batch-name: <DWICorrect_March302019_V2.dag+6941>
+03/30/19 17:24:39 Workflow accounting_group: <>
+03/30/19 17:24:39 Workflow accounting_group_user: <>
+03/30/19 17:24:39 Warning: failed to get attribute DAGNodeName
+03/30/19 17:24:39 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+03/30/19 17:24:39 Default node log file is: </home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log>
+03/30/19 17:24:39 DAG Lockfile will be written to DWICorrect_March302019_V2.dag.lock
+03/30/19 17:24:39 DAG Input file is DWICorrect_March302019_V2.dag
+03/30/19 17:24:39 Parsing 1 dagfiles
+03/30/19 17:24:39 Parsing DWICorrect_March302019_V2.dag ...
+03/30/19 17:24:39 Dag contains 16 total jobs
+03/30/19 17:24:39 Sleeping for 3 seconds to ensure ProcessId uniqueness
+03/30/19 17:24:42 Bootstrapping...
+03/30/19 17:24:42 Number of pre-completed nodes: 0
+03/30/19 17:24:42 MultiLogFiles: truncating log file /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:42 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:24:42 Of 16 nodes total:
+03/30/19 17:24:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:24:42   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:24:42     0       0        0       0      16          0        0
+03/30/19 17:24:42 0 job proc(s) currently held
+03/30/19 17:24:42 Registering condor_event_timer...
+03/30/19 17:24:43 Submitting HTCondor Node SS001V1_nozfi job(s)...
+03/30/19 17:24:43 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:43 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:43 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:43 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS001V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS001V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS001V1_nozfiPreproc -a logFile' '=' 'SS001V1_nozfi.log -a errFile' '=' 'SS001V1_nozfi.err -a outFile' '=' 'SS001V1_nozfi.out -a args' '=' 'SS001V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS001V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS001V1_nozfi_dwi_preprocessed.mif,SS001V1_nozfi_eddyqcdir,SS001V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:44 From submit: Submitting job(s).
+03/30/19 17:24:44 From submit: 1 job(s) submitted to cluster 6942.
+03/30/19 17:24:44 	assigned HTCondor ID (6942.0.0)
+03/30/19 17:24:44 Submitting HTCondor Node SS008V1_nozfi job(s)...
+03/30/19 17:24:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS008V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS008V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS008V1_nozfiPreproc -a logFile' '=' 'SS008V1_nozfi.log -a errFile' '=' 'SS008V1_nozfi.err -a outFile' '=' 'SS008V1_nozfi.out -a args' '=' 'SS008V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS008V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS008V1_nozfi_dwi_preprocessed.mif,SS008V1_nozfi_eddyqcdir,SS008V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:44 From submit: Submitting job(s).
+03/30/19 17:24:44 From submit: 1 job(s) submitted to cluster 6943.
+03/30/19 17:24:44 	assigned HTCondor ID (6943.0.0)
+03/30/19 17:24:44 Submitting HTCondor Node SS014V1_nozfi job(s)...
+03/30/19 17:24:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS014V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS014V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS014V1_nozfiPreproc -a logFile' '=' 'SS014V1_nozfi.log -a errFile' '=' 'SS014V1_nozfi.err -a outFile' '=' 'SS014V1_nozfi.out -a args' '=' 'SS014V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS014V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS014V1_nozfi_dwi_preprocessed.mif,SS014V1_nozfi_eddyqcdir,SS014V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:44 From submit: Submitting job(s).
+03/30/19 17:24:44 From submit: 1 job(s) submitted to cluster 6944.
+03/30/19 17:24:44 	assigned HTCondor ID (6944.0.0)
+03/30/19 17:24:44 Submitting HTCondor Node SS015V1_nozfi job(s)...
+03/30/19 17:24:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS015V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS015V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS015V1_nozfiPreproc -a logFile' '=' 'SS015V1_nozfi.log -a errFile' '=' 'SS015V1_nozfi.err -a outFile' '=' 'SS015V1_nozfi.out -a args' '=' 'SS015V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS015V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS015V1_nozfi_dwi_preprocessed.mif,SS015V1_nozfi_eddyqcdir,SS015V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:44 From submit: Submitting job(s).
+03/30/19 17:24:44 From submit: 1 job(s) submitted to cluster 6945.
+03/30/19 17:24:44 	assigned HTCondor ID (6945.0.0)
+03/30/19 17:24:44 Submitting HTCondor Node SS016V1_nozfi job(s)...
+03/30/19 17:24:44 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:44 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS016V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS016V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS016V1_nozfiPreproc -a logFile' '=' 'SS016V1_nozfi.log -a errFile' '=' 'SS016V1_nozfi.err -a outFile' '=' 'SS016V1_nozfi.out -a args' '=' 'SS016V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS016V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS016V1_nozfi_dwi_preprocessed.mif,SS016V1_nozfi_eddyqcdir,SS016V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:44 From submit: Submitting job(s).
+03/30/19 17:24:44 From submit: 1 job(s) submitted to cluster 6946.
+03/30/19 17:24:44 	assigned HTCondor ID (6946.0.0)
+03/30/19 17:24:44 Just submitted 5 jobs this cycle...
+03/30/19 17:24:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:24:44 Reassigning the id of job SS001V1_nozfi from (6942.0.0) to (6942.0.0)
+03/30/19 17:24:44 Event: ULOG_SUBMIT for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 17:24:44}
+03/30/19 17:24:44 Number of idle job procs: 1
+03/30/19 17:24:44 Reassigning the id of job SS008V1_nozfi from (6943.0.0) to (6943.0.0)
+03/30/19 17:24:44 Event: ULOG_SUBMIT for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 17:24:44}
+03/30/19 17:24:44 Number of idle job procs: 2
+03/30/19 17:24:44 Reassigning the id of job SS014V1_nozfi from (6944.0.0) to (6944.0.0)
+03/30/19 17:24:44 Event: ULOG_SUBMIT for HTCondor Node SS014V1_nozfi (6944.0.0) {03/30/19 17:24:44}
+03/30/19 17:24:44 Number of idle job procs: 3
+03/30/19 17:24:44 Reassigning the id of job SS015V1_nozfi from (6945.0.0) to (6945.0.0)
+03/30/19 17:24:44 Event: ULOG_SUBMIT for HTCondor Node SS015V1_nozfi (6945.0.0) {03/30/19 17:24:44}
+03/30/19 17:24:44 Number of idle job procs: 4
+03/30/19 17:24:44 Reassigning the id of job SS016V1_nozfi from (6946.0.0) to (6946.0.0)
+03/30/19 17:24:44 Event: ULOG_SUBMIT for HTCondor Node SS016V1_nozfi (6946.0.0) {03/30/19 17:24:44}
+03/30/19 17:24:44 Number of idle job procs: 5
+03/30/19 17:24:44 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:24:44 Of 16 nodes total:
+03/30/19 17:24:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:24:44   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:24:44     0       0        5       0      11          0        0
+03/30/19 17:24:44 0 job proc(s) currently held
+03/30/19 17:24:49 Submitting HTCondor Node SS019V1_nozfi job(s)...
+03/30/19 17:24:49 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:49 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS019V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS019V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS019V1_nozfiPreproc -a logFile' '=' 'SS019V1_nozfi.log -a errFile' '=' 'SS019V1_nozfi.err -a outFile' '=' 'SS019V1_nozfi.out -a args' '=' 'SS019V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS019V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS019V1_nozfi_dwi_preprocessed.mif,SS019V1_nozfi_eddyqcdir,SS019V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:49 From submit: Submitting job(s).
+03/30/19 17:24:49 From submit: 1 job(s) submitted to cluster 6947.
+03/30/19 17:24:49 	assigned HTCondor ID (6947.0.0)
+03/30/19 17:24:49 Submitting HTCondor Node SS020V1_nozfi job(s)...
+03/30/19 17:24:49 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:49 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS020V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS020V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS020V1_nozfiPreproc -a logFile' '=' 'SS020V1_nozfi.log -a errFile' '=' 'SS020V1_nozfi.err -a outFile' '=' 'SS020V1_nozfi.out -a args' '=' 'SS020V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS020V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS020V1_nozfi_dwi_preprocessed.mif,SS020V1_nozfi_eddyqcdir,SS020V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:50 From submit: Submitting job(s).
+03/30/19 17:24:50 From submit: 1 job(s) submitted to cluster 6948.
+03/30/19 17:24:50 	assigned HTCondor ID (6948.0.0)
+03/30/19 17:24:50 Submitting HTCondor Node SS026V1_nozfi job(s)...
+03/30/19 17:24:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS026V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS026V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS026V1_nozfiPreproc -a logFile' '=' 'SS026V1_nozfi.log -a errFile' '=' 'SS026V1_nozfi.err -a outFile' '=' 'SS026V1_nozfi.out -a args' '=' 'SS026V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS026V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS026V1_nozfi_dwi_preprocessed.mif,SS026V1_nozfi_eddyqcdir,SS026V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:50 From submit: Submitting job(s).
+03/30/19 17:24:50 From submit: 1 job(s) submitted to cluster 6949.
+03/30/19 17:24:50 	assigned HTCondor ID (6949.0.0)
+03/30/19 17:24:50 Submitting HTCondor Node SS030V1_nozfi job(s)...
+03/30/19 17:24:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS030V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS030V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS030V1_nozfiPreproc -a logFile' '=' 'SS030V1_nozfi.log -a errFile' '=' 'SS030V1_nozfi.err -a outFile' '=' 'SS030V1_nozfi.out -a args' '=' 'SS030V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS030V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS030V1_nozfi_dwi_preprocessed.mif,SS030V1_nozfi_eddyqcdir,SS030V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:50 From submit: Submitting job(s).
+03/30/19 17:24:50 From submit: 1 job(s) submitted to cluster 6950.
+03/30/19 17:24:50 	assigned HTCondor ID (6950.0.0)
+03/30/19 17:24:50 Submitting HTCondor Node SS032V1_nozfi job(s)...
+03/30/19 17:24:50 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:50 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS032V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS032V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS032V1_nozfiPreproc -a logFile' '=' 'SS032V1_nozfi.log -a errFile' '=' 'SS032V1_nozfi.err -a outFile' '=' 'SS032V1_nozfi.out -a args' '=' 'SS032V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS032V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS032V1_nozfi_dwi_preprocessed.mif,SS032V1_nozfi_eddyqcdir,SS032V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:50 From submit: Submitting job(s).
+03/30/19 17:24:50 From submit: 1 job(s) submitted to cluster 6951.
+03/30/19 17:24:50 	assigned HTCondor ID (6951.0.0)
+03/30/19 17:24:50 Just submitted 5 jobs this cycle...
+03/30/19 17:24:50 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:24:50 Reassigning the id of job SS019V1_nozfi from (6947.0.0) to (6947.0.0)
+03/30/19 17:24:50 Event: ULOG_SUBMIT for HTCondor Node SS019V1_nozfi (6947.0.0) {03/30/19 17:24:49}
+03/30/19 17:24:50 Number of idle job procs: 6
+03/30/19 17:24:50 Reassigning the id of job SS020V1_nozfi from (6948.0.0) to (6948.0.0)
+03/30/19 17:24:50 Event: ULOG_SUBMIT for HTCondor Node SS020V1_nozfi (6948.0.0) {03/30/19 17:24:50}
+03/30/19 17:24:50 Number of idle job procs: 7
+03/30/19 17:24:50 Reassigning the id of job SS026V1_nozfi from (6949.0.0) to (6949.0.0)
+03/30/19 17:24:50 Event: ULOG_SUBMIT for HTCondor Node SS026V1_nozfi (6949.0.0) {03/30/19 17:24:50}
+03/30/19 17:24:50 Number of idle job procs: 8
+03/30/19 17:24:50 Reassigning the id of job SS030V1_nozfi from (6950.0.0) to (6950.0.0)
+03/30/19 17:24:50 Event: ULOG_SUBMIT for HTCondor Node SS030V1_nozfi (6950.0.0) {03/30/19 17:24:50}
+03/30/19 17:24:50 Number of idle job procs: 9
+03/30/19 17:24:50 Reassigning the id of job SS032V1_nozfi from (6951.0.0) to (6951.0.0)
+03/30/19 17:24:50 Event: ULOG_SUBMIT for HTCondor Node SS032V1_nozfi (6951.0.0) {03/30/19 17:24:50}
+03/30/19 17:24:50 Number of idle job procs: 10
+03/30/19 17:24:50 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:24:50 Of 16 nodes total:
+03/30/19 17:24:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:24:50   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:24:50     0       0       10       0       6          0        0
+03/30/19 17:24:50 0 job proc(s) currently held
+03/30/19 17:24:55 Submitting HTCondor Node SS033V1_nozfi job(s)...
+03/30/19 17:24:55 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:55 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:55 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:55 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS033V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS033V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS033V1_nozfiPreproc -a logFile' '=' 'SS033V1_nozfi.log -a errFile' '=' 'SS033V1_nozfi.err -a outFile' '=' 'SS033V1_nozfi.out -a args' '=' 'SS033V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS033V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS033V1_nozfi_dwi_preprocessed.mif,SS033V1_nozfi_eddyqcdir,SS033V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:55 From submit: Submitting job(s).
+03/30/19 17:24:55 From submit: 1 job(s) submitted to cluster 6952.
+03/30/19 17:24:55 	assigned HTCondor ID (6952.0.0)
+03/30/19 17:24:55 Submitting HTCondor Node SS035V1_nozfi job(s)...
+03/30/19 17:24:55 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:55 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:55 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:55 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS035V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS035V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS035V1_nozfiPreproc -a logFile' '=' 'SS035V1_nozfi.log -a errFile' '=' 'SS035V1_nozfi.err -a outFile' '=' 'SS035V1_nozfi.out -a args' '=' 'SS035V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS035V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS035V1_nozfi_dwi_preprocessed.mif,SS035V1_nozfi_eddyqcdir,SS035V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:55 From submit: Submitting job(s).
+03/30/19 17:24:55 From submit: 1 job(s) submitted to cluster 6953.
+03/30/19 17:24:55 	assigned HTCondor ID (6953.0.0)
+03/30/19 17:24:55 Submitting HTCondor Node SS041V1_nozfi job(s)...
+03/30/19 17:24:55 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:55 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:55 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:55 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS041V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS041V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS041V1_nozfiPreproc -a logFile' '=' 'SS041V1_nozfi.log -a errFile' '=' 'SS041V1_nozfi.err -a outFile' '=' 'SS041V1_nozfi.out -a args' '=' 'SS041V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS041V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS041V1_nozfi_dwi_preprocessed.mif,SS041V1_nozfi_eddyqcdir,SS041V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:56 From submit: Submitting job(s).
+03/30/19 17:24:56 From submit: 1 job(s) submitted to cluster 6954.
+03/30/19 17:24:56 	assigned HTCondor ID (6954.0.0)
+03/30/19 17:24:56 Submitting HTCondor Node SS053V1_nozfi job(s)...
+03/30/19 17:24:56 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:56 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:56 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:56 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS053V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS053V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS053V1_nozfiPreproc -a logFile' '=' 'SS053V1_nozfi.log -a errFile' '=' 'SS053V1_nozfi.err -a outFile' '=' 'SS053V1_nozfi.out -a args' '=' 'SS053V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS053V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS053V1_nozfi_dwi_preprocessed.mif,SS053V1_nozfi_eddyqcdir,SS053V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:56 From submit: Submitting job(s).
+03/30/19 17:24:56 From submit: 1 job(s) submitted to cluster 6955.
+03/30/19 17:24:56 	assigned HTCondor ID (6955.0.0)
+03/30/19 17:24:56 Submitting HTCondor Node SS054V1_nozfi job(s)...
+03/30/19 17:24:56 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:24:56 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:24:56 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:24:56 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS054V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS054V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS054V1_nozfiPreproc -a logFile' '=' 'SS054V1_nozfi.log -a errFile' '=' 'SS054V1_nozfi.err -a outFile' '=' 'SS054V1_nozfi.out -a args' '=' 'SS054V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS054V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS054V1_nozfi_dwi_preprocessed.mif,SS054V1_nozfi_eddyqcdir,SS054V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:24:56 From submit: Submitting job(s).
+03/30/19 17:24:56 From submit: 1 job(s) submitted to cluster 6956.
+03/30/19 17:24:56 	assigned HTCondor ID (6956.0.0)
+03/30/19 17:24:56 Just submitted 5 jobs this cycle...
+03/30/19 17:24:56 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:24:56 Reassigning the id of job SS033V1_nozfi from (6952.0.0) to (6952.0.0)
+03/30/19 17:24:56 Event: ULOG_SUBMIT for HTCondor Node SS033V1_nozfi (6952.0.0) {03/30/19 17:24:55}
+03/30/19 17:24:56 Number of idle job procs: 11
+03/30/19 17:24:56 Reassigning the id of job SS035V1_nozfi from (6953.0.0) to (6953.0.0)
+03/30/19 17:24:56 Event: ULOG_SUBMIT for HTCondor Node SS035V1_nozfi (6953.0.0) {03/30/19 17:24:55}
+03/30/19 17:24:56 Number of idle job procs: 12
+03/30/19 17:24:56 Reassigning the id of job SS041V1_nozfi from (6954.0.0) to (6954.0.0)
+03/30/19 17:24:56 Event: ULOG_SUBMIT for HTCondor Node SS041V1_nozfi (6954.0.0) {03/30/19 17:24:56}
+03/30/19 17:24:56 Number of idle job procs: 13
+03/30/19 17:24:56 Reassigning the id of job SS053V1_nozfi from (6955.0.0) to (6955.0.0)
+03/30/19 17:24:56 Event: ULOG_SUBMIT for HTCondor Node SS053V1_nozfi (6955.0.0) {03/30/19 17:24:56}
+03/30/19 17:24:56 Number of idle job procs: 14
+03/30/19 17:24:56 Reassigning the id of job SS054V1_nozfi from (6956.0.0) to (6956.0.0)
+03/30/19 17:24:56 Event: ULOG_SUBMIT for HTCondor Node SS054V1_nozfi (6956.0.0) {03/30/19 17:24:56}
+03/30/19 17:24:56 Number of idle job procs: 15
+03/30/19 17:24:56 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:24:56 Of 16 nodes total:
+03/30/19 17:24:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:24:56   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:24:56     0       0       15       0       1          0        0
+03/30/19 17:24:56 0 job proc(s) currently held
+03/30/19 17:25:01 Submitting HTCondor Node SS066V1_nozfi job(s)...
+03/30/19 17:25:01 Adding a DAGMan workflow log /home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log
+03/30/19 17:25:01 Masking the events recorded in the DAGMAN workflow log
+03/30/19 17:25:01 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+03/30/19 17:25:01 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'SS066V1_nozfi -a +DAGManJobId' '=' '6941 -a DAGManJobId' '=' '6941 -batch-name DWICorrect_March302019_V2.dag+6941 -a submit_event_notes' '=' 'DAG' 'Node:' 'SS066V1_nozfi -a dagman_log' '=' '/home/nadluru/uwstrokeproject/./DWICorrect_March302019_V2.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a initialDir' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/CHTC2/SS066V1_nozfiPreproc -a logFile' '=' 'SS066V1_nozfi.log -a errFile' '=' 'SS066V1_nozfi.err -a outFile' '=' 'SS066V1_nozfi.out -a args' '=' 'SS066V1_nozfi.mif -a transferInputFiles' '=' '/mounts/data/preprocessed/modalities/dti/Strk/dti/SS066V1_nozfi.mif,/home/nadluru/mrtrix3,/home/nadluru/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz -a transferOutputFiles' '=' 'SS066V1_nozfi_dwi_preprocessed.mif,SS066V1_nozfi_eddyqcdir,SS066V1_nozfi_tmp -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /home/nadluru/uwstrokeproject/DWICorrect.submit
+03/30/19 17:25:01 From submit: Submitting job(s).
+03/30/19 17:25:01 From submit: 1 job(s) submitted to cluster 6957.
+03/30/19 17:25:01 	assigned HTCondor ID (6957.0.0)
+03/30/19 17:25:01 Just submitted 1 job this cycle...
+03/30/19 17:25:01 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:25:01 Reassigning the id of job SS066V1_nozfi from (6957.0.0) to (6957.0.0)
+03/30/19 17:25:01 Event: ULOG_SUBMIT for HTCondor Node SS066V1_nozfi (6957.0.0) {03/30/19 17:25:01}
+03/30/19 17:25:01 Number of idle job procs: 16
+03/30/19 17:25:01 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:25:01 Of 16 nodes total:
+03/30/19 17:25:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:25:01   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:25:01     0       0       16       0       0          0        0
+03/30/19 17:25:01 0 job proc(s) currently held
+03/30/19 17:35:02 601 seconds since last log event
+03/30/19 17:35:02 Pending DAG nodes:
+03/30/19 17:35:02   Node SS001V1_nozfi, HTCondor ID 6942, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS008V1_nozfi, HTCondor ID 6943, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS014V1_nozfi, HTCondor ID 6944, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS015V1_nozfi, HTCondor ID 6945, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS016V1_nozfi, HTCondor ID 6946, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS019V1_nozfi, HTCondor ID 6947, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS020V1_nozfi, HTCondor ID 6948, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS026V1_nozfi, HTCondor ID 6949, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS030V1_nozfi, HTCondor ID 6950, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS032V1_nozfi, HTCondor ID 6951, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS033V1_nozfi, HTCondor ID 6952, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS035V1_nozfi, HTCondor ID 6953, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS041V1_nozfi, HTCondor ID 6954, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS053V1_nozfi, HTCondor ID 6955, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS054V1_nozfi, HTCondor ID 6956, status STATUS_SUBMITTED
+03/30/19 17:35:02   Node SS066V1_nozfi, HTCondor ID 6957, status STATUS_SUBMITTED
+03/30/19 17:45:02 1201 seconds since last log event
+03/30/19 17:45:02 Pending DAG nodes:
+03/30/19 17:45:02   Node SS001V1_nozfi, HTCondor ID 6942, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS008V1_nozfi, HTCondor ID 6943, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS014V1_nozfi, HTCondor ID 6944, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS015V1_nozfi, HTCondor ID 6945, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS016V1_nozfi, HTCondor ID 6946, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS019V1_nozfi, HTCondor ID 6947, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS020V1_nozfi, HTCondor ID 6948, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS026V1_nozfi, HTCondor ID 6949, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS030V1_nozfi, HTCondor ID 6950, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS032V1_nozfi, HTCondor ID 6951, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS033V1_nozfi, HTCondor ID 6952, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS035V1_nozfi, HTCondor ID 6953, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS041V1_nozfi, HTCondor ID 6954, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS053V1_nozfi, HTCondor ID 6955, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS054V1_nozfi, HTCondor ID 6956, status STATUS_SUBMITTED
+03/30/19 17:45:02   Node SS066V1_nozfi, HTCondor ID 6957, status STATUS_SUBMITTED
+03/30/19 17:53:53 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:53:53 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 17:53:50}
+03/30/19 17:53:53 Number of idle job procs: 15
+03/30/19 17:56:58 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:56:58 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 17:56:57}
+03/30/19 17:56:58 Number of idle job procs: 16
+03/30/19 17:56:58 Event: ULOG_JOB_HELD for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 17:56:57}
+03/30/19 17:56:58   Hold reason: Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_11893/SS001V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:43986>
+03/30/19 17:56:58 Number of idle job procs: 16
+03/30/19 17:56:58 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 17:56:58 Of 16 nodes total:
+03/30/19 17:56:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 17:56:58   ===     ===      ===     ===     ===        ===      ===
+03/30/19 17:56:58     0       0       16       0       0          0        0
+03/30/19 17:56:58 1 job proc(s) currently held
+03/30/19 17:57:18 Currently monitoring 1 HTCondor log file(s)
+03/30/19 17:57:18 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 17:57:16}
+03/30/19 17:57:18 Number of idle job procs: 15
+03/30/19 18:00:23 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:00:23 Event: ULOG_JOB_RELEASED for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 18:00:23}
+03/30/19 18:00:23 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:00:23 Of 16 nodes total:
+03/30/19 18:00:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:00:23   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:00:23     0       0       16       0       0          0        0
+03/30/19 18:00:23 0 job proc(s) currently held
+03/30/19 18:00:33 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:00:33 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:00:33}
+03/30/19 18:00:33 Number of idle job procs: 16
+03/30/19 18:00:33 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:00:33}
+03/30/19 18:00:33   Hold reason: Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_12671/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:32799>
+03/30/19 18:00:33 Number of idle job procs: 16
+03/30/19 18:00:33 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:00:33 Of 16 nodes total:
+03/30/19 18:00:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:00:33   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:00:33     0       0       16       0       0          0        0
+03/30/19 18:00:33 1 job proc(s) currently held
+03/30/19 18:05:24 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:05:24 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:05:23}
+03/30/19 18:05:24 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:05:24 Of 16 nodes total:
+03/30/19 18:05:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:05:24   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:05:24     0       0       16       0       0          0        0
+03/30/19 18:05:24 0 job proc(s) currently held
+03/30/19 18:12:09 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:12:09 Event: ULOG_EXECUTE for HTCondor Node SS019V1_nozfi (6947.0.0) {03/30/19 18:12:09}
+03/30/19 18:12:09 Number of idle job procs: 15
+03/30/19 18:12:09 Event: ULOG_EXECUTE for HTCondor Node SS015V1_nozfi (6945.0.0) {03/30/19 18:12:09}
+03/30/19 18:12:09 Number of idle job procs: 14
+03/30/19 18:12:09 Event: ULOG_EXECUTE for HTCondor Node SS014V1_nozfi (6944.0.0) {03/30/19 18:12:09}
+03/30/19 18:12:09 Number of idle job procs: 13
+03/30/19 18:12:09 Event: ULOG_EXECUTE for HTCondor Node SS016V1_nozfi (6946.0.0) {03/30/19 18:12:09}
+03/30/19 18:12:09 Number of idle job procs: 12
+03/30/19 18:12:09 Event: ULOG_EXECUTE for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:12:09}
+03/30/19 18:12:09 Number of idle job procs: 11
+03/30/19 18:15:34 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:15:34 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS015V1_nozfi (6945.0.0) {03/30/19 18:15:34}
+03/30/19 18:15:34 Number of idle job procs: 12
+03/30/19 18:15:34 Event: ULOG_JOB_HELD for HTCondor Node SS015V1_nozfi (6945.0.0) {03/30/19 18:15:34}
+03/30/19 18:15:34   Hold reason: Error from slot1_1@aci-314.chtc.wisc.edu: STARTER at 128.104.102.38 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_85846/SS015V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.38:43901>
+03/30/19 18:15:34 Number of idle job procs: 12
+03/30/19 18:15:34 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:15:34 Of 16 nodes total:
+03/30/19 18:15:34  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:15:34   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:15:34     0       0       16       0       0          0        0
+03/30/19 18:15:34 1 job proc(s) currently held
+03/30/19 18:15:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:15:44 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS014V1_nozfi (6944.0.0) {03/30/19 18:15:40}
+03/30/19 18:15:44 Number of idle job procs: 13
+03/30/19 18:15:44 Event: ULOG_JOB_HELD for HTCondor Node SS014V1_nozfi (6944.0.0) {03/30/19 18:15:40}
+03/30/19 18:15:44   Hold reason: Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_53504/SS014V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:36262>
+03/30/19 18:15:44 Number of idle job procs: 13
+03/30/19 18:15:44 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:15:44 Of 16 nodes total:
+03/30/19 18:15:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:15:44   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:15:44     0       0       16       0       0          0        0
+03/30/19 18:15:44 2 job proc(s) currently held
+03/30/19 18:15:49 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:15:49 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS016V1_nozfi (6946.0.0) {03/30/19 18:15:47}
+03/30/19 18:15:49 Number of idle job procs: 14
+03/30/19 18:15:49 Event: ULOG_JOB_HELD for HTCondor Node SS016V1_nozfi (6946.0.0) {03/30/19 18:15:47}
+03/30/19 18:15:49   Hold reason: Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_86062/SS016V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:44855>
+03/30/19 18:15:49 Number of idle job procs: 14
+03/30/19 18:15:49 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:15:49 Of 16 nodes total:
+03/30/19 18:15:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:15:49   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:15:49     0       0       16       0       0          0        0
+03/30/19 18:15:49 3 job proc(s) currently held
+03/30/19 18:15:59 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:15:59 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS019V1_nozfi (6947.0.0) {03/30/19 18:15:56}
+03/30/19 18:15:59 Number of idle job procs: 15
+03/30/19 18:15:59 Event: ULOG_JOB_HELD for HTCondor Node SS019V1_nozfi (6947.0.0) {03/30/19 18:15:56}
+03/30/19 18:15:59   Hold reason: Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_82265/SS019V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:43571>
+03/30/19 18:15:59 Number of idle job procs: 15
+03/30/19 18:15:59 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:15:59 Of 16 nodes total:
+03/30/19 18:15:59  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:15:59   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:15:59     0       0       16       0       0          0        0
+03/30/19 18:15:59 4 job proc(s) currently held
+03/30/19 18:16:14 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:16:14 Event: ULOG_EXECUTE for HTCondor Node SS001V1_nozfi (6942.0.0) {03/30/19 18:16:10}
+03/30/19 18:16:14 Number of idle job procs: 14
+03/30/19 18:16:14 Event: ULOG_EXECUTE for HTCondor Node SS020V1_nozfi (6948.0.0) {03/30/19 18:16:13}
+03/30/19 18:16:14 Number of idle job procs: 13
+03/30/19 18:16:19 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:16:19 Event: ULOG_EXECUTE for HTCondor Node SS026V1_nozfi (6949.0.0) {03/30/19 18:16:17}
+03/30/19 18:16:19 Number of idle job procs: 12
+03/30/19 18:16:19 Event: ULOG_EXECUTE for HTCondor Node SS030V1_nozfi (6950.0.0) {03/30/19 18:16:18}
+03/30/19 18:16:19 Number of idle job procs: 11
+03/30/19 18:16:24 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:16:24 Event: ULOG_EXECUTE for HTCondor Node SS032V1_nozfi (6951.0.0) {03/30/19 18:16:21}
+03/30/19 18:16:24 Number of idle job procs: 10
+03/30/19 18:16:24 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:16:24}
+03/30/19 18:16:24 Number of idle job procs: 11
+03/30/19 18:16:24 Event: ULOG_JOB_HELD for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:16:24}
+03/30/19 18:16:24   Hold reason: Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_61985/SS008V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:36445>
+03/30/19 18:16:24 Number of idle job procs: 11
+03/30/19 18:16:24 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:16:24 Of 16 nodes total:
+03/30/19 18:16:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:16:24   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:16:24     0       0       16       0       0          0        0
+03/30/19 18:16:24 5 job proc(s) currently held
+03/30/19 18:17:04 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:17:04 Event: ULOG_EXECUTE for HTCondor Node SS033V1_nozfi (6952.0.0) {03/30/19 18:17:02}
+03/30/19 18:17:04 Number of idle job procs: 10
+03/30/19 18:19:14 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:19:14 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS026V1_nozfi (6949.0.0) {03/30/19 18:19:13}
+03/30/19 18:19:14 Number of idle job procs: 11
+03/30/19 18:19:14 Event: ULOG_JOB_HELD for HTCondor Node SS026V1_nozfi (6949.0.0) {03/30/19 18:19:13}
+03/30/19 18:19:14   Hold reason: Error from slot1_1@aci-315.chtc.wisc.edu: STARTER at 128.104.102.39 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_87138/SS026V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.39:34267>
+03/30/19 18:19:14 Number of idle job procs: 11
+03/30/19 18:19:14 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:19:14 Of 16 nodes total:
+03/30/19 18:19:14  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:19:14   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:19:14     0       0       16       0       0          0        0
+03/30/19 18:19:14 6 job proc(s) currently held
+03/30/19 18:19:24 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:19:24 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS030V1_nozfi (6950.0.0) {03/30/19 18:19:22}
+03/30/19 18:19:24 Number of idle job procs: 12
+03/30/19 18:19:24 Event: ULOG_JOB_HELD for HTCondor Node SS030V1_nozfi (6950.0.0) {03/30/19 18:19:22}
+03/30/19 18:19:24   Hold reason: Error from slot1_1@aci-109.chtc.wisc.edu: STARTER at 128.104.102.74 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_18274/SS030V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.74:33798>
+03/30/19 18:19:24 Number of idle job procs: 12
+03/30/19 18:19:24 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:19:24 Of 16 nodes total:
+03/30/19 18:19:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:19:24   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:19:24     0       0       16       0       0          0        0
+03/30/19 18:19:24 7 job proc(s) currently held
+03/30/19 18:19:39 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:19:39 Event: ULOG_EXECUTE for HTCondor Node SS035V1_nozfi (6953.0.0) {03/30/19 18:19:34}
+03/30/19 18:19:39 Number of idle job procs: 11
+03/30/19 18:19:39 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS032V1_nozfi (6951.0.0) {03/30/19 18:19:38}
+03/30/19 18:19:39 Number of idle job procs: 12
+03/30/19 18:19:39 Event: ULOG_JOB_HELD for HTCondor Node SS032V1_nozfi (6951.0.0) {03/30/19 18:19:38}
+03/30/19 18:19:39   Hold reason: Error from slot1_1@aci-310.chtc.wisc.edu: STARTER at 128.104.102.34 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_83367/SS032V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.34:37950>
+03/30/19 18:19:39 Number of idle job procs: 12
+03/30/19 18:19:39 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:19:39 Of 16 nodes total:
+03/30/19 18:19:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:19:39   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:19:39     0       0       16       0       0          0        0
+03/30/19 18:19:39 8 job proc(s) currently held
+03/30/19 18:19:44 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:19:44 Event: ULOG_EXECUTE for HTCondor Node SS041V1_nozfi (6954.0.0) {03/30/19 18:19:40}
+03/30/19 18:19:44 Number of idle job procs: 11
+03/30/19 18:19:44 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS020V1_nozfi (6948.0.0) {03/30/19 18:19:41}
+03/30/19 18:19:44 Number of idle job procs: 12
+03/30/19 18:19:44 Event: ULOG_JOB_HELD for HTCondor Node SS020V1_nozfi (6948.0.0) {03/30/19 18:19:41}
+03/30/19 18:19:44   Hold reason: Error from slot1_1@aci-307.chtc.wisc.edu: STARTER at 128.104.102.31 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_55097/SS020V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.31:42509>
+03/30/19 18:19:44 Number of idle job procs: 12
+03/30/19 18:19:44 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:19:44 Of 16 nodes total:
+03/30/19 18:19:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:19:44   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:19:44     0       0       16       0       0          0        0
+03/30/19 18:19:44 9 job proc(s) currently held
+03/30/19 18:20:04 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:20:04 Event: ULOG_EXECUTE for HTCondor Node SS054V1_nozfi (6956.0.0) {03/30/19 18:20:01}
+03/30/19 18:20:04 Number of idle job procs: 11
+03/30/19 18:20:09 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:20:09 Event: ULOG_EXECUTE for HTCondor Node SS053V1_nozfi (6955.0.0) {03/30/19 18:20:05}
+03/30/19 18:20:09 Number of idle job procs: 10
+03/30/19 18:20:29 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS032V1_nozfi (6951.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS030V1_nozfi (6950.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS026V1_nozfi (6949.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS020V1_nozfi (6948.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS019V1_nozfi (6947.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS016V1_nozfi (6946.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS015V1_nozfi (6945.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS014V1_nozfi (6944.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 Event: ULOG_JOB_RELEASED for HTCondor Node SS008V1_nozfi (6943.0.0) {03/30/19 18:20:26}
+03/30/19 18:20:29 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:20:29 Of 16 nodes total:
+03/30/19 18:20:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:20:29   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:20:29     0       0       16       0       0          0        0
+03/30/19 18:20:29 0 job proc(s) currently held
+03/30/19 18:20:39 Currently monitoring 1 HTCondor log file(s)
+03/30/19 18:20:39 Event: ULOG_SHADOW_EXCEPTION for HTCondor Node SS033V1_nozfi (6952.0.0) {03/30/19 18:20:39}
+03/30/19 18:20:39 Number of idle job procs: 11
+03/30/19 18:20:39 Event: ULOG_JOB_HELD for HTCondor Node SS033V1_nozfi (6952.0.0) {03/30/19 18:20:39}
+03/30/19 18:20:39   Hold reason: Error from slot1_1@aci-316.chtc.wisc.edu: STARTER at 128.104.102.40 failed to send file(s) to <144.92.151.238:9618>: error reading from /var/lib/condor/execute/slot1/dir_62831/SS033V1_nozfi_dwi_preprocessed.mif: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.104.102.40:33867>
+03/30/19 18:20:39 Number of idle job procs: 11
+03/30/19 18:20:39 DAG status: 0 (DAG_STATUS_OK)
+03/30/19 18:20:39 Of 16 nodes total:
+03/30/19 18:20:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:20:39   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:20:39     0       0       16       0       0          0        0
+03/30/19 18:20:39 1 job proc(s) currently held
+03/30/19 18:21:13 Received SIGUSR1
+03/30/19 18:21:13 Aborting DAG...
+03/30/19 18:21:13 Writing Rescue DAG to DWICorrect_March302019_V2.dag.rescue001...
+03/30/19 18:21:13 Removing submitted jobs...
+03/30/19 18:21:13 Note: 0 total job deferrals because of -MaxJobs limit (0)
+03/30/19 18:21:13 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+03/30/19 18:21:13 Note: 0 total job deferrals because of node category throttles
+03/30/19 18:21:13 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+03/30/19 18:21:13 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+03/30/19 18:21:13 DAG status: 4 (DAG_STATUS_RM)
+03/30/19 18:21:13 Of 16 nodes total:
+03/30/19 18:21:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+03/30/19 18:21:13   ===     ===      ===     ===     ===        ===      ===
+03/30/19 18:21:13     0       0       16       0       0          0        0
+03/30/19 18:21:13 1 job proc(s) currently held
+03/30/19 18:21:13 Wrote metrics file DWICorrect_March302019_V2.dag.metrics.
+03/30/19 18:21:13 Metrics not sent because of PEGASUS_METRICS or CONDOR_DEVELOPERS setting.
+03/30/19 18:21:13 **** condor_scheduniv_exec.6941.0 (condor_DAGMAN) pid 1154731 EXITING WITH STATUS 2
