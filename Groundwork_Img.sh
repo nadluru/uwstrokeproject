@@ -38,6 +38,7 @@ parallel -j12 --bar --plus 'id={};id=${id%_nozfi*};flirt -in {} -ref ${id}_BRAVO
 # 4/3/2019. 10:38 p.m.
 # On cochiti. 
 cd /bitest/adluru
+parallel -j12 --bar fslswapdim {} -x y z {.}_Swapx.nii.gz ::: *Acute*_Mask.nii
 parallel 'id={};id=${id%_nozfi*};WriteVoxelwiseCSV {} ${id}_Acute_Lesion_Mask.nii ${id}_Acute_Lesion_Swapx.nii.gz;' ::: SS*_nozfi*_bc_??_in_bravo.nii.gz
 
 parallel -j12 --bar 'roipre={};roipre=${roipre%_nozfi*}_Acute_Lesion_Mask;WriteVoxelwiseCSV ${roipre}.nii ${roipre}_Swapx.nii.gz {}' ::: SS*_nozfi*_bc_??_in_bravo.nii.gz
@@ -65,3 +66,5 @@ parallel -j2 --plus '
     cat $final' ::: $roi1 $roi2
 }
 export -f WriteVoxelwiseCSV
+
+csvstack *final.csv > StrokeVoxelwiseDTI.csv

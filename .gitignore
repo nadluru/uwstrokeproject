@@ -1,0 +1,62 @@
+# Condor files.
+*.submit*.*
+*.dag*.*
+# *.submit
+# *.dag
+*.err
+*.log
+*.out
+*.lib
+
+# Matlab data files
+*.mat
+*.asv
+
+# Some CSV files
+*DIPA.csv
+Weights*.csv
+Landmarks*.csv
+CSVs
+
+# Mathematica CDF files
+*.cdf
+
+# Executables
+*.exe*
+*.mex*
+*.p
+
+# Nifti/image files.
+*.nii
+*.nii.gz
+*.mha
+
+# Tmp files.
+*.*~
+
+# Tar files.
+*.tar
+
+# cfg
+*.cfg
+
+# Images/figures
+*.png
+*.jpg
+*.tif*
+*.fig*
+
+# ppt files
+*.ppt*
+
+# Folders
+DIPA
+Figures
+PosterFigures
+FinalResults
+RNLLMM
+figs
+Atlases
+CSVs
+# jar files
+*.jar*
