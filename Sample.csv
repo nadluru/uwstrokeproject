@@ -1,0 +1,4 @@
+SubjectId,PathToSubject,DWI,PathToCHTCEddy
+S1,/path/to/S1data,dwi_denoised_deringed.mif,/path/to/CHTCEddy
+S2,/path/to/S2data,dwi_denoised_deringed.mif,/path/to/CHTCEddy
+S3,/path/to/S3data,dwi_denoised_deringed.mif,/path/to/CHTCEddy

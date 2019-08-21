@@ -1,0 +1,30 @@
+JOB S1 CHTCEddy.submit 
+VARS S1 executable = "CHTCEddy.sh"
+VARS S1 initialDir = "/path/to/S1data/logdir"
+VARS S1 logFile = "S1.log"
+VARS S1 errFile = "S1.err"
+VARS S1 outFile = "S1.out"
+VARS S1 args = "dwi_denoised_deringed.mif"
+VARS S1 transferInputFiles = "/path/to/S1data/dwi_denoised_deringed.mif,/path/to/CHTCEddy"
+VARS S1 transferOutputFiles = "/path/to/S1data/EddyOutputs"
+
+JOB S2 CHTCEddy.submit 
+VARS S2 executable = "CHTCEddy.sh"
+VARS S2 initialDir = "/path/to/S2data/logdir"
+VARS S2 logFile = "S2.log"
+VARS S2 errFile = "S2.err"
+VARS S2 outFile = "S2.out"
+VARS S2 args = "dwi_denoised_deringed.mif"
+VARS S2 transferInputFiles = "/path/to/S2data/dwi_denoised_deringed.mif,/path/to/CHTCEddy"
+VARS S2 transferOutputFiles = "/path/to/S2data/EddyOutputs"
+
+JOB S3 CHTCEddy.submit 
+VARS S3 executable = "CHTCEddy.sh"
+VARS S3 initialDir = "/path/to/S3data/logdir"
+VARS S3 logFile = "S3.log"
+VARS S3 errFile = "S3.err"
+VARS S3 outFile = "S3.out"
+VARS S3 args = "dwi_denoised_deringed.mif"
+VARS S3 transferInputFiles = "/path/to/S3data/dwi_denoised_deringed.mif,/path/to/CHTCEddy"
+VARS S3 transferOutputFiles = "/path/to/S3data/EddyOutputs"
+
