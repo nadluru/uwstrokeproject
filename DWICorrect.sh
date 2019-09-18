@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Setting up environment."
-cd ~/CHTCEddy
+#cd ~/CHTCEddy
 tar -xzf python.tar.gz
 export mrtrix3=$(pwd)/mrtrix3
 export pythondir=$(pwd)/python

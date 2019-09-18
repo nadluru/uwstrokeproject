@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# region pre-RSNA
+# region pre-RSNA (n=16)
 dataroot=/mounts/data/preprocessed/modalities/dti/Strk/
 export bvecs=$dataroot/diff.bvec
 export bvals=$dataroot/diff.bval
@@ -68,4 +68,25 @@ WriteVoxelwiseCSV() {
 export -f WriteVoxelwiseCSV
 
 csvstack *final.csv >StrokeVoxelwiseDTI.csv
+# endregion
+
+# region post rsna acceptance (n=65)
+# 9/17/2019. 9:26 p.m.
+dataroot=/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset
+export bvecs=$dataroot/diff.bvec
+export bvals=$dataroot/diff.bval
+export initroot=$dataroot/CHTC
+
+parallel --dry-run -j12 --bar --plus 'mrresize -scale 0.5,0.5,1 {} - -datatype int16le -interp sinc | mrconvert - {..}_nozfi.mif -fslgrad $bvecs $bvals -force' ::: $dataroot/dti/*.nii.gz
+
+parallel --dry-run -j12 --bar 'dwi2mask {} {.}_mask.mif -force;
+dwidenoise {} {.}_denoised.mif -mask {.}_mask.mif -noise {.}_noise.mif -force;
+mrcalc -force {.}_noise.mif -finite {.}_noise.mif 0 -if {.}_noise_lowb.mif;
+mrdegibbs {.}_denoised.mif {.}_deringed.mif -force' ::: $dataroot/dti/*_nozfi.mif
+
+parallel -j1 --plus ./DWICorrect_AddJobToDAG.sh {..}_nozfi.mif ::: $dataroot/dti/*.nii.gz > DWICorrect_September172019_V1.dag
+
+parallel -j12 --bar dwibiascorrect {.}_dwi_preproc.mif {.}_b1bc.mif -mask {.}_mask.mif -ants -bias {.}_bf.mif -tempdir {.}_bc -nocleanup -force ::: $dataroot/dti/*_nozfi.mif
+
+parallel -j12 --bar 'mrcalc -force {.}_b1bc.mif 2 -pow {.}_noise_lowb.mif 2 -pow -sub -abs -sqrt - | mrcalc - -finite - 0 -if {.}_b1bc_rc.mif -force' ::: $dataroot/dti/*_nozfi.mif
 # endregion

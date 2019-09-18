@@ -30,6 +30,7 @@ CSVs
 *.nii
 *.nii.gz
 *.mha
+*.mif
 
 # Tmp files.
 *.*~

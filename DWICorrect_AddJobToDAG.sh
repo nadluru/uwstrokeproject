@@ -3,7 +3,7 @@ dwi=$1
 submit=$HOME/uwstrokeproject/DWICorrect.submit
 
 mrtrix=$HOME/mrtrix3
-fslinstaller=$HOME/fslinstaller.py
+fslinstaller=$HOME/CHTCEddy/fslinstaller.py
 pythontar=$HOME/CHTCPython/python.tar.gz
 
 transferInputFiles="$dwi,$mrtrix,$fslinstaller,$pythontar"
