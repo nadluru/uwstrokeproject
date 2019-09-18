@@ -84,7 +84,7 @@ dwidenoise {} {.}_denoised.mif -mask {.}_mask.mif -noise {.}_noise.mif -force;
 mrcalc -force {.}_noise.mif -finite {.}_noise.mif 0 -if {.}_noise_lowb.mif;
 mrdegibbs {.}_denoised.mif {.}_deringed.mif -force' ::: $dataroot/dti/*_nozfi.mif
 
-parallel -j1 --plus ./DWICorrect_AddJobToDAG.sh {..}_nozfi.mif ::: $dataroot/dti/*.nii.gz > DWICorrect_September172019_V1.dag
+parallel -j1 ./DWICorrect_AddJobToDAG.sh {} {#} {= '$_=total_jobs()' =} ::: $dataroot/dti/*_deringed.mif > DWICorrect_September182019_V1.dag
 
 parallel -j12 --bar dwibiascorrect {.}_dwi_preproc.mif {.}_b1bc.mif -mask {.}_mask.mif -ants -bias {.}_bf.mif -tempdir {.}_bc -nocleanup -force ::: $dataroot/dti/*_nozfi.mif
 

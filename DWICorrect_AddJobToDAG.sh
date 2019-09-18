@@ -1,5 +1,7 @@
 #!/bin/bash
 dwi=$1
+jobnum=$2
+total=$3
 submit=$HOME/uwstrokeproject/DWICorrect.submit
 
 mrtrix=$HOME/mrtrix3
@@ -16,6 +18,7 @@ mkdir -p $initialDir
 
 transferOutputFiles="${job}_dwi_preprocessed.mif,${job}_eddyqcdir,${job}_tmp"
 
+echo "#JOB $jobnum/$total"
 echo "JOB $job $submit"
 echo "VARS $job initialDir = \"$initialDir\""
 echo "VARS $job logFile = \"${job}.log\""

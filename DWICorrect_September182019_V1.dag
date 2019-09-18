@@ -1,0 +1,704 @@
+#JOB 1/64
+JOB KS001V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS001V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS001V1_nozfi_deringedPreproc"
+VARS KS001V1_nozfi_deringed logFile = "KS001V1_nozfi_deringed.log"
+VARS KS001V1_nozfi_deringed errFile = "KS001V1_nozfi_deringed.err"
+VARS KS001V1_nozfi_deringed outFile = "KS001V1_nozfi_deringed.out"
+
+VARS KS001V1_nozfi_deringed args = "KS001V1_nozfi_deringed.mif"
+VARS KS001V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS001V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS001V1_nozfi_deringed transferOutputFiles = "KS001V1_nozfi_deringed_dwi_preprocessed.mif,KS001V1_nozfi_deringed_eddyqcdir,KS001V1_nozfi_deringed_tmp"
+
+#JOB 2/64
+JOB KS006V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS006V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS006V1_nozfi_deringedPreproc"
+VARS KS006V1_nozfi_deringed logFile = "KS006V1_nozfi_deringed.log"
+VARS KS006V1_nozfi_deringed errFile = "KS006V1_nozfi_deringed.err"
+VARS KS006V1_nozfi_deringed outFile = "KS006V1_nozfi_deringed.out"
+
+VARS KS006V1_nozfi_deringed args = "KS006V1_nozfi_deringed.mif"
+VARS KS006V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS006V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS006V1_nozfi_deringed transferOutputFiles = "KS006V1_nozfi_deringed_dwi_preprocessed.mif,KS006V1_nozfi_deringed_eddyqcdir,KS006V1_nozfi_deringed_tmp"
+
+#JOB 3/64
+JOB KS007V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS007V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS007V1_nozfi_deringedPreproc"
+VARS KS007V1_nozfi_deringed logFile = "KS007V1_nozfi_deringed.log"
+VARS KS007V1_nozfi_deringed errFile = "KS007V1_nozfi_deringed.err"
+VARS KS007V1_nozfi_deringed outFile = "KS007V1_nozfi_deringed.out"
+
+VARS KS007V1_nozfi_deringed args = "KS007V1_nozfi_deringed.mif"
+VARS KS007V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS007V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS007V1_nozfi_deringed transferOutputFiles = "KS007V1_nozfi_deringed_dwi_preprocessed.mif,KS007V1_nozfi_deringed_eddyqcdir,KS007V1_nozfi_deringed_tmp"
+
+#JOB 4/64
+JOB KS011V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS011V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS011V1_nozfi_deringedPreproc"
+VARS KS011V1_nozfi_deringed logFile = "KS011V1_nozfi_deringed.log"
+VARS KS011V1_nozfi_deringed errFile = "KS011V1_nozfi_deringed.err"
+VARS KS011V1_nozfi_deringed outFile = "KS011V1_nozfi_deringed.out"
+
+VARS KS011V1_nozfi_deringed args = "KS011V1_nozfi_deringed.mif"
+VARS KS011V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS011V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS011V1_nozfi_deringed transferOutputFiles = "KS011V1_nozfi_deringed_dwi_preprocessed.mif,KS011V1_nozfi_deringed_eddyqcdir,KS011V1_nozfi_deringed_tmp"
+
+#JOB 5/64
+JOB KS014V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS014V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS014V1_nozfi_deringedPreproc"
+VARS KS014V1_nozfi_deringed logFile = "KS014V1_nozfi_deringed.log"
+VARS KS014V1_nozfi_deringed errFile = "KS014V1_nozfi_deringed.err"
+VARS KS014V1_nozfi_deringed outFile = "KS014V1_nozfi_deringed.out"
+
+VARS KS014V1_nozfi_deringed args = "KS014V1_nozfi_deringed.mif"
+VARS KS014V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS014V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS014V1_nozfi_deringed transferOutputFiles = "KS014V1_nozfi_deringed_dwi_preprocessed.mif,KS014V1_nozfi_deringed_eddyqcdir,KS014V1_nozfi_deringed_tmp"
+
+#JOB 6/64
+JOB KS016V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS016V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS016V1_nozfi_deringedPreproc"
+VARS KS016V1_nozfi_deringed logFile = "KS016V1_nozfi_deringed.log"
+VARS KS016V1_nozfi_deringed errFile = "KS016V1_nozfi_deringed.err"
+VARS KS016V1_nozfi_deringed outFile = "KS016V1_nozfi_deringed.out"
+
+VARS KS016V1_nozfi_deringed args = "KS016V1_nozfi_deringed.mif"
+VARS KS016V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS016V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS016V1_nozfi_deringed transferOutputFiles = "KS016V1_nozfi_deringed_dwi_preprocessed.mif,KS016V1_nozfi_deringed_eddyqcdir,KS016V1_nozfi_deringed_tmp"
+
+#JOB 7/64
+JOB KS017V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS017V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS017V1_nozfi_deringedPreproc"
+VARS KS017V1_nozfi_deringed logFile = "KS017V1_nozfi_deringed.log"
+VARS KS017V1_nozfi_deringed errFile = "KS017V1_nozfi_deringed.err"
+VARS KS017V1_nozfi_deringed outFile = "KS017V1_nozfi_deringed.out"
+
+VARS KS017V1_nozfi_deringed args = "KS017V1_nozfi_deringed.mif"
+VARS KS017V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS017V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS017V1_nozfi_deringed transferOutputFiles = "KS017V1_nozfi_deringed_dwi_preprocessed.mif,KS017V1_nozfi_deringed_eddyqcdir,KS017V1_nozfi_deringed_tmp"
+
+#JOB 8/64
+JOB KS018V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS018V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS018V1_nozfi_deringedPreproc"
+VARS KS018V1_nozfi_deringed logFile = "KS018V1_nozfi_deringed.log"
+VARS KS018V1_nozfi_deringed errFile = "KS018V1_nozfi_deringed.err"
+VARS KS018V1_nozfi_deringed outFile = "KS018V1_nozfi_deringed.out"
+
+VARS KS018V1_nozfi_deringed args = "KS018V1_nozfi_deringed.mif"
+VARS KS018V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS018V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS018V1_nozfi_deringed transferOutputFiles = "KS018V1_nozfi_deringed_dwi_preprocessed.mif,KS018V1_nozfi_deringed_eddyqcdir,KS018V1_nozfi_deringed_tmp"
+
+#JOB 9/64
+JOB KS019V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS019V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS019V1_nozfi_deringedPreproc"
+VARS KS019V1_nozfi_deringed logFile = "KS019V1_nozfi_deringed.log"
+VARS KS019V1_nozfi_deringed errFile = "KS019V1_nozfi_deringed.err"
+VARS KS019V1_nozfi_deringed outFile = "KS019V1_nozfi_deringed.out"
+
+VARS KS019V1_nozfi_deringed args = "KS019V1_nozfi_deringed.mif"
+VARS KS019V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS019V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS019V1_nozfi_deringed transferOutputFiles = "KS019V1_nozfi_deringed_dwi_preprocessed.mif,KS019V1_nozfi_deringed_eddyqcdir,KS019V1_nozfi_deringed_tmp"
+
+#JOB 10/64
+JOB KS020V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS020V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS020V1_nozfi_deringedPreproc"
+VARS KS020V1_nozfi_deringed logFile = "KS020V1_nozfi_deringed.log"
+VARS KS020V1_nozfi_deringed errFile = "KS020V1_nozfi_deringed.err"
+VARS KS020V1_nozfi_deringed outFile = "KS020V1_nozfi_deringed.out"
+
+VARS KS020V1_nozfi_deringed args = "KS020V1_nozfi_deringed.mif"
+VARS KS020V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS020V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS020V1_nozfi_deringed transferOutputFiles = "KS020V1_nozfi_deringed_dwi_preprocessed.mif,KS020V1_nozfi_deringed_eddyqcdir,KS020V1_nozfi_deringed_tmp"
+
+#JOB 11/64
+JOB KS021V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS021V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS021V1_nozfi_deringedPreproc"
+VARS KS021V1_nozfi_deringed logFile = "KS021V1_nozfi_deringed.log"
+VARS KS021V1_nozfi_deringed errFile = "KS021V1_nozfi_deringed.err"
+VARS KS021V1_nozfi_deringed outFile = "KS021V1_nozfi_deringed.out"
+
+VARS KS021V1_nozfi_deringed args = "KS021V1_nozfi_deringed.mif"
+VARS KS021V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS021V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS021V1_nozfi_deringed transferOutputFiles = "KS021V1_nozfi_deringed_dwi_preprocessed.mif,KS021V1_nozfi_deringed_eddyqcdir,KS021V1_nozfi_deringed_tmp"
+
+#JOB 12/64
+JOB KS022V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS022V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS022V1_nozfi_deringedPreproc"
+VARS KS022V1_nozfi_deringed logFile = "KS022V1_nozfi_deringed.log"
+VARS KS022V1_nozfi_deringed errFile = "KS022V1_nozfi_deringed.err"
+VARS KS022V1_nozfi_deringed outFile = "KS022V1_nozfi_deringed.out"
+
+VARS KS022V1_nozfi_deringed args = "KS022V1_nozfi_deringed.mif"
+VARS KS022V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS022V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS022V1_nozfi_deringed transferOutputFiles = "KS022V1_nozfi_deringed_dwi_preprocessed.mif,KS022V1_nozfi_deringed_eddyqcdir,KS022V1_nozfi_deringed_tmp"
+
+#JOB 13/64
+JOB KS023V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS023V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS023V1_nozfi_deringedPreproc"
+VARS KS023V1_nozfi_deringed logFile = "KS023V1_nozfi_deringed.log"
+VARS KS023V1_nozfi_deringed errFile = "KS023V1_nozfi_deringed.err"
+VARS KS023V1_nozfi_deringed outFile = "KS023V1_nozfi_deringed.out"
+
+VARS KS023V1_nozfi_deringed args = "KS023V1_nozfi_deringed.mif"
+VARS KS023V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS023V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS023V1_nozfi_deringed transferOutputFiles = "KS023V1_nozfi_deringed_dwi_preprocessed.mif,KS023V1_nozfi_deringed_eddyqcdir,KS023V1_nozfi_deringed_tmp"
+
+#JOB 14/64
+JOB KS024V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS024V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS024V1_nozfi_deringedPreproc"
+VARS KS024V1_nozfi_deringed logFile = "KS024V1_nozfi_deringed.log"
+VARS KS024V1_nozfi_deringed errFile = "KS024V1_nozfi_deringed.err"
+VARS KS024V1_nozfi_deringed outFile = "KS024V1_nozfi_deringed.out"
+
+VARS KS024V1_nozfi_deringed args = "KS024V1_nozfi_deringed.mif"
+VARS KS024V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS024V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS024V1_nozfi_deringed transferOutputFiles = "KS024V1_nozfi_deringed_dwi_preprocessed.mif,KS024V1_nozfi_deringed_eddyqcdir,KS024V1_nozfi_deringed_tmp"
+
+#JOB 15/64
+JOB KS025V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS025V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS025V1_nozfi_deringedPreproc"
+VARS KS025V1_nozfi_deringed logFile = "KS025V1_nozfi_deringed.log"
+VARS KS025V1_nozfi_deringed errFile = "KS025V1_nozfi_deringed.err"
+VARS KS025V1_nozfi_deringed outFile = "KS025V1_nozfi_deringed.out"
+
+VARS KS025V1_nozfi_deringed args = "KS025V1_nozfi_deringed.mif"
+VARS KS025V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS025V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS025V1_nozfi_deringed transferOutputFiles = "KS025V1_nozfi_deringed_dwi_preprocessed.mif,KS025V1_nozfi_deringed_eddyqcdir,KS025V1_nozfi_deringed_tmp"
+
+#JOB 16/64
+JOB KS026V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS026V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS026V1_nozfi_deringedPreproc"
+VARS KS026V1_nozfi_deringed logFile = "KS026V1_nozfi_deringed.log"
+VARS KS026V1_nozfi_deringed errFile = "KS026V1_nozfi_deringed.err"
+VARS KS026V1_nozfi_deringed outFile = "KS026V1_nozfi_deringed.out"
+
+VARS KS026V1_nozfi_deringed args = "KS026V1_nozfi_deringed.mif"
+VARS KS026V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS026V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS026V1_nozfi_deringed transferOutputFiles = "KS026V1_nozfi_deringed_dwi_preprocessed.mif,KS026V1_nozfi_deringed_eddyqcdir,KS026V1_nozfi_deringed_tmp"
+
+#JOB 17/64
+JOB KS027V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS027V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS027V1_nozfi_deringedPreproc"
+VARS KS027V1_nozfi_deringed logFile = "KS027V1_nozfi_deringed.log"
+VARS KS027V1_nozfi_deringed errFile = "KS027V1_nozfi_deringed.err"
+VARS KS027V1_nozfi_deringed outFile = "KS027V1_nozfi_deringed.out"
+
+VARS KS027V1_nozfi_deringed args = "KS027V1_nozfi_deringed.mif"
+VARS KS027V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS027V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS027V1_nozfi_deringed transferOutputFiles = "KS027V1_nozfi_deringed_dwi_preprocessed.mif,KS027V1_nozfi_deringed_eddyqcdir,KS027V1_nozfi_deringed_tmp"
+
+#JOB 18/64
+JOB KS028V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS028V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS028V1_nozfi_deringedPreproc"
+VARS KS028V1_nozfi_deringed logFile = "KS028V1_nozfi_deringed.log"
+VARS KS028V1_nozfi_deringed errFile = "KS028V1_nozfi_deringed.err"
+VARS KS028V1_nozfi_deringed outFile = "KS028V1_nozfi_deringed.out"
+
+VARS KS028V1_nozfi_deringed args = "KS028V1_nozfi_deringed.mif"
+VARS KS028V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS028V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS028V1_nozfi_deringed transferOutputFiles = "KS028V1_nozfi_deringed_dwi_preprocessed.mif,KS028V1_nozfi_deringed_eddyqcdir,KS028V1_nozfi_deringed_tmp"
+
+#JOB 19/64
+JOB KS029V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS029V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS029V1_nozfi_deringedPreproc"
+VARS KS029V1_nozfi_deringed logFile = "KS029V1_nozfi_deringed.log"
+VARS KS029V1_nozfi_deringed errFile = "KS029V1_nozfi_deringed.err"
+VARS KS029V1_nozfi_deringed outFile = "KS029V1_nozfi_deringed.out"
+
+VARS KS029V1_nozfi_deringed args = "KS029V1_nozfi_deringed.mif"
+VARS KS029V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS029V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS029V1_nozfi_deringed transferOutputFiles = "KS029V1_nozfi_deringed_dwi_preprocessed.mif,KS029V1_nozfi_deringed_eddyqcdir,KS029V1_nozfi_deringed_tmp"
+
+#JOB 20/64
+JOB KS030V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS030V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS030V1_nozfi_deringedPreproc"
+VARS KS030V1_nozfi_deringed logFile = "KS030V1_nozfi_deringed.log"
+VARS KS030V1_nozfi_deringed errFile = "KS030V1_nozfi_deringed.err"
+VARS KS030V1_nozfi_deringed outFile = "KS030V1_nozfi_deringed.out"
+
+VARS KS030V1_nozfi_deringed args = "KS030V1_nozfi_deringed.mif"
+VARS KS030V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS030V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS030V1_nozfi_deringed transferOutputFiles = "KS030V1_nozfi_deringed_dwi_preprocessed.mif,KS030V1_nozfi_deringed_eddyqcdir,KS030V1_nozfi_deringed_tmp"
+
+#JOB 21/64
+JOB KS031V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS031V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS031V1_nozfi_deringedPreproc"
+VARS KS031V1_nozfi_deringed logFile = "KS031V1_nozfi_deringed.log"
+VARS KS031V1_nozfi_deringed errFile = "KS031V1_nozfi_deringed.err"
+VARS KS031V1_nozfi_deringed outFile = "KS031V1_nozfi_deringed.out"
+
+VARS KS031V1_nozfi_deringed args = "KS031V1_nozfi_deringed.mif"
+VARS KS031V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS031V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS031V1_nozfi_deringed transferOutputFiles = "KS031V1_nozfi_deringed_dwi_preprocessed.mif,KS031V1_nozfi_deringed_eddyqcdir,KS031V1_nozfi_deringed_tmp"
+
+#JOB 22/64
+JOB KS032V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS032V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS032V1_nozfi_deringedPreproc"
+VARS KS032V1_nozfi_deringed logFile = "KS032V1_nozfi_deringed.log"
+VARS KS032V1_nozfi_deringed errFile = "KS032V1_nozfi_deringed.err"
+VARS KS032V1_nozfi_deringed outFile = "KS032V1_nozfi_deringed.out"
+
+VARS KS032V1_nozfi_deringed args = "KS032V1_nozfi_deringed.mif"
+VARS KS032V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS032V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS032V1_nozfi_deringed transferOutputFiles = "KS032V1_nozfi_deringed_dwi_preprocessed.mif,KS032V1_nozfi_deringed_eddyqcdir,KS032V1_nozfi_deringed_tmp"
+
+#JOB 23/64
+JOB KS033V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS033V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS033V1_nozfi_deringedPreproc"
+VARS KS033V1_nozfi_deringed logFile = "KS033V1_nozfi_deringed.log"
+VARS KS033V1_nozfi_deringed errFile = "KS033V1_nozfi_deringed.err"
+VARS KS033V1_nozfi_deringed outFile = "KS033V1_nozfi_deringed.out"
+
+VARS KS033V1_nozfi_deringed args = "KS033V1_nozfi_deringed.mif"
+VARS KS033V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS033V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS033V1_nozfi_deringed transferOutputFiles = "KS033V1_nozfi_deringed_dwi_preprocessed.mif,KS033V1_nozfi_deringed_eddyqcdir,KS033V1_nozfi_deringed_tmp"
+
+#JOB 24/64
+JOB KS034V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS034V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS034V1_nozfi_deringedPreproc"
+VARS KS034V1_nozfi_deringed logFile = "KS034V1_nozfi_deringed.log"
+VARS KS034V1_nozfi_deringed errFile = "KS034V1_nozfi_deringed.err"
+VARS KS034V1_nozfi_deringed outFile = "KS034V1_nozfi_deringed.out"
+
+VARS KS034V1_nozfi_deringed args = "KS034V1_nozfi_deringed.mif"
+VARS KS034V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS034V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS034V1_nozfi_deringed transferOutputFiles = "KS034V1_nozfi_deringed_dwi_preprocessed.mif,KS034V1_nozfi_deringed_eddyqcdir,KS034V1_nozfi_deringed_tmp"
+
+#JOB 25/64
+JOB KS038V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS038V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS038V1_nozfi_deringedPreproc"
+VARS KS038V1_nozfi_deringed logFile = "KS038V1_nozfi_deringed.log"
+VARS KS038V1_nozfi_deringed errFile = "KS038V1_nozfi_deringed.err"
+VARS KS038V1_nozfi_deringed outFile = "KS038V1_nozfi_deringed.out"
+
+VARS KS038V1_nozfi_deringed args = "KS038V1_nozfi_deringed.mif"
+VARS KS038V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS038V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS038V1_nozfi_deringed transferOutputFiles = "KS038V1_nozfi_deringed_dwi_preprocessed.mif,KS038V1_nozfi_deringed_eddyqcdir,KS038V1_nozfi_deringed_tmp"
+
+#JOB 26/64
+JOB KS039V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS039V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS039V1_nozfi_deringedPreproc"
+VARS KS039V1_nozfi_deringed logFile = "KS039V1_nozfi_deringed.log"
+VARS KS039V1_nozfi_deringed errFile = "KS039V1_nozfi_deringed.err"
+VARS KS039V1_nozfi_deringed outFile = "KS039V1_nozfi_deringed.out"
+
+VARS KS039V1_nozfi_deringed args = "KS039V1_nozfi_deringed.mif"
+VARS KS039V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS039V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS039V1_nozfi_deringed transferOutputFiles = "KS039V1_nozfi_deringed_dwi_preprocessed.mif,KS039V1_nozfi_deringed_eddyqcdir,KS039V1_nozfi_deringed_tmp"
+
+#JOB 27/64
+JOB KS040V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS KS040V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/KS040V1_nozfi_deringedPreproc"
+VARS KS040V1_nozfi_deringed logFile = "KS040V1_nozfi_deringed.log"
+VARS KS040V1_nozfi_deringed errFile = "KS040V1_nozfi_deringed.err"
+VARS KS040V1_nozfi_deringed outFile = "KS040V1_nozfi_deringed.out"
+
+VARS KS040V1_nozfi_deringed args = "KS040V1_nozfi_deringed.mif"
+VARS KS040V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/KS040V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS KS040V1_nozfi_deringed transferOutputFiles = "KS040V1_nozfi_deringed_dwi_preprocessed.mif,KS040V1_nozfi_deringed_eddyqcdir,KS040V1_nozfi_deringed_tmp"
+
+#JOB 28/64
+JOB SS001V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS001V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS001V1_nozfi_deringedPreproc"
+VARS SS001V1_nozfi_deringed logFile = "SS001V1_nozfi_deringed.log"
+VARS SS001V1_nozfi_deringed errFile = "SS001V1_nozfi_deringed.err"
+VARS SS001V1_nozfi_deringed outFile = "SS001V1_nozfi_deringed.out"
+
+VARS SS001V1_nozfi_deringed args = "SS001V1_nozfi_deringed.mif"
+VARS SS001V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS001V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS001V1_nozfi_deringed transferOutputFiles = "SS001V1_nozfi_deringed_dwi_preprocessed.mif,SS001V1_nozfi_deringed_eddyqcdir,SS001V1_nozfi_deringed_tmp"
+
+#JOB 29/64
+JOB SS004V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS004V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS004V1_nozfi_deringedPreproc"
+VARS SS004V1_nozfi_deringed logFile = "SS004V1_nozfi_deringed.log"
+VARS SS004V1_nozfi_deringed errFile = "SS004V1_nozfi_deringed.err"
+VARS SS004V1_nozfi_deringed outFile = "SS004V1_nozfi_deringed.out"
+
+VARS SS004V1_nozfi_deringed args = "SS004V1_nozfi_deringed.mif"
+VARS SS004V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS004V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS004V1_nozfi_deringed transferOutputFiles = "SS004V1_nozfi_deringed_dwi_preprocessed.mif,SS004V1_nozfi_deringed_eddyqcdir,SS004V1_nozfi_deringed_tmp"
+
+#JOB 30/64
+JOB SS006V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS006V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS006V1_nozfi_deringedPreproc"
+VARS SS006V1_nozfi_deringed logFile = "SS006V1_nozfi_deringed.log"
+VARS SS006V1_nozfi_deringed errFile = "SS006V1_nozfi_deringed.err"
+VARS SS006V1_nozfi_deringed outFile = "SS006V1_nozfi_deringed.out"
+
+VARS SS006V1_nozfi_deringed args = "SS006V1_nozfi_deringed.mif"
+VARS SS006V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS006V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS006V1_nozfi_deringed transferOutputFiles = "SS006V1_nozfi_deringed_dwi_preprocessed.mif,SS006V1_nozfi_deringed_eddyqcdir,SS006V1_nozfi_deringed_tmp"
+
+#JOB 31/64
+JOB SS007V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS007V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS007V1_nozfi_deringedPreproc"
+VARS SS007V1_nozfi_deringed logFile = "SS007V1_nozfi_deringed.log"
+VARS SS007V1_nozfi_deringed errFile = "SS007V1_nozfi_deringed.err"
+VARS SS007V1_nozfi_deringed outFile = "SS007V1_nozfi_deringed.out"
+
+VARS SS007V1_nozfi_deringed args = "SS007V1_nozfi_deringed.mif"
+VARS SS007V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS007V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS007V1_nozfi_deringed transferOutputFiles = "SS007V1_nozfi_deringed_dwi_preprocessed.mif,SS007V1_nozfi_deringed_eddyqcdir,SS007V1_nozfi_deringed_tmp"
+
+#JOB 32/64
+JOB SS008V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS008V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS008V1_nozfi_deringedPreproc"
+VARS SS008V1_nozfi_deringed logFile = "SS008V1_nozfi_deringed.log"
+VARS SS008V1_nozfi_deringed errFile = "SS008V1_nozfi_deringed.err"
+VARS SS008V1_nozfi_deringed outFile = "SS008V1_nozfi_deringed.out"
+
+VARS SS008V1_nozfi_deringed args = "SS008V1_nozfi_deringed.mif"
+VARS SS008V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS008V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS008V1_nozfi_deringed transferOutputFiles = "SS008V1_nozfi_deringed_dwi_preprocessed.mif,SS008V1_nozfi_deringed_eddyqcdir,SS008V1_nozfi_deringed_tmp"
+
+#JOB 33/64
+JOB SS012V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS012V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS012V1_nozfi_deringedPreproc"
+VARS SS012V1_nozfi_deringed logFile = "SS012V1_nozfi_deringed.log"
+VARS SS012V1_nozfi_deringed errFile = "SS012V1_nozfi_deringed.err"
+VARS SS012V1_nozfi_deringed outFile = "SS012V1_nozfi_deringed.out"
+
+VARS SS012V1_nozfi_deringed args = "SS012V1_nozfi_deringed.mif"
+VARS SS012V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS012V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS012V1_nozfi_deringed transferOutputFiles = "SS012V1_nozfi_deringed_dwi_preprocessed.mif,SS012V1_nozfi_deringed_eddyqcdir,SS012V1_nozfi_deringed_tmp"
+
+#JOB 34/64
+JOB SS014V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS014V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS014V1_nozfi_deringedPreproc"
+VARS SS014V1_nozfi_deringed logFile = "SS014V1_nozfi_deringed.log"
+VARS SS014V1_nozfi_deringed errFile = "SS014V1_nozfi_deringed.err"
+VARS SS014V1_nozfi_deringed outFile = "SS014V1_nozfi_deringed.out"
+
+VARS SS014V1_nozfi_deringed args = "SS014V1_nozfi_deringed.mif"
+VARS SS014V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS014V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS014V1_nozfi_deringed transferOutputFiles = "SS014V1_nozfi_deringed_dwi_preprocessed.mif,SS014V1_nozfi_deringed_eddyqcdir,SS014V1_nozfi_deringed_tmp"
+
+#JOB 35/64
+JOB SS015V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS015V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS015V1_nozfi_deringedPreproc"
+VARS SS015V1_nozfi_deringed logFile = "SS015V1_nozfi_deringed.log"
+VARS SS015V1_nozfi_deringed errFile = "SS015V1_nozfi_deringed.err"
+VARS SS015V1_nozfi_deringed outFile = "SS015V1_nozfi_deringed.out"
+
+VARS SS015V1_nozfi_deringed args = "SS015V1_nozfi_deringed.mif"
+VARS SS015V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS015V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS015V1_nozfi_deringed transferOutputFiles = "SS015V1_nozfi_deringed_dwi_preprocessed.mif,SS015V1_nozfi_deringed_eddyqcdir,SS015V1_nozfi_deringed_tmp"
+
+#JOB 36/64
+JOB SS016V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS016V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS016V1_nozfi_deringedPreproc"
+VARS SS016V1_nozfi_deringed logFile = "SS016V1_nozfi_deringed.log"
+VARS SS016V1_nozfi_deringed errFile = "SS016V1_nozfi_deringed.err"
+VARS SS016V1_nozfi_deringed outFile = "SS016V1_nozfi_deringed.out"
+
+VARS SS016V1_nozfi_deringed args = "SS016V1_nozfi_deringed.mif"
+VARS SS016V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS016V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS016V1_nozfi_deringed transferOutputFiles = "SS016V1_nozfi_deringed_dwi_preprocessed.mif,SS016V1_nozfi_deringed_eddyqcdir,SS016V1_nozfi_deringed_tmp"
+
+#JOB 37/64
+JOB SS019V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS019V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS019V1_nozfi_deringedPreproc"
+VARS SS019V1_nozfi_deringed logFile = "SS019V1_nozfi_deringed.log"
+VARS SS019V1_nozfi_deringed errFile = "SS019V1_nozfi_deringed.err"
+VARS SS019V1_nozfi_deringed outFile = "SS019V1_nozfi_deringed.out"
+
+VARS SS019V1_nozfi_deringed args = "SS019V1_nozfi_deringed.mif"
+VARS SS019V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS019V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS019V1_nozfi_deringed transferOutputFiles = "SS019V1_nozfi_deringed_dwi_preprocessed.mif,SS019V1_nozfi_deringed_eddyqcdir,SS019V1_nozfi_deringed_tmp"
+
+#JOB 38/64
+JOB SS020V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS020V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS020V1_nozfi_deringedPreproc"
+VARS SS020V1_nozfi_deringed logFile = "SS020V1_nozfi_deringed.log"
+VARS SS020V1_nozfi_deringed errFile = "SS020V1_nozfi_deringed.err"
+VARS SS020V1_nozfi_deringed outFile = "SS020V1_nozfi_deringed.out"
+
+VARS SS020V1_nozfi_deringed args = "SS020V1_nozfi_deringed.mif"
+VARS SS020V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS020V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS020V1_nozfi_deringed transferOutputFiles = "SS020V1_nozfi_deringed_dwi_preprocessed.mif,SS020V1_nozfi_deringed_eddyqcdir,SS020V1_nozfi_deringed_tmp"
+
+#JOB 39/64
+JOB SS021V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS021V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS021V1_nozfi_deringedPreproc"
+VARS SS021V1_nozfi_deringed logFile = "SS021V1_nozfi_deringed.log"
+VARS SS021V1_nozfi_deringed errFile = "SS021V1_nozfi_deringed.err"
+VARS SS021V1_nozfi_deringed outFile = "SS021V1_nozfi_deringed.out"
+
+VARS SS021V1_nozfi_deringed args = "SS021V1_nozfi_deringed.mif"
+VARS SS021V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS021V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS021V1_nozfi_deringed transferOutputFiles = "SS021V1_nozfi_deringed_dwi_preprocessed.mif,SS021V1_nozfi_deringed_eddyqcdir,SS021V1_nozfi_deringed_tmp"
+
+#JOB 40/64
+JOB SS022V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS022V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS022V1_nozfi_deringedPreproc"
+VARS SS022V1_nozfi_deringed logFile = "SS022V1_nozfi_deringed.log"
+VARS SS022V1_nozfi_deringed errFile = "SS022V1_nozfi_deringed.err"
+VARS SS022V1_nozfi_deringed outFile = "SS022V1_nozfi_deringed.out"
+
+VARS SS022V1_nozfi_deringed args = "SS022V1_nozfi_deringed.mif"
+VARS SS022V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS022V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS022V1_nozfi_deringed transferOutputFiles = "SS022V1_nozfi_deringed_dwi_preprocessed.mif,SS022V1_nozfi_deringed_eddyqcdir,SS022V1_nozfi_deringed_tmp"
+
+#JOB 41/64
+JOB SS026V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS026V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS026V1_nozfi_deringedPreproc"
+VARS SS026V1_nozfi_deringed logFile = "SS026V1_nozfi_deringed.log"
+VARS SS026V1_nozfi_deringed errFile = "SS026V1_nozfi_deringed.err"
+VARS SS026V1_nozfi_deringed outFile = "SS026V1_nozfi_deringed.out"
+
+VARS SS026V1_nozfi_deringed args = "SS026V1_nozfi_deringed.mif"
+VARS SS026V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS026V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS026V1_nozfi_deringed transferOutputFiles = "SS026V1_nozfi_deringed_dwi_preprocessed.mif,SS026V1_nozfi_deringed_eddyqcdir,SS026V1_nozfi_deringed_tmp"
+
+#JOB 42/64
+JOB SS029V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS029V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS029V1_nozfi_deringedPreproc"
+VARS SS029V1_nozfi_deringed logFile = "SS029V1_nozfi_deringed.log"
+VARS SS029V1_nozfi_deringed errFile = "SS029V1_nozfi_deringed.err"
+VARS SS029V1_nozfi_deringed outFile = "SS029V1_nozfi_deringed.out"
+
+VARS SS029V1_nozfi_deringed args = "SS029V1_nozfi_deringed.mif"
+VARS SS029V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS029V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS029V1_nozfi_deringed transferOutputFiles = "SS029V1_nozfi_deringed_dwi_preprocessed.mif,SS029V1_nozfi_deringed_eddyqcdir,SS029V1_nozfi_deringed_tmp"
+
+#JOB 43/64
+JOB SS030V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS030V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS030V1_nozfi_deringedPreproc"
+VARS SS030V1_nozfi_deringed logFile = "SS030V1_nozfi_deringed.log"
+VARS SS030V1_nozfi_deringed errFile = "SS030V1_nozfi_deringed.err"
+VARS SS030V1_nozfi_deringed outFile = "SS030V1_nozfi_deringed.out"
+
+VARS SS030V1_nozfi_deringed args = "SS030V1_nozfi_deringed.mif"
+VARS SS030V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS030V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS030V1_nozfi_deringed transferOutputFiles = "SS030V1_nozfi_deringed_dwi_preprocessed.mif,SS030V1_nozfi_deringed_eddyqcdir,SS030V1_nozfi_deringed_tmp"
+
+#JOB 44/64
+JOB SS031V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS031V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS031V1_nozfi_deringedPreproc"
+VARS SS031V1_nozfi_deringed logFile = "SS031V1_nozfi_deringed.log"
+VARS SS031V1_nozfi_deringed errFile = "SS031V1_nozfi_deringed.err"
+VARS SS031V1_nozfi_deringed outFile = "SS031V1_nozfi_deringed.out"
+
+VARS SS031V1_nozfi_deringed args = "SS031V1_nozfi_deringed.mif"
+VARS SS031V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS031V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS031V1_nozfi_deringed transferOutputFiles = "SS031V1_nozfi_deringed_dwi_preprocessed.mif,SS031V1_nozfi_deringed_eddyqcdir,SS031V1_nozfi_deringed_tmp"
+
+#JOB 45/64
+JOB SS032V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS032V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS032V1_nozfi_deringedPreproc"
+VARS SS032V1_nozfi_deringed logFile = "SS032V1_nozfi_deringed.log"
+VARS SS032V1_nozfi_deringed errFile = "SS032V1_nozfi_deringed.err"
+VARS SS032V1_nozfi_deringed outFile = "SS032V1_nozfi_deringed.out"
+
+VARS SS032V1_nozfi_deringed args = "SS032V1_nozfi_deringed.mif"
+VARS SS032V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS032V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS032V1_nozfi_deringed transferOutputFiles = "SS032V1_nozfi_deringed_dwi_preprocessed.mif,SS032V1_nozfi_deringed_eddyqcdir,SS032V1_nozfi_deringed_tmp"
+
+#JOB 46/64
+JOB SS033V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS033V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS033V1_nozfi_deringedPreproc"
+VARS SS033V1_nozfi_deringed logFile = "SS033V1_nozfi_deringed.log"
+VARS SS033V1_nozfi_deringed errFile = "SS033V1_nozfi_deringed.err"
+VARS SS033V1_nozfi_deringed outFile = "SS033V1_nozfi_deringed.out"
+
+VARS SS033V1_nozfi_deringed args = "SS033V1_nozfi_deringed.mif"
+VARS SS033V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS033V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS033V1_nozfi_deringed transferOutputFiles = "SS033V1_nozfi_deringed_dwi_preprocessed.mif,SS033V1_nozfi_deringed_eddyqcdir,SS033V1_nozfi_deringed_tmp"
+
+#JOB 47/64
+JOB SS035V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS035V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS035V1_nozfi_deringedPreproc"
+VARS SS035V1_nozfi_deringed logFile = "SS035V1_nozfi_deringed.log"
+VARS SS035V1_nozfi_deringed errFile = "SS035V1_nozfi_deringed.err"
+VARS SS035V1_nozfi_deringed outFile = "SS035V1_nozfi_deringed.out"
+
+VARS SS035V1_nozfi_deringed args = "SS035V1_nozfi_deringed.mif"
+VARS SS035V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS035V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS035V1_nozfi_deringed transferOutputFiles = "SS035V1_nozfi_deringed_dwi_preprocessed.mif,SS035V1_nozfi_deringed_eddyqcdir,SS035V1_nozfi_deringed_tmp"
+
+#JOB 48/64
+JOB SS036V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS036V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS036V1_nozfi_deringedPreproc"
+VARS SS036V1_nozfi_deringed logFile = "SS036V1_nozfi_deringed.log"
+VARS SS036V1_nozfi_deringed errFile = "SS036V1_nozfi_deringed.err"
+VARS SS036V1_nozfi_deringed outFile = "SS036V1_nozfi_deringed.out"
+
+VARS SS036V1_nozfi_deringed args = "SS036V1_nozfi_deringed.mif"
+VARS SS036V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS036V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS036V1_nozfi_deringed transferOutputFiles = "SS036V1_nozfi_deringed_dwi_preprocessed.mif,SS036V1_nozfi_deringed_eddyqcdir,SS036V1_nozfi_deringed_tmp"
+
+#JOB 49/64
+JOB SS037V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS037V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS037V1_nozfi_deringedPreproc"
+VARS SS037V1_nozfi_deringed logFile = "SS037V1_nozfi_deringed.log"
+VARS SS037V1_nozfi_deringed errFile = "SS037V1_nozfi_deringed.err"
+VARS SS037V1_nozfi_deringed outFile = "SS037V1_nozfi_deringed.out"
+
+VARS SS037V1_nozfi_deringed args = "SS037V1_nozfi_deringed.mif"
+VARS SS037V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS037V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS037V1_nozfi_deringed transferOutputFiles = "SS037V1_nozfi_deringed_dwi_preprocessed.mif,SS037V1_nozfi_deringed_eddyqcdir,SS037V1_nozfi_deringed_tmp"
+
+#JOB 50/64
+JOB SS038V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS038V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS038V1_nozfi_deringedPreproc"
+VARS SS038V1_nozfi_deringed logFile = "SS038V1_nozfi_deringed.log"
+VARS SS038V1_nozfi_deringed errFile = "SS038V1_nozfi_deringed.err"
+VARS SS038V1_nozfi_deringed outFile = "SS038V1_nozfi_deringed.out"
+
+VARS SS038V1_nozfi_deringed args = "SS038V1_nozfi_deringed.mif"
+VARS SS038V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS038V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS038V1_nozfi_deringed transferOutputFiles = "SS038V1_nozfi_deringed_dwi_preprocessed.mif,SS038V1_nozfi_deringed_eddyqcdir,SS038V1_nozfi_deringed_tmp"
+
+#JOB 51/64
+JOB SS039V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS039V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS039V1_nozfi_deringedPreproc"
+VARS SS039V1_nozfi_deringed logFile = "SS039V1_nozfi_deringed.log"
+VARS SS039V1_nozfi_deringed errFile = "SS039V1_nozfi_deringed.err"
+VARS SS039V1_nozfi_deringed outFile = "SS039V1_nozfi_deringed.out"
+
+VARS SS039V1_nozfi_deringed args = "SS039V1_nozfi_deringed.mif"
+VARS SS039V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS039V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS039V1_nozfi_deringed transferOutputFiles = "SS039V1_nozfi_deringed_dwi_preprocessed.mif,SS039V1_nozfi_deringed_eddyqcdir,SS039V1_nozfi_deringed_tmp"
+
+#JOB 52/64
+JOB SS041V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS041V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS041V1_nozfi_deringedPreproc"
+VARS SS041V1_nozfi_deringed logFile = "SS041V1_nozfi_deringed.log"
+VARS SS041V1_nozfi_deringed errFile = "SS041V1_nozfi_deringed.err"
+VARS SS041V1_nozfi_deringed outFile = "SS041V1_nozfi_deringed.out"
+
+VARS SS041V1_nozfi_deringed args = "SS041V1_nozfi_deringed.mif"
+VARS SS041V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS041V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS041V1_nozfi_deringed transferOutputFiles = "SS041V1_nozfi_deringed_dwi_preprocessed.mif,SS041V1_nozfi_deringed_eddyqcdir,SS041V1_nozfi_deringed_tmp"
+
+#JOB 53/64
+JOB SS045V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS045V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS045V1_nozfi_deringedPreproc"
+VARS SS045V1_nozfi_deringed logFile = "SS045V1_nozfi_deringed.log"
+VARS SS045V1_nozfi_deringed errFile = "SS045V1_nozfi_deringed.err"
+VARS SS045V1_nozfi_deringed outFile = "SS045V1_nozfi_deringed.out"
+
+VARS SS045V1_nozfi_deringed args = "SS045V1_nozfi_deringed.mif"
+VARS SS045V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS045V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS045V1_nozfi_deringed transferOutputFiles = "SS045V1_nozfi_deringed_dwi_preprocessed.mif,SS045V1_nozfi_deringed_eddyqcdir,SS045V1_nozfi_deringed_tmp"
+
+#JOB 54/64
+JOB SS050V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS050V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS050V1_nozfi_deringedPreproc"
+VARS SS050V1_nozfi_deringed logFile = "SS050V1_nozfi_deringed.log"
+VARS SS050V1_nozfi_deringed errFile = "SS050V1_nozfi_deringed.err"
+VARS SS050V1_nozfi_deringed outFile = "SS050V1_nozfi_deringed.out"
+
+VARS SS050V1_nozfi_deringed args = "SS050V1_nozfi_deringed.mif"
+VARS SS050V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS050V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS050V1_nozfi_deringed transferOutputFiles = "SS050V1_nozfi_deringed_dwi_preprocessed.mif,SS050V1_nozfi_deringed_eddyqcdir,SS050V1_nozfi_deringed_tmp"
+
+#JOB 55/64
+JOB SS053V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS053V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS053V1_nozfi_deringedPreproc"
+VARS SS053V1_nozfi_deringed logFile = "SS053V1_nozfi_deringed.log"
+VARS SS053V1_nozfi_deringed errFile = "SS053V1_nozfi_deringed.err"
+VARS SS053V1_nozfi_deringed outFile = "SS053V1_nozfi_deringed.out"
+
+VARS SS053V1_nozfi_deringed args = "SS053V1_nozfi_deringed.mif"
+VARS SS053V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS053V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS053V1_nozfi_deringed transferOutputFiles = "SS053V1_nozfi_deringed_dwi_preprocessed.mif,SS053V1_nozfi_deringed_eddyqcdir,SS053V1_nozfi_deringed_tmp"
+
+#JOB 56/64
+JOB SS054V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS054V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS054V1_nozfi_deringedPreproc"
+VARS SS054V1_nozfi_deringed logFile = "SS054V1_nozfi_deringed.log"
+VARS SS054V1_nozfi_deringed errFile = "SS054V1_nozfi_deringed.err"
+VARS SS054V1_nozfi_deringed outFile = "SS054V1_nozfi_deringed.out"
+
+VARS SS054V1_nozfi_deringed args = "SS054V1_nozfi_deringed.mif"
+VARS SS054V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS054V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS054V1_nozfi_deringed transferOutputFiles = "SS054V1_nozfi_deringed_dwi_preprocessed.mif,SS054V1_nozfi_deringed_eddyqcdir,SS054V1_nozfi_deringed_tmp"
+
+#JOB 57/64
+JOB SS058V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS058V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS058V1_nozfi_deringedPreproc"
+VARS SS058V1_nozfi_deringed logFile = "SS058V1_nozfi_deringed.log"
+VARS SS058V1_nozfi_deringed errFile = "SS058V1_nozfi_deringed.err"
+VARS SS058V1_nozfi_deringed outFile = "SS058V1_nozfi_deringed.out"
+
+VARS SS058V1_nozfi_deringed args = "SS058V1_nozfi_deringed.mif"
+VARS SS058V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS058V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS058V1_nozfi_deringed transferOutputFiles = "SS058V1_nozfi_deringed_dwi_preprocessed.mif,SS058V1_nozfi_deringed_eddyqcdir,SS058V1_nozfi_deringed_tmp"
+
+#JOB 58/64
+JOB SS059V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS059V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS059V1_nozfi_deringedPreproc"
+VARS SS059V1_nozfi_deringed logFile = "SS059V1_nozfi_deringed.log"
+VARS SS059V1_nozfi_deringed errFile = "SS059V1_nozfi_deringed.err"
+VARS SS059V1_nozfi_deringed outFile = "SS059V1_nozfi_deringed.out"
+
+VARS SS059V1_nozfi_deringed args = "SS059V1_nozfi_deringed.mif"
+VARS SS059V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS059V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS059V1_nozfi_deringed transferOutputFiles = "SS059V1_nozfi_deringed_dwi_preprocessed.mif,SS059V1_nozfi_deringed_eddyqcdir,SS059V1_nozfi_deringed_tmp"
+
+#JOB 59/64
+JOB SS060V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS060V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS060V1_nozfi_deringedPreproc"
+VARS SS060V1_nozfi_deringed logFile = "SS060V1_nozfi_deringed.log"
+VARS SS060V1_nozfi_deringed errFile = "SS060V1_nozfi_deringed.err"
+VARS SS060V1_nozfi_deringed outFile = "SS060V1_nozfi_deringed.out"
+
+VARS SS060V1_nozfi_deringed args = "SS060V1_nozfi_deringed.mif"
+VARS SS060V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS060V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS060V1_nozfi_deringed transferOutputFiles = "SS060V1_nozfi_deringed_dwi_preprocessed.mif,SS060V1_nozfi_deringed_eddyqcdir,SS060V1_nozfi_deringed_tmp"
+
+#JOB 60/64
+JOB SS061V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS061V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS061V1_nozfi_deringedPreproc"
+VARS SS061V1_nozfi_deringed logFile = "SS061V1_nozfi_deringed.log"
+VARS SS061V1_nozfi_deringed errFile = "SS061V1_nozfi_deringed.err"
+VARS SS061V1_nozfi_deringed outFile = "SS061V1_nozfi_deringed.out"
+
+VARS SS061V1_nozfi_deringed args = "SS061V1_nozfi_deringed.mif"
+VARS SS061V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS061V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS061V1_nozfi_deringed transferOutputFiles = "SS061V1_nozfi_deringed_dwi_preprocessed.mif,SS061V1_nozfi_deringed_eddyqcdir,SS061V1_nozfi_deringed_tmp"
+
+#JOB 61/64
+JOB SS063V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS063V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS063V1_nozfi_deringedPreproc"
+VARS SS063V1_nozfi_deringed logFile = "SS063V1_nozfi_deringed.log"
+VARS SS063V1_nozfi_deringed errFile = "SS063V1_nozfi_deringed.err"
+VARS SS063V1_nozfi_deringed outFile = "SS063V1_nozfi_deringed.out"
+
+VARS SS063V1_nozfi_deringed args = "SS063V1_nozfi_deringed.mif"
+VARS SS063V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS063V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS063V1_nozfi_deringed transferOutputFiles = "SS063V1_nozfi_deringed_dwi_preprocessed.mif,SS063V1_nozfi_deringed_eddyqcdir,SS063V1_nozfi_deringed_tmp"
+
+#JOB 62/64
+JOB SS065V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS065V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS065V1_nozfi_deringedPreproc"
+VARS SS065V1_nozfi_deringed logFile = "SS065V1_nozfi_deringed.log"
+VARS SS065V1_nozfi_deringed errFile = "SS065V1_nozfi_deringed.err"
+VARS SS065V1_nozfi_deringed outFile = "SS065V1_nozfi_deringed.out"
+
+VARS SS065V1_nozfi_deringed args = "SS065V1_nozfi_deringed.mif"
+VARS SS065V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS065V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS065V1_nozfi_deringed transferOutputFiles = "SS065V1_nozfi_deringed_dwi_preprocessed.mif,SS065V1_nozfi_deringed_eddyqcdir,SS065V1_nozfi_deringed_tmp"
+
+#JOB 63/64
+JOB SS066V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS066V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS066V1_nozfi_deringedPreproc"
+VARS SS066V1_nozfi_deringed logFile = "SS066V1_nozfi_deringed.log"
+VARS SS066V1_nozfi_deringed errFile = "SS066V1_nozfi_deringed.err"
+VARS SS066V1_nozfi_deringed outFile = "SS066V1_nozfi_deringed.out"
+
+VARS SS066V1_nozfi_deringed args = "SS066V1_nozfi_deringed.mif"
+VARS SS066V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS066V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS066V1_nozfi_deringed transferOutputFiles = "SS066V1_nozfi_deringed_dwi_preprocessed.mif,SS066V1_nozfi_deringed_eddyqcdir,SS066V1_nozfi_deringed_tmp"
+
+#JOB 64/64
+JOB SS067V1_nozfi_deringed /home/nadluru/uwstrokeproject/DWICorrect.submit
+VARS SS067V1_nozfi_deringed initialDir = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/CHTC/SS067V1_nozfi_deringedPreproc"
+VARS SS067V1_nozfi_deringed logFile = "SS067V1_nozfi_deringed.log"
+VARS SS067V1_nozfi_deringed errFile = "SS067V1_nozfi_deringed.err"
+VARS SS067V1_nozfi_deringed outFile = "SS067V1_nozfi_deringed.out"
+
+VARS SS067V1_nozfi_deringed args = "SS067V1_nozfi_deringed.mif"
+VARS SS067V1_nozfi_deringed transferInputFiles = "/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset/dti/SS067V1_nozfi_deringed.mif,/home/nadluru/mrtrix3,/home/nadluru/CHTCEddy/fslinstaller.py,/home/nadluru/CHTCPython/python.tar.gz"
+VARS SS067V1_nozfi_deringed transferOutputFiles = "SS067V1_nozfi_deringed_dwi_preprocessed.mif,SS067V1_nozfi_deringed_eddyqcdir,SS067V1_nozfi_deringed_tmp"
+
