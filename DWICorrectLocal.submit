@@ -1,0 +1,19 @@
+universe = vanilla
+getenv = true
+executable = /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.sh
+
+periodicRemove =  (((CurrentTime - EnteredCurrentStatus) > (2*24*3600)) && JobStatus == 5)
+requirements = ( OpSys == "LINUX" && Arch == "X86_64" )
+request_cpus = 6
+request_memory = 16 Gb
+request_disk = 50 Gb
+periodic_release = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 30) && (NumSystemHolds < 10)
+match_list_length = 5
+requirements = (TARGET.Name =!= LastMatchName1)
+
+initialdir = $(initialDir)
+log = $(logFile)
+output = $(outFile)
+error = $(errFile)
+arguments = $(args)
+queue

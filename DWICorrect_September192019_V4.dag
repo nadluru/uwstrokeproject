@@ -1,0 +1,576 @@
+#JOB 1/64
+JOB KS001V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS001V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS001V1_nozfi_deringedPreproc"
+VARS KS001V1_nozfi_deringed logFile = "KS001V1_nozfi_deringed.log"
+VARS KS001V1_nozfi_deringed errFile = "KS001V1_nozfi_deringed.err"
+VARS KS001V1_nozfi_deringed outFile = "KS001V1_nozfi_deringed.out"
+
+VARS KS001V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS001V1_nozfi_deringed.mif"
+
+#JOB 2/64
+JOB KS006V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS006V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS006V1_nozfi_deringedPreproc"
+VARS KS006V1_nozfi_deringed logFile = "KS006V1_nozfi_deringed.log"
+VARS KS006V1_nozfi_deringed errFile = "KS006V1_nozfi_deringed.err"
+VARS KS006V1_nozfi_deringed outFile = "KS006V1_nozfi_deringed.out"
+
+VARS KS006V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS006V1_nozfi_deringed.mif"
+
+#JOB 3/64
+JOB KS007V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS007V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS007V1_nozfi_deringedPreproc"
+VARS KS007V1_nozfi_deringed logFile = "KS007V1_nozfi_deringed.log"
+VARS KS007V1_nozfi_deringed errFile = "KS007V1_nozfi_deringed.err"
+VARS KS007V1_nozfi_deringed outFile = "KS007V1_nozfi_deringed.out"
+
+VARS KS007V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS007V1_nozfi_deringed.mif"
+
+#JOB 4/64
+JOB KS011V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS011V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS011V1_nozfi_deringedPreproc"
+VARS KS011V1_nozfi_deringed logFile = "KS011V1_nozfi_deringed.log"
+VARS KS011V1_nozfi_deringed errFile = "KS011V1_nozfi_deringed.err"
+VARS KS011V1_nozfi_deringed outFile = "KS011V1_nozfi_deringed.out"
+
+VARS KS011V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS011V1_nozfi_deringed.mif"
+
+#JOB 5/64
+JOB KS014V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS014V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS014V1_nozfi_deringedPreproc"
+VARS KS014V1_nozfi_deringed logFile = "KS014V1_nozfi_deringed.log"
+VARS KS014V1_nozfi_deringed errFile = "KS014V1_nozfi_deringed.err"
+VARS KS014V1_nozfi_deringed outFile = "KS014V1_nozfi_deringed.out"
+
+VARS KS014V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS014V1_nozfi_deringed.mif"
+
+#JOB 6/64
+JOB KS016V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS016V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS016V1_nozfi_deringedPreproc"
+VARS KS016V1_nozfi_deringed logFile = "KS016V1_nozfi_deringed.log"
+VARS KS016V1_nozfi_deringed errFile = "KS016V1_nozfi_deringed.err"
+VARS KS016V1_nozfi_deringed outFile = "KS016V1_nozfi_deringed.out"
+
+VARS KS016V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS016V1_nozfi_deringed.mif"
+
+#JOB 7/64
+JOB KS017V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS017V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS017V1_nozfi_deringedPreproc"
+VARS KS017V1_nozfi_deringed logFile = "KS017V1_nozfi_deringed.log"
+VARS KS017V1_nozfi_deringed errFile = "KS017V1_nozfi_deringed.err"
+VARS KS017V1_nozfi_deringed outFile = "KS017V1_nozfi_deringed.out"
+
+VARS KS017V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS017V1_nozfi_deringed.mif"
+
+#JOB 8/64
+JOB KS018V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS018V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS018V1_nozfi_deringedPreproc"
+VARS KS018V1_nozfi_deringed logFile = "KS018V1_nozfi_deringed.log"
+VARS KS018V1_nozfi_deringed errFile = "KS018V1_nozfi_deringed.err"
+VARS KS018V1_nozfi_deringed outFile = "KS018V1_nozfi_deringed.out"
+
+VARS KS018V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS018V1_nozfi_deringed.mif"
+
+#JOB 9/64
+JOB KS019V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS019V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS019V1_nozfi_deringedPreproc"
+VARS KS019V1_nozfi_deringed logFile = "KS019V1_nozfi_deringed.log"
+VARS KS019V1_nozfi_deringed errFile = "KS019V1_nozfi_deringed.err"
+VARS KS019V1_nozfi_deringed outFile = "KS019V1_nozfi_deringed.out"
+
+VARS KS019V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS019V1_nozfi_deringed.mif"
+
+#JOB 10/64
+JOB KS020V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS020V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS020V1_nozfi_deringedPreproc"
+VARS KS020V1_nozfi_deringed logFile = "KS020V1_nozfi_deringed.log"
+VARS KS020V1_nozfi_deringed errFile = "KS020V1_nozfi_deringed.err"
+VARS KS020V1_nozfi_deringed outFile = "KS020V1_nozfi_deringed.out"
+
+VARS KS020V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS020V1_nozfi_deringed.mif"
+
+#JOB 11/64
+JOB KS021V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS021V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS021V1_nozfi_deringedPreproc"
+VARS KS021V1_nozfi_deringed logFile = "KS021V1_nozfi_deringed.log"
+VARS KS021V1_nozfi_deringed errFile = "KS021V1_nozfi_deringed.err"
+VARS KS021V1_nozfi_deringed outFile = "KS021V1_nozfi_deringed.out"
+
+VARS KS021V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS021V1_nozfi_deringed.mif"
+
+#JOB 12/64
+JOB KS022V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS022V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS022V1_nozfi_deringedPreproc"
+VARS KS022V1_nozfi_deringed logFile = "KS022V1_nozfi_deringed.log"
+VARS KS022V1_nozfi_deringed errFile = "KS022V1_nozfi_deringed.err"
+VARS KS022V1_nozfi_deringed outFile = "KS022V1_nozfi_deringed.out"
+
+VARS KS022V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS022V1_nozfi_deringed.mif"
+
+#JOB 13/64
+JOB KS023V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS023V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS023V1_nozfi_deringedPreproc"
+VARS KS023V1_nozfi_deringed logFile = "KS023V1_nozfi_deringed.log"
+VARS KS023V1_nozfi_deringed errFile = "KS023V1_nozfi_deringed.err"
+VARS KS023V1_nozfi_deringed outFile = "KS023V1_nozfi_deringed.out"
+
+VARS KS023V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS023V1_nozfi_deringed.mif"
+
+#JOB 14/64
+JOB KS024V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS024V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS024V1_nozfi_deringedPreproc"
+VARS KS024V1_nozfi_deringed logFile = "KS024V1_nozfi_deringed.log"
+VARS KS024V1_nozfi_deringed errFile = "KS024V1_nozfi_deringed.err"
+VARS KS024V1_nozfi_deringed outFile = "KS024V1_nozfi_deringed.out"
+
+VARS KS024V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS024V1_nozfi_deringed.mif"
+
+#JOB 15/64
+JOB KS025V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS025V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS025V1_nozfi_deringedPreproc"
+VARS KS025V1_nozfi_deringed logFile = "KS025V1_nozfi_deringed.log"
+VARS KS025V1_nozfi_deringed errFile = "KS025V1_nozfi_deringed.err"
+VARS KS025V1_nozfi_deringed outFile = "KS025V1_nozfi_deringed.out"
+
+VARS KS025V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS025V1_nozfi_deringed.mif"
+
+#JOB 16/64
+JOB KS026V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS026V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS026V1_nozfi_deringedPreproc"
+VARS KS026V1_nozfi_deringed logFile = "KS026V1_nozfi_deringed.log"
+VARS KS026V1_nozfi_deringed errFile = "KS026V1_nozfi_deringed.err"
+VARS KS026V1_nozfi_deringed outFile = "KS026V1_nozfi_deringed.out"
+
+VARS KS026V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS026V1_nozfi_deringed.mif"
+
+#JOB 17/64
+JOB KS027V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS027V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS027V1_nozfi_deringedPreproc"
+VARS KS027V1_nozfi_deringed logFile = "KS027V1_nozfi_deringed.log"
+VARS KS027V1_nozfi_deringed errFile = "KS027V1_nozfi_deringed.err"
+VARS KS027V1_nozfi_deringed outFile = "KS027V1_nozfi_deringed.out"
+
+VARS KS027V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS027V1_nozfi_deringed.mif"
+
+#JOB 18/64
+JOB KS028V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS028V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS028V1_nozfi_deringedPreproc"
+VARS KS028V1_nozfi_deringed logFile = "KS028V1_nozfi_deringed.log"
+VARS KS028V1_nozfi_deringed errFile = "KS028V1_nozfi_deringed.err"
+VARS KS028V1_nozfi_deringed outFile = "KS028V1_nozfi_deringed.out"
+
+VARS KS028V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS028V1_nozfi_deringed.mif"
+
+#JOB 19/64
+JOB KS029V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS029V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS029V1_nozfi_deringedPreproc"
+VARS KS029V1_nozfi_deringed logFile = "KS029V1_nozfi_deringed.log"
+VARS KS029V1_nozfi_deringed errFile = "KS029V1_nozfi_deringed.err"
+VARS KS029V1_nozfi_deringed outFile = "KS029V1_nozfi_deringed.out"
+
+VARS KS029V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS029V1_nozfi_deringed.mif"
+
+#JOB 20/64
+JOB KS030V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS030V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS030V1_nozfi_deringedPreproc"
+VARS KS030V1_nozfi_deringed logFile = "KS030V1_nozfi_deringed.log"
+VARS KS030V1_nozfi_deringed errFile = "KS030V1_nozfi_deringed.err"
+VARS KS030V1_nozfi_deringed outFile = "KS030V1_nozfi_deringed.out"
+
+VARS KS030V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS030V1_nozfi_deringed.mif"
+
+#JOB 21/64
+JOB KS031V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS031V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS031V1_nozfi_deringedPreproc"
+VARS KS031V1_nozfi_deringed logFile = "KS031V1_nozfi_deringed.log"
+VARS KS031V1_nozfi_deringed errFile = "KS031V1_nozfi_deringed.err"
+VARS KS031V1_nozfi_deringed outFile = "KS031V1_nozfi_deringed.out"
+
+VARS KS031V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS031V1_nozfi_deringed.mif"
+
+#JOB 22/64
+JOB KS032V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS032V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS032V1_nozfi_deringedPreproc"
+VARS KS032V1_nozfi_deringed logFile = "KS032V1_nozfi_deringed.log"
+VARS KS032V1_nozfi_deringed errFile = "KS032V1_nozfi_deringed.err"
+VARS KS032V1_nozfi_deringed outFile = "KS032V1_nozfi_deringed.out"
+
+VARS KS032V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS032V1_nozfi_deringed.mif"
+
+#JOB 23/64
+JOB KS033V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS033V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS033V1_nozfi_deringedPreproc"
+VARS KS033V1_nozfi_deringed logFile = "KS033V1_nozfi_deringed.log"
+VARS KS033V1_nozfi_deringed errFile = "KS033V1_nozfi_deringed.err"
+VARS KS033V1_nozfi_deringed outFile = "KS033V1_nozfi_deringed.out"
+
+VARS KS033V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS033V1_nozfi_deringed.mif"
+
+#JOB 24/64
+JOB KS034V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS034V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS034V1_nozfi_deringedPreproc"
+VARS KS034V1_nozfi_deringed logFile = "KS034V1_nozfi_deringed.log"
+VARS KS034V1_nozfi_deringed errFile = "KS034V1_nozfi_deringed.err"
+VARS KS034V1_nozfi_deringed outFile = "KS034V1_nozfi_deringed.out"
+
+VARS KS034V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS034V1_nozfi_deringed.mif"
+
+#JOB 25/64
+JOB KS038V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS038V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS038V1_nozfi_deringedPreproc"
+VARS KS038V1_nozfi_deringed logFile = "KS038V1_nozfi_deringed.log"
+VARS KS038V1_nozfi_deringed errFile = "KS038V1_nozfi_deringed.err"
+VARS KS038V1_nozfi_deringed outFile = "KS038V1_nozfi_deringed.out"
+
+VARS KS038V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS038V1_nozfi_deringed.mif"
+
+#JOB 26/64
+JOB KS039V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS039V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS039V1_nozfi_deringedPreproc"
+VARS KS039V1_nozfi_deringed logFile = "KS039V1_nozfi_deringed.log"
+VARS KS039V1_nozfi_deringed errFile = "KS039V1_nozfi_deringed.err"
+VARS KS039V1_nozfi_deringed outFile = "KS039V1_nozfi_deringed.out"
+
+VARS KS039V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS039V1_nozfi_deringed.mif"
+
+#JOB 27/64
+JOB KS040V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS KS040V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/KS040V1_nozfi_deringedPreproc"
+VARS KS040V1_nozfi_deringed logFile = "KS040V1_nozfi_deringed.log"
+VARS KS040V1_nozfi_deringed errFile = "KS040V1_nozfi_deringed.err"
+VARS KS040V1_nozfi_deringed outFile = "KS040V1_nozfi_deringed.out"
+
+VARS KS040V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/KS040V1_nozfi_deringed.mif"
+
+#JOB 28/64
+JOB SS001V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS001V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS001V1_nozfi_deringedPreproc"
+VARS SS001V1_nozfi_deringed logFile = "SS001V1_nozfi_deringed.log"
+VARS SS001V1_nozfi_deringed errFile = "SS001V1_nozfi_deringed.err"
+VARS SS001V1_nozfi_deringed outFile = "SS001V1_nozfi_deringed.out"
+
+VARS SS001V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS001V1_nozfi_deringed.mif"
+
+#JOB 29/64
+JOB SS004V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS004V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS004V1_nozfi_deringedPreproc"
+VARS SS004V1_nozfi_deringed logFile = "SS004V1_nozfi_deringed.log"
+VARS SS004V1_nozfi_deringed errFile = "SS004V1_nozfi_deringed.err"
+VARS SS004V1_nozfi_deringed outFile = "SS004V1_nozfi_deringed.out"
+
+VARS SS004V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS004V1_nozfi_deringed.mif"
+
+#JOB 30/64
+JOB SS006V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS006V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS006V1_nozfi_deringedPreproc"
+VARS SS006V1_nozfi_deringed logFile = "SS006V1_nozfi_deringed.log"
+VARS SS006V1_nozfi_deringed errFile = "SS006V1_nozfi_deringed.err"
+VARS SS006V1_nozfi_deringed outFile = "SS006V1_nozfi_deringed.out"
+
+VARS SS006V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS006V1_nozfi_deringed.mif"
+
+#JOB 31/64
+JOB SS007V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS007V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS007V1_nozfi_deringedPreproc"
+VARS SS007V1_nozfi_deringed logFile = "SS007V1_nozfi_deringed.log"
+VARS SS007V1_nozfi_deringed errFile = "SS007V1_nozfi_deringed.err"
+VARS SS007V1_nozfi_deringed outFile = "SS007V1_nozfi_deringed.out"
+
+VARS SS007V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS007V1_nozfi_deringed.mif"
+
+#JOB 32/64
+JOB SS008V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS008V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS008V1_nozfi_deringedPreproc"
+VARS SS008V1_nozfi_deringed logFile = "SS008V1_nozfi_deringed.log"
+VARS SS008V1_nozfi_deringed errFile = "SS008V1_nozfi_deringed.err"
+VARS SS008V1_nozfi_deringed outFile = "SS008V1_nozfi_deringed.out"
+
+VARS SS008V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS008V1_nozfi_deringed.mif"
+
+#JOB 33/64
+JOB SS012V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS012V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS012V1_nozfi_deringedPreproc"
+VARS SS012V1_nozfi_deringed logFile = "SS012V1_nozfi_deringed.log"
+VARS SS012V1_nozfi_deringed errFile = "SS012V1_nozfi_deringed.err"
+VARS SS012V1_nozfi_deringed outFile = "SS012V1_nozfi_deringed.out"
+
+VARS SS012V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS012V1_nozfi_deringed.mif"
+
+#JOB 34/64
+JOB SS014V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS014V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS014V1_nozfi_deringedPreproc"
+VARS SS014V1_nozfi_deringed logFile = "SS014V1_nozfi_deringed.log"
+VARS SS014V1_nozfi_deringed errFile = "SS014V1_nozfi_deringed.err"
+VARS SS014V1_nozfi_deringed outFile = "SS014V1_nozfi_deringed.out"
+
+VARS SS014V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS014V1_nozfi_deringed.mif"
+
+#JOB 35/64
+JOB SS015V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS015V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS015V1_nozfi_deringedPreproc"
+VARS SS015V1_nozfi_deringed logFile = "SS015V1_nozfi_deringed.log"
+VARS SS015V1_nozfi_deringed errFile = "SS015V1_nozfi_deringed.err"
+VARS SS015V1_nozfi_deringed outFile = "SS015V1_nozfi_deringed.out"
+
+VARS SS015V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS015V1_nozfi_deringed.mif"
+
+#JOB 36/64
+JOB SS016V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS016V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS016V1_nozfi_deringedPreproc"
+VARS SS016V1_nozfi_deringed logFile = "SS016V1_nozfi_deringed.log"
+VARS SS016V1_nozfi_deringed errFile = "SS016V1_nozfi_deringed.err"
+VARS SS016V1_nozfi_deringed outFile = "SS016V1_nozfi_deringed.out"
+
+VARS SS016V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS016V1_nozfi_deringed.mif"
+
+#JOB 37/64
+JOB SS019V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS019V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS019V1_nozfi_deringedPreproc"
+VARS SS019V1_nozfi_deringed logFile = "SS019V1_nozfi_deringed.log"
+VARS SS019V1_nozfi_deringed errFile = "SS019V1_nozfi_deringed.err"
+VARS SS019V1_nozfi_deringed outFile = "SS019V1_nozfi_deringed.out"
+
+VARS SS019V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS019V1_nozfi_deringed.mif"
+
+#JOB 38/64
+JOB SS020V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS020V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS020V1_nozfi_deringedPreproc"
+VARS SS020V1_nozfi_deringed logFile = "SS020V1_nozfi_deringed.log"
+VARS SS020V1_nozfi_deringed errFile = "SS020V1_nozfi_deringed.err"
+VARS SS020V1_nozfi_deringed outFile = "SS020V1_nozfi_deringed.out"
+
+VARS SS020V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS020V1_nozfi_deringed.mif"
+
+#JOB 39/64
+JOB SS021V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS021V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS021V1_nozfi_deringedPreproc"
+VARS SS021V1_nozfi_deringed logFile = "SS021V1_nozfi_deringed.log"
+VARS SS021V1_nozfi_deringed errFile = "SS021V1_nozfi_deringed.err"
+VARS SS021V1_nozfi_deringed outFile = "SS021V1_nozfi_deringed.out"
+
+VARS SS021V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS021V1_nozfi_deringed.mif"
+
+#JOB 40/64
+JOB SS022V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS022V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS022V1_nozfi_deringedPreproc"
+VARS SS022V1_nozfi_deringed logFile = "SS022V1_nozfi_deringed.log"
+VARS SS022V1_nozfi_deringed errFile = "SS022V1_nozfi_deringed.err"
+VARS SS022V1_nozfi_deringed outFile = "SS022V1_nozfi_deringed.out"
+
+VARS SS022V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS022V1_nozfi_deringed.mif"
+
+#JOB 41/64
+JOB SS026V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS026V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS026V1_nozfi_deringedPreproc"
+VARS SS026V1_nozfi_deringed logFile = "SS026V1_nozfi_deringed.log"
+VARS SS026V1_nozfi_deringed errFile = "SS026V1_nozfi_deringed.err"
+VARS SS026V1_nozfi_deringed outFile = "SS026V1_nozfi_deringed.out"
+
+VARS SS026V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS026V1_nozfi_deringed.mif"
+
+#JOB 42/64
+JOB SS029V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS029V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS029V1_nozfi_deringedPreproc"
+VARS SS029V1_nozfi_deringed logFile = "SS029V1_nozfi_deringed.log"
+VARS SS029V1_nozfi_deringed errFile = "SS029V1_nozfi_deringed.err"
+VARS SS029V1_nozfi_deringed outFile = "SS029V1_nozfi_deringed.out"
+
+VARS SS029V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS029V1_nozfi_deringed.mif"
+
+#JOB 43/64
+JOB SS030V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS030V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS030V1_nozfi_deringedPreproc"
+VARS SS030V1_nozfi_deringed logFile = "SS030V1_nozfi_deringed.log"
+VARS SS030V1_nozfi_deringed errFile = "SS030V1_nozfi_deringed.err"
+VARS SS030V1_nozfi_deringed outFile = "SS030V1_nozfi_deringed.out"
+
+VARS SS030V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS030V1_nozfi_deringed.mif"
+
+#JOB 44/64
+JOB SS031V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS031V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS031V1_nozfi_deringedPreproc"
+VARS SS031V1_nozfi_deringed logFile = "SS031V1_nozfi_deringed.log"
+VARS SS031V1_nozfi_deringed errFile = "SS031V1_nozfi_deringed.err"
+VARS SS031V1_nozfi_deringed outFile = "SS031V1_nozfi_deringed.out"
+
+VARS SS031V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS031V1_nozfi_deringed.mif"
+
+#JOB 45/64
+JOB SS032V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS032V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS032V1_nozfi_deringedPreproc"
+VARS SS032V1_nozfi_deringed logFile = "SS032V1_nozfi_deringed.log"
+VARS SS032V1_nozfi_deringed errFile = "SS032V1_nozfi_deringed.err"
+VARS SS032V1_nozfi_deringed outFile = "SS032V1_nozfi_deringed.out"
+
+VARS SS032V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS032V1_nozfi_deringed.mif"
+
+#JOB 46/64
+JOB SS033V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS033V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS033V1_nozfi_deringedPreproc"
+VARS SS033V1_nozfi_deringed logFile = "SS033V1_nozfi_deringed.log"
+VARS SS033V1_nozfi_deringed errFile = "SS033V1_nozfi_deringed.err"
+VARS SS033V1_nozfi_deringed outFile = "SS033V1_nozfi_deringed.out"
+
+VARS SS033V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS033V1_nozfi_deringed.mif"
+
+#JOB 47/64
+JOB SS035V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS035V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS035V1_nozfi_deringedPreproc"
+VARS SS035V1_nozfi_deringed logFile = "SS035V1_nozfi_deringed.log"
+VARS SS035V1_nozfi_deringed errFile = "SS035V1_nozfi_deringed.err"
+VARS SS035V1_nozfi_deringed outFile = "SS035V1_nozfi_deringed.out"
+
+VARS SS035V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS035V1_nozfi_deringed.mif"
+
+#JOB 48/64
+JOB SS036V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS036V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS036V1_nozfi_deringedPreproc"
+VARS SS036V1_nozfi_deringed logFile = "SS036V1_nozfi_deringed.log"
+VARS SS036V1_nozfi_deringed errFile = "SS036V1_nozfi_deringed.err"
+VARS SS036V1_nozfi_deringed outFile = "SS036V1_nozfi_deringed.out"
+
+VARS SS036V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS036V1_nozfi_deringed.mif"
+
+#JOB 49/64
+JOB SS037V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS037V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS037V1_nozfi_deringedPreproc"
+VARS SS037V1_nozfi_deringed logFile = "SS037V1_nozfi_deringed.log"
+VARS SS037V1_nozfi_deringed errFile = "SS037V1_nozfi_deringed.err"
+VARS SS037V1_nozfi_deringed outFile = "SS037V1_nozfi_deringed.out"
+
+VARS SS037V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS037V1_nozfi_deringed.mif"
+
+#JOB 50/64
+JOB SS038V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS038V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS038V1_nozfi_deringedPreproc"
+VARS SS038V1_nozfi_deringed logFile = "SS038V1_nozfi_deringed.log"
+VARS SS038V1_nozfi_deringed errFile = "SS038V1_nozfi_deringed.err"
+VARS SS038V1_nozfi_deringed outFile = "SS038V1_nozfi_deringed.out"
+
+VARS SS038V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS038V1_nozfi_deringed.mif"
+
+#JOB 51/64
+JOB SS039V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS039V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS039V1_nozfi_deringedPreproc"
+VARS SS039V1_nozfi_deringed logFile = "SS039V1_nozfi_deringed.log"
+VARS SS039V1_nozfi_deringed errFile = "SS039V1_nozfi_deringed.err"
+VARS SS039V1_nozfi_deringed outFile = "SS039V1_nozfi_deringed.out"
+
+VARS SS039V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS039V1_nozfi_deringed.mif"
+
+#JOB 52/64
+JOB SS041V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS041V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS041V1_nozfi_deringedPreproc"
+VARS SS041V1_nozfi_deringed logFile = "SS041V1_nozfi_deringed.log"
+VARS SS041V1_nozfi_deringed errFile = "SS041V1_nozfi_deringed.err"
+VARS SS041V1_nozfi_deringed outFile = "SS041V1_nozfi_deringed.out"
+
+VARS SS041V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS041V1_nozfi_deringed.mif"
+
+#JOB 53/64
+JOB SS045V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS045V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS045V1_nozfi_deringedPreproc"
+VARS SS045V1_nozfi_deringed logFile = "SS045V1_nozfi_deringed.log"
+VARS SS045V1_nozfi_deringed errFile = "SS045V1_nozfi_deringed.err"
+VARS SS045V1_nozfi_deringed outFile = "SS045V1_nozfi_deringed.out"
+
+VARS SS045V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS045V1_nozfi_deringed.mif"
+
+#JOB 54/64
+JOB SS050V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS050V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS050V1_nozfi_deringedPreproc"
+VARS SS050V1_nozfi_deringed logFile = "SS050V1_nozfi_deringed.log"
+VARS SS050V1_nozfi_deringed errFile = "SS050V1_nozfi_deringed.err"
+VARS SS050V1_nozfi_deringed outFile = "SS050V1_nozfi_deringed.out"
+
+VARS SS050V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS050V1_nozfi_deringed.mif"
+
+#JOB 55/64
+JOB SS053V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS053V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS053V1_nozfi_deringedPreproc"
+VARS SS053V1_nozfi_deringed logFile = "SS053V1_nozfi_deringed.log"
+VARS SS053V1_nozfi_deringed errFile = "SS053V1_nozfi_deringed.err"
+VARS SS053V1_nozfi_deringed outFile = "SS053V1_nozfi_deringed.out"
+
+VARS SS053V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS053V1_nozfi_deringed.mif"
+
+#JOB 56/64
+JOB SS054V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS054V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS054V1_nozfi_deringedPreproc"
+VARS SS054V1_nozfi_deringed logFile = "SS054V1_nozfi_deringed.log"
+VARS SS054V1_nozfi_deringed errFile = "SS054V1_nozfi_deringed.err"
+VARS SS054V1_nozfi_deringed outFile = "SS054V1_nozfi_deringed.out"
+
+VARS SS054V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS054V1_nozfi_deringed.mif"
+
+#JOB 57/64
+JOB SS058V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS058V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS058V1_nozfi_deringedPreproc"
+VARS SS058V1_nozfi_deringed logFile = "SS058V1_nozfi_deringed.log"
+VARS SS058V1_nozfi_deringed errFile = "SS058V1_nozfi_deringed.err"
+VARS SS058V1_nozfi_deringed outFile = "SS058V1_nozfi_deringed.out"
+
+VARS SS058V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS058V1_nozfi_deringed.mif"
+
+#JOB 58/64
+JOB SS059V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS059V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS059V1_nozfi_deringedPreproc"
+VARS SS059V1_nozfi_deringed logFile = "SS059V1_nozfi_deringed.log"
+VARS SS059V1_nozfi_deringed errFile = "SS059V1_nozfi_deringed.err"
+VARS SS059V1_nozfi_deringed outFile = "SS059V1_nozfi_deringed.out"
+
+VARS SS059V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS059V1_nozfi_deringed.mif"
+
+#JOB 59/64
+JOB SS060V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS060V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS060V1_nozfi_deringedPreproc"
+VARS SS060V1_nozfi_deringed logFile = "SS060V1_nozfi_deringed.log"
+VARS SS060V1_nozfi_deringed errFile = "SS060V1_nozfi_deringed.err"
+VARS SS060V1_nozfi_deringed outFile = "SS060V1_nozfi_deringed.out"
+
+VARS SS060V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS060V1_nozfi_deringed.mif"
+
+#JOB 60/64
+JOB SS061V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS061V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS061V1_nozfi_deringedPreproc"
+VARS SS061V1_nozfi_deringed logFile = "SS061V1_nozfi_deringed.log"
+VARS SS061V1_nozfi_deringed errFile = "SS061V1_nozfi_deringed.err"
+VARS SS061V1_nozfi_deringed outFile = "SS061V1_nozfi_deringed.out"
+
+VARS SS061V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS061V1_nozfi_deringed.mif"
+
+#JOB 61/64
+JOB SS063V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS063V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS063V1_nozfi_deringedPreproc"
+VARS SS063V1_nozfi_deringed logFile = "SS063V1_nozfi_deringed.log"
+VARS SS063V1_nozfi_deringed errFile = "SS063V1_nozfi_deringed.err"
+VARS SS063V1_nozfi_deringed outFile = "SS063V1_nozfi_deringed.out"
+
+VARS SS063V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS063V1_nozfi_deringed.mif"
+
+#JOB 62/64
+JOB SS065V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS065V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS065V1_nozfi_deringedPreproc"
+VARS SS065V1_nozfi_deringed logFile = "SS065V1_nozfi_deringed.log"
+VARS SS065V1_nozfi_deringed errFile = "SS065V1_nozfi_deringed.err"
+VARS SS065V1_nozfi_deringed outFile = "SS065V1_nozfi_deringed.out"
+
+VARS SS065V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS065V1_nozfi_deringed.mif"
+
+#JOB 63/64
+JOB SS066V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS066V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS066V1_nozfi_deringedPreproc"
+VARS SS066V1_nozfi_deringed logFile = "SS066V1_nozfi_deringed.log"
+VARS SS066V1_nozfi_deringed errFile = "SS066V1_nozfi_deringed.err"
+VARS SS066V1_nozfi_deringed outFile = "SS066V1_nozfi_deringed.out"
+
+VARS SS066V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS066V1_nozfi_deringed.mif"
+
+#JOB 64/64
+JOB SS067V1_nozfi_deringed /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLocal.submit
+VARS SS067V1_nozfi_deringed initialDir = "/scratch/adluru/sp_adluru/Local/SS067V1_nozfi_deringedPreproc"
+VARS SS067V1_nozfi_deringed logFile = "SS067V1_nozfi_deringed.log"
+VARS SS067V1_nozfi_deringed errFile = "SS067V1_nozfi_deringed.err"
+VARS SS067V1_nozfi_deringed outFile = "SS067V1_nozfi_deringed.out"
+
+VARS SS067V1_nozfi_deringed args = "/scratch/adluru/sp_adluru/dti/SS067V1_nozfi_deringed.mif"
+
