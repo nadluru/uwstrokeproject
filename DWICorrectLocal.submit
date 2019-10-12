@@ -4,9 +4,8 @@ executable = /home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DWICorrectLo
 
 periodicRemove =  (((CurrentTime - EnteredCurrentStatus) > (2*24*3600)) && JobStatus == 5)
 requirements = ( OpSys == "LINUX" && Arch == "X86_64" )
-request_cpus = 6
+request_cpus = 4 
 request_memory = 16 Gb
-request_disk = 50 Gb
 periodic_release = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 30) && (NumSystemHolds < 10)
 match_list_length = 5
 requirements = (TARGET.Name =!= LastMatchName1)
