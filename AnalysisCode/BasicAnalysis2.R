@@ -74,78 +74,17 @@ p = csv %>% group_by(ID) %>%
      z = dev.off()
   )
 
-p = csv %>% 
-  ggplot(aes(x = AgeAtVisit, y = Value, 
-             color = ROIName, 
-             fill = ROIName)) + 
-  geom_point(alpha = 0.2) + 
-  facet_rep_wrap(Gender~MeasureName, 
-                 scales = "free") +
-  gtheme +
-  coord_capped_cart(bottom = 'both',
-                    left = 'both')
 
-p
-
-csv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTITrimmed3.csv'))
-p = csv %>% group_by(ID) %>%
-  do(
-    plots = ggplot(data = .,
-                   aes(x = Value,
-                       y = MeasureName,
-                       color = ROIName,
-                       fill = ROIName)) + 
-      geom_density_ridges(
-        alpha = 0.2, 
-        scale = 1.0
-      ) +
-      theme(axis.text = element_text(size = 15),
-            axis.title = element_text(size = 15),
-            strip.text = element_text(size = 15),
-            legend.title = element_text(size = 15),
-            legend.text = element_text(size = 15),
-            plot.title = element_text(size = 15, hjust = 0.5),
-            panel.border = element_blank(), 
-            axis.line = element_line()) +
-      coord_capped_cart(bottom = 'both',
-                        left = 'both') +
-      labs(y = 'DTI measure name',
-           x = 'DTI measure value')
-    ,
-    Name = unique(.$ID)
-  ) %>%
-  rowwise() %>%
-  do(plotsanno = .$plots + 
-       labs(title = paste('Subject', .$Name)),
-     filename = paste('DTIDistributions', .$Name, 
-                      sep = '_') %>% trimws
-  ) %>%
-  rowwise() %>%
-  do(x = pdf(paste0(figroot, gsub("/", "", .$filename), '.pdf'),
-             width = 7.5, height = 5.5),
-     y = print(.$plotsanno),
-     z = dev.off()
-  )
-
-csv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTITrimmed3.csv'))
-p = csv %>% filter(Value <= 3.0) %>%
-  mutate(Age = Age_at_Visit1.visit1.date...DOB. %>% as.factor) %>%
-  ggplot(aes(x = Age,
+csv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTIDemo.csv'))
+p = csv %>%
+  ggplot(aes(x = AgeAtVisit,
              y = Value,
              fill = ROIName)) +
   geom_boxplot(outlier.alpha = 0.1) +
   facet_rep_grid(MeasureName~Gender,
                  scales = "free_y",
-                 repeat.tick.labels = FALSE) +
-  theme(axis.text = element_text(size = 15),
-        axis.text.x = element_text(angle = 0, hjust = 1),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+                 repeat.tick.labels = F) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(x = 'Age [years]',
@@ -169,22 +108,14 @@ p = kcsvlong %>%
   facet_rep_wrap(ClinicalMeasureName~MeasureName,
                  scales = "free",
                  ncol = 4) +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.position = 'bottom',
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Microstructural asymmetry (MASY)',
        x = 'Clinical measure')
 p
 
-library(broom)
+
 kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLong.csv'))
 dfTxt = kcsvlong %>% 
   filter(!(ClinicalMeasureName %in% c('Acute.Time.Period',
@@ -232,14 +163,7 @@ p = csv %>% mutate(Age = Age_at_Visit1.visit1.date...DOB.) %>%
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
@@ -256,14 +180,7 @@ p = csv %>% mutate(ATP = AcuteTimePeriod.visit1.date...stroke.onset.date..year.v
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
@@ -279,14 +196,7 @@ p = csv %>% mutate(ATP = AcuteTimePeriod.visit1.date...stroke.onset.date..year.v
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
@@ -301,14 +211,7 @@ p = csv %>% mutate(YOE = Years.of.Education) %>%
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
@@ -324,14 +227,7 @@ p = csv %>% mutate(VF = Verbal.fluency.Raw.V1) %>%
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
@@ -347,14 +243,7 @@ p = csv %>% mutate(VF = Verbal.fluency.Normed.V1..corrected.for.age.and.educatio
   geom_smooth(method = 'lm') +
   facet_rep_wrap(MeasureName~.,
                  scales = "fixed") +
-  theme(axis.text = element_text(size = 15),
-        axis.title = element_text(size = 15),
-        strip.text = element_text(size = 15),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 15),
-        plot.title = element_text(size = 15, hjust = 0.5),
-        panel.border = element_blank(), 
-        axis.line = element_line()) +
+  gtheme +
   coord_capped_cart(bottom = 'both',
                     left = 'both') +
   labs(y = 'Distributional distance',
