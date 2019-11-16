@@ -1,0 +1,2 @@
+SS007V1 need to use the small piece not the single slice ROIs. i.e. index 2.
+fslmaths JIMData/GTLabels_ALM/SS007V1_Acute_Lesion_Mask_index.nii.gz -thr 2 -uthr 2 -bin JIMData/GTLabels_ALM/SS007V1_Acute_Lesion_Mask_size_thr.nii.gz

@@ -70,6 +70,13 @@ export -f WriteVoxelwiseCSV
 csvstack *final.csv >StrokeVoxelwiseDTI.csv
 # endregion
 
+# region decided to use n=27 with JIM alm masks (11/14/2019)
+cd /scratch/adluru/sp_adluru/RSNA2019FinalSetForAnalysis/alm
+ls *thr.nii.gz | parallel --plus fslswapdim {} -x y z {..}_swapx.nii.gz
+ls dti/*.gz | parallel -j24 --bar --dry-run --rpl '{_} s/_nozfi.*/_Acute_Lesion_Mask_size_thr/;s/.*dti\//alm\//' WriteVoxelwiseCSV {_}.nii.gz {_}_swapx.nii.gz {}
+~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI.csv
+# endregion
+
 # region post rsna acceptance (n=65)
 # 9/17/2019. 9:26 p.m.
 dataroot=/mounts/data/preprocessed/modalities/dti/sp_adluru/LargerDataset # gru
@@ -264,7 +271,29 @@ configdir=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfig
 # endregion
 
 # region testing n=65 using modelConfig_uw_v2
+outdir=/scratch/adluru/sp_adluru/DMOrigOutputUWV2
+configdir=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles
+modelcfg=$configdir/models/modelConfig_uw_v2.cfg
+testcfg=$configdir/test/testConfig_uw_V2_LM.cfg
+finalmodel=$outdir/saved_models/trainSessionDmOriginal/deepMedicOriginal.trainSessionDmOriginal.final.2019-10-14.05.51.50.008796.model.ckpt
+./deepMedicRun -model $modelcfg \
+    -test $testcfg \
+    -load $finalmodel \
+    -dev cuda0
 # endregion
+
+# region testing n=65 using modelConfig_uw_v2_closeop
+outdir=/scratch/adluru/sp_adluru/DMOrigOutputUWV2Closeop
+configdir=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles
+modelcfg=$configdir/models/modelConfig_uw_v2_closeop.cfg
+testcfg=$configdir/test/testConfig_uw_V2_LM_closeop.cfg
+finalmodel=$outdir/saved_models/trainSessionDmOriginal/deepMedicOriginal.trainSessionDmOriginal.final.2019-10-18.08.15.09.645128.model.ckpt
+./deepMedicRun -model $modelcfg \
+    -test $testcfg \
+    -load $finalmodel \
+    -dev cuda2
+# endregion
+
 
 # region testing on the JIM data
 outdir=/scratch/adluru/sp_adluru/DMOrigOutput
@@ -335,8 +364,67 @@ ls train/trainRoiMasks_ALM_Nov082019.cfg | parallel -k --bar 'sed -i.bak -e "3d;
 ls train/trainGtLabels_ALM_Nov082019.cfg.bak | parallel -k --bar 'sed -n -e 3p -e 6p -e 9p -e 12p -e 18p -e 24p {}|sed "s/.*_ALM\///g;s/\_Ac.*//g"' | parallel echo {}_Pred_ALM.nii.gz > train/validation/validationNamesOfPredictions_ALM_Nov092019.cfg
 # endregion
 
+# region .cfg files updates.
+ls trainChannels_*Nov*.cfg | parallel sed -i.bak2 's/instruc.nii.gz/instruc_demean_destd.nii.gz/g' {}
+sed -i.bak3 's/in_struc.nii.gz/in_struc_demean_destd.nii.gz/g' trainChannels_flair_ALM_Nov092019.cfg
+sed -i.bak3 's/JIMData\/T1WImages/T1/g' trainChannels_t1c_ALM_Nov082019.cfg
+sed -i.bak4 's/\_BRAVO\_uniform/.anat_stdorientation/g' trainChannels_t1c_ALM_Nov082019.cfg
+
+ls *Nov*_validation.cfg | parallel sed -i.bak3 's/instruc.nii.gz/instruc_demean_destd.nii.gz/g' {}
+ls *Nov*_validation.cfg | parallel sed -i.bak4 's/in_struc.nii.gz/in_struc_demean_destd.nii.gz/g' {}
+sed -i.bak5 's/JIMData\/T1WImages/T1/g;s/\_BRAVO\_uniform/.anat\_stdorientation/g' trainChannels_t1c_ALM_Nov082019_validation.cfg
+
+sed -i.bak4 's/JIMData\/T1WBrainMasks/T1/g;s/_BRAVO_uniform/.anat_stdorientation/g' trainRoiMasks_ALM_Nov082019.cfg
+sed -i.bak4 's/JIMData\/T1WBrainMasks/T1/g;s/_BRAVO_uniform/.anat_stdorientation/g' trainRoiMasks_ALM_Nov082019_validation.cfg
+# endregion
+
 # region training ALM Nov 9, 2019.
 ./deepMedicRun -model ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/models/modelConfig_uw_ALM.cfg -train ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/train/trainConfig_uw_ALM.cfg -dev cuda1
+# endregion
+# region test cfg files
+cd /scratch/adluru/sp_adluru
+ls dti/*fa.nii.gz | sed 's/.*dti\///g;s/_nozfi.*//g' | parallel -k echo $(pwd)/flairinstruc/{}.flair_stdorientation_BFC_bet_in_struc_demean_destd.nii.gz >  ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/test/testChannels_flair_ALM_Nov122019.cfg
+sed -i 's/KS//g;s/\/[0-9][0-9][0-9]/&_/g;s/[0-9][0-9][0-9]_/KS_&/g' ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/test/testChannels_flair_ALM_Nov122019.cfg
+parallel -k 'echo $(pwd)/dwiinstruc/{1}_nozfi_b1bc_rc_withgrad_{2}_instruc_demean_destd.nii.gz >> ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/test/testChannels_{2}_ALM_Nov122019.cfg ' ::: $(ls dti/*fa.nii.gz | sed 's/.*dti\///g;s/_nozfi.*//g') ::: fa md rd ad dwimin dwimean b0mean dwistd dwirms
+ls dti/*fa.nii.gz | sed 's/.*dti\///g;s/_nozfi.*//g' | parallel -k echo {}_Pred_ALM.nii.gz > ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/test/testNamesOfPredictions_ALM_Nov122019.cfg
+ls dti/*fa.nii.gz | sed 's/.*dti\///g;s/_nozfi.*//g' | parallel -k echo $(pwd)/T1/{}.anat_stdorientation_normalized_BFC_brain_mask.nii.gz >  ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/test/testRoiMasks_ALM_Nov122019.cfg
+
+sed -i.bak '/KS_019_V1/d' testChannels_flair_ALM_Nov122019.cfg
+ls testChannels_*Nov*.cfg | parallel sed -i.bak2 '/KS019V1/d' {}
+sed -i.bak '/KS019V1/d' testNamesOfPredictions_ALM_Nov122019.cfg
+sed -i.bak '/KS019V1/d' testRoiMasks_ALM_Nov122019.cfg
+
+# endregion
+# region testing ALM Nov. 12, 2019
+outdir=/scratch/adluru/sp_adluru/DMOrigOutputUW_ALMV1
+configdir=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles
+modelcfg=$configdir/models/modelConfig_uw_ALM.cfg
+testcfg=$configdir/test/testConfig_uw_ALM.cfg
+finalmodel=$outdir/saved_models/trainSessionDmOriginal/deepMedicOriginal.trainSessionDmOriginal.final.2019-11-12.14.22.10.939083.model.ckpt
+./deepMedicRun -model $modelcfg \
+    -test $testcfg \
+    -load $finalmodel \
+    -dev cuda0
+# endregion
+# region training ALM Nov 11, 2019.
+model=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/models/modelConfig_uw_ALM2.cfg
+train=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/train/trainConfig_uw_ALM2.cfg
+./deepMedicRun -model $model -train $train -dev cuda0
+# endregion
+
+# region training ALM Nov 12, 2019.
+./deepMedicRun -model ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/models/modelConfig_uw_ALM3.cfg -train ~/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles/train/trainConfig_uw_ALM3.cfg -dev cuda1
+# endregion
+# region testing ALM Nov. 13, 2019
+outdir=/scratch/adluru/sp_adluru/DMOrigOutputUW_ALMV1
+configdir=/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/DeepMedicConfigFiles
+modelcfg=$configdir/models/modelConfig_uw_ALM3.cfg
+testcfg=$configdir/test/testConfig_uw_ALM3.cfg
+finalmodel=$outdir/saved_models/trainSessionDmOriginal/deepMedicOriginal.trainSessionDmOriginal.final.2019-11-13.06.45.43.662733.model.ckpt
+./deepMedicRun -model $modelcfg \
+    -test $testcfg \
+    -load $finalmodel \
+    -dev cuda0
 # endregion
 
 # region n=65 generate the appropriate dwi contrast based on the Stroke 2019 paper that Veena sent
@@ -372,6 +460,25 @@ convert_xfm -omat KS001V1epi2struc_inv.mat -inverse KS001V1epi2struc.mat
 flirt -in T1/KS001V1.anat_stdorientation_normalized_BFC_brain.nii.gz -ref dti/KS001V1_nozfi_b1bc_rc_withgrad_b0mean.nii.gz -applyxfm -init KS001V1epi2struc_inv.mat -out KS001V1strucinepi.nii.gz
 # endregion
 
+# region SS058 axis 3
+cat train/trainChannels_*Nov*.cfg | grep SS058 | parallel --bar -j8  mrpad {} {} -axis 2 13 13 -force
+cat train/trainRoiMasks_ALM_Nov082019.cfg | grep SS058 | parallel mrpad {} {} -axis 2 13 13 -force
+# endregion
+
+# region dwi to t1 registration
+ls dti/*b0mean.nii.gz | sed 's/.*dti\///g;s/\_.*//g' | parallel -j24 -k --bar epi_reg -v --epi=dti/{}_nozfi_b1bc_rc_withgrad_b0mean.nii.gz --t1=T1/{}.anat_stdorientation_normalized_BFC.nii.gz --t1brain=T1/{}.anat_stdorientation_normalized_BFC_brain.nii.gz --out=epi2struc/{}_epi2struc --noclean
+
+parallel -j24 -k --bar flirt -in dti/{1}_nozfi_b1bc_rc_withgrad_{2}.nii.gz -ref T1/{1}.anat_stdorientation_normalized_BFC_brain.nii.gz -init epi2struc/{1}_epi2struc.mat -applyxfm -out dwiinstruc/{1}_nozfi_b1bc_rc_withgrad_{2}_instruc.nii.gz ::: $(ls dti/*b0mean.nii.gz | sed 's/.*dti\///g;s/\_.*//g') ::: fa md ad rd b0mean
+
+parallel --dry-run -j24 -k --bar flirt -in dwicontrasts/{1}_nozfi_b1bc_rc_withgrad_{2}.nii.gz -ref T1/{1}.anat_stdorientation_normalized_BFC_brain.nii.gz -init epi2struc/{1}_epi2struc.mat -applyxfm -out dwiinstruc/{1}_nozfi_b1bc_rc_withgrad_{2}_instruc.nii.gz ::: $(ls dti/*b0mean.nii.gz | sed 's/.*dti\///g;s/\_.*//g') ::: dwimin dwimean dwistd dwirms
+
+parallel --dry-run --plus -j24 -k --bar 'arr=($(mrstats {} -quiet -output mean -output std -ignorezero));mrcalc {} ${arr[0]} -sub ${arr[1]} -div {..}_demean_destd.nii.gz -force' ::: dwiinstruc/*_instruc.nii.gz
+# endregion
+
+# region t1 demean_destd
+parallel --dry-run --plus -j24 -k --bar 'arr=($(mrstats {} -quiet -output mean -output std -ignorezero));mrcalc {} ${arr[0]} -sub ${arr[1]} -div {..}_demean_destd.nii.gz' ::: T1/*stdorientation_normalized_BFC_brain.nii.gz
+# endregion
+
 # region FLAIR pre-processing
 cd /scratch/adluru/sp_adluru/flair
 parallel -j30 --bar fslreorient2std {} {.}_stdorientation.nii.gz ::: *flair.nii
@@ -383,4 +490,8 @@ parallel --dry-run -j24 --bar -k --plus flirt -in {1} -ref {2} -applyxfm -init f
 
 
 ls flair/*stdorientation_BFC_bet.nii.gz | sed 's/.*flair\///g;s/.flair.*//g' | grep -v SS064V1 | parallel --dry-run -j24 --rpl '{_} s/\_//g' --bar -k flirt -in flair/{}.flair_stdorientation_BFC_bet.nii.gz -ref T1/{_}.anat_stdorientation_normalized_BFC_brain.nii.gz -cost normmi -searchcost normmi -omat flair2struc/{_}_flair2struc.mat
+
+ls flair/*stdorientation_BFC_bet.nii.gz | sed 's/.*flair\///g;s/.flair.*//g' | grep -v SS064V1 | parallel --dry-run -j24 --rpl '{_} s/\_//g' --bar -k flirt -in flair/{}.flair_stdorientation_BFC_bet.nii.gz -ref T1/{_}.anat_stdorientation_normalized_BFC_brain.nii.gz -init flair2struc/{_}_flair2struc.mat -applyxfm -out flairinstruc/{}.flair_stdorientation_BFC_bet_in_struc.nii.gz
+
+parallel --dry-run --plus -j24 -k --bar 'arr=($(mrstats {} -quiet -output mean -output std -ignorezero));mrcalc {} ${arr[0]} -sub ${arr[1]} -div {..}_demean_destd.nii.gz -force' ::: flairinstruc/*_in_struc.nii.gz
 # endregion
