@@ -97,6 +97,14 @@ applywarp --ref=$t1w --in=${pre}_ALM_in_MNI_swapx --warp=${pre}_nonlinear_transf
 # region (batch) flirt => fnirt => mni => flip => inv (11/25/2019)
 parallel --dry-run -j24 --bar bash SwapInMNI.sh {1} {2} ::: t1w/SS*.nii.gz :::+ alm/SS*thr.nii.gz
 # endregion
+
+# region (post swapx fix) decided to use n=27 with JIM alm masks (11/14/2019)
+cd /study/utaut2/T1WIAnalysisNA/RSNA2019FinalSetForAnalysis
+ls tomni/*in_native.nii.gz | parallel --bar -j20 --rpl '{.a} s/.anat/_anat/' cp {} {.a}
+ls dti/*instruc.nii.gz | parallel --dry-run --rpl '{_} s/_nozfi.*/_Acute_Lesion_Mask_size_thr/;s/.*dti\//alm\//' --rpl '{__} s/_nozfi.*/_anat_stdorientation_normalized_BFC_brain_ALM_in_MNI_swapx_in_native/;s/.*dti\//tomni\//' WriteVoxelwiseCSV {_}.nii.gz {__}.nii.gz {}
+~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI.csv
+# endregion
+
 # region decided to use n=27 with JIM alm masks (11/14/2019)
 cd /scratch/adluru/sp_adluru/RSNA2019FinalSetForAnalysis/alm
 ls *thr.nii.gz | parallel --plus fslswapdim {} -x y z {..}_swapx.nii.gz
@@ -465,6 +473,11 @@ parallel -j24 --bar -k 'dwiextract {} -shells 2000 - | mrmath - mean dwicontrast
 parallel --dry-run --plus -j24 --bar epi_reg -v --epi={1} --t1={2} --t1brain={3} --out=epi2struc/{1/..}_epi2struc --noclean ::: dti/*b0mean.nii.gz :::+ T1/*BFC.nii.gz :::+ T1/*BFC_brain.nii.gz
 cd /scratch/adluru/sp_adluru/epi2struc
 parallel -j20 --bar convert_xfm -omat {.}_inv.mat -inverse {} ::: *epi2struc.mat
+
+# region recomputing the fa md rd ad without the masking. 11/26/2019.
+ls dti/*withgrad.mif | parallel 'dwi2tensor {} - | tensor2metric - -fa {.}_fa.nii.gz -adc {.}_md.nii.gz -rd {.}_rd.nii.gz -ad {.}_ad.nii.gz -force'
+ls dti/*withgrad_??.nii.gz | parallel --bar fslmaths {} -nan {}
+# endregion
 
 parallel -j24 --bar -k --plus --dry-run flirt -in {1} -ref {2} -applyxfm -init epi2struc/{1/..}_epi2struc.mat -out dwiinstruc/{1/..}_instruc.nii.gz ::: dti/*b0mean.nii.gz :::+ T1/*BFC_brain.nii.gz
 parallel -j24 --bar -k --plus --dry-run flirt -in {1} -ref {2} -applyxfm -init epi2struc/{3/..}_epi2struc.mat -out dwiinstruc/{1/..}_instruc.nii.gz ::: dti/*withgrad_fa.nii.gz :::+ T1/*BFC_brain.nii.gz :::+ dti/*b0mean.nii.gz
