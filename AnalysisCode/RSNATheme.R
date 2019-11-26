@@ -55,11 +55,12 @@ figroot = paste0(study, 'utaut2/T1WIAnalysisNA/RSNA2019FinalSetForAnalysis/Figur
 
 # ggplot theme ====
 dodge = position_dodge(width = 0.9)
-txtSize = 12
+txtSize = 18
 gtheme = theme(legend.key = element_rect(colour = "black"),
                legend.title = element_text(size = txtSize),
                legend.text = element_text(size = txtSize),
-               legend.background = element_blank()) +
+               legend.background = element_blank(),
+               legend.position = c(0.9, 0.9)) +
   theme(legend.position = "top", legend.title = element_blank()) +
   theme(strip.text.x = element_text(size = txtSize),
         strip.text.y = element_text(size = txtSize)) +
@@ -80,4 +81,5 @@ gtheme = theme(legend.key = element_rect(colour = "black"),
                                     colour = "gray"), 
     panel.grid.minor = element_line(size = 0.2, linetype = 'solid',
                                     colour = "gray")
-  ) 
+  ) +
+  theme(strip.background = element_rect(fill = "white"))

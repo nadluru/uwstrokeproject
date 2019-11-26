@@ -70,6 +70,33 @@ export -f WriteVoxelwiseCSV
 csvstack *final.csv >StrokeVoxelwiseDTI.csv
 # endregion
 
+# region alm swapx nudge info (11/25/2019)
+SS001 
+SS004 translate y -17
+SS014
+SS015
+SS019
+SS035
+SS036
+# endregion
+
+# region (test run) flirt => fnirt => mni => flip => inv (11/25/2019)
+t1w=t1w/SS001V1.anat_stdorientation_normalized_BFC_brain.nii.gz
+alm=alm/SS001V1_Acute_Lesion_Mask_size_thr.nii.gz
+pre=tomni/$(basename $t1w .nii.gz)
+refimg=${FSLDIR}/data/standard/MNI152_T1_1mm_brain.nii.gz
+flirt -ref $refimg -in $t1w -omat ${pre}_affine_transf.mat
+fnirt --in=$t1w --aff=${pre}_affine_transf.mat --cout=${pre}_nonlinear_transf --config=T1_2_MNI152_1mm
+applywarp --ref=$refimg --in=$t1w --warp=${pre}_nonlinear_transf --out=${pre}_warped_structural
+applywarp --ref=$refimg --in=$alm --warp=${pre}_nonlinear_transf --out=${pre}_ALM_in_MNI --interp=nn
+invwarp --ref=$t1w --warp=${pre}_nonlinear_transf --out=${pre}_nonlinear_transf_inv
+fslswapdim ${pre}_ALM_in_MNI -x y z ${pre}_ALM_in_MNI_swapx
+applywarp --ref=$t1w --in=${pre}_ALM_in_MNI_swapx --warp=${pre}_nonlinear_transf_inv --out=${pre}_ALM_in_MNI_swapx_in_native --interp=nn
+# endregion
+
+# region (batch) flirt => fnirt => mni => flip => inv (11/25/2019)
+parallel --dry-run -j24 --bar bash SwapInMNI.sh {1} {2} ::: t1w/SS*.nii.gz :::+ alm/SS*thr.nii.gz
+# endregion
 # region decided to use n=27 with JIM alm masks (11/14/2019)
 cd /scratch/adluru/sp_adluru/RSNA2019FinalSetForAnalysis/alm
 ls *thr.nii.gz | parallel --plus fslswapdim {} -x y z {..}_swapx.nii.gz

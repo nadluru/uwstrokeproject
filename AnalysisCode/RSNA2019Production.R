@@ -279,4 +279,5 @@ print(panno)
 dev.off()
 
 # Basic demo numbers ======
-democsv %>% group_by(Gender) %>% summarize(ma = mean(Age_at_Visit1.visit1.date...DOB.),sda = sd(Age_at_Visit1.visit1.date...DOB.))
+democsv %>% group_by(Gender) %>% 
+  summarize(ma = mean(Age_at_Visit1.visit1.date...DOB.),sda = sd(Age_at_Visit1.visit1.date...DOB.))
