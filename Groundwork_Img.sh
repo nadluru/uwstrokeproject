@@ -102,7 +102,7 @@ parallel --dry-run -j24 --bar bash SwapInMNI.sh {1} {2} ::: t1w/SS*.nii.gz :::+ 
 cd /study/utaut2/T1WIAnalysisNA/RSNA2019FinalSetForAnalysis
 ls tomni/*in_native.nii.gz | parallel --bar -j20 --rpl '{.a} s/.anat/_anat/' cp {} {.a}
 ls dti/*instruc.nii.gz | parallel --dry-run --rpl '{_} s/_nozfi.*/_Acute_Lesion_Mask_size_thr/;s/.*dti\//alm\//' --rpl '{__} s/_nozfi.*/_anat_stdorientation_normalized_BFC_brain_ALM_in_MNI_swapx_in_native/;s/.*dti\//tomni\//' WriteVoxelwiseCSV {_}.nii.gz {__}.nii.gz {}
-~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI.csv
+~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI_MNIFlipped.csv
 # endregion
 
 # region decided to use n=27 with JIM alm masks (11/14/2019)
