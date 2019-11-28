@@ -56,8 +56,13 @@ parallel --dry-run -j27 --bar bash SwapInMNI_ApplyWarpsOnly.sh {1} {2} $scratch/
 # endregion
 
 # region (post swapx fix) 
-cd /study/utaut2/T1WIAnalysisNA/RSNA2019FinalSetForAnalysis
-ls tomni/*in_native.nii.gz | parallel --bar -j20 --rpl '{.a} s/.anat/_anat/' cp {} {.a}
-ls dti/*withgrad_??_in_bravo.nii.gz | parallel --dry-run --rpl '{i} s/_nozfi.*/_Acute_Lesion_Mask/;s/.*dti\///;s/.gz//' --rpl '{c} s/_nozfi.*/_BRAVO_uniform_bet_ALM_in_MNI_swapx_in_native/;s/.*dti\//MNIFlip\//' WriteVoxelwiseCSV {i}.nii {c}.nii.gz {}
+cd $scratch/SimpleMinded
+ls dti/*withgrad_??_in_bravo.nii.gz | parallel --dry-run -j27 --rpl '{i} s/_nozfi.*/_Acute_Lesion_Mask/;s/.*dti\///;s/.gz//' --rpl '{c} s/_nozfi.*/_BRAVO_uniform_bet_ALM_in_MNI_swapx_in_native/;s/.*dti\//MNIFlip\//' WriteVoxelwiseCSV {i}.nii {c}.nii.gz {}
 ~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded.csv
+# endregion
+
+# region (post swapx fix) with size_thr
+cd $scratch/SimpleMinded
+ls dti/*withgrad_??_in_bravo.nii.gz | parallel --dry-run -j27 --rpl '{i} s/_nozfi.*/_Acute_Lesion_Mask_size_thr/;s/.*dti\///;s/.gz//' --rpl '{c} s/_nozfi.*/_BRAVO_uniform_bet_ALM_in_MNI_swapx_in_native/;s/.*dti\//MNIFlip\//' WriteVoxelwiseCSV {i}.nii.gz {c}.nii.gz {}
+~/.linuxbrew/bin/csvstack *final.csv > StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_SizeThr.csv
 # endregion

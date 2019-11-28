@@ -32,3 +32,8 @@ cp StrokeVoxelwiseDTI_MNIFlipped.csv StrokeVoxelwiseDTI_MNIFlipped_Nov262019.csv
 sed -i.bak 's/_nozfi.*withgrad//g;s/_in_bravo//g;s/Acute_Lesion_Mask/ALM/g;s/_/,/;s/ID/ID,DTI/;s/_/,/;s/ROI/SID,ROI/;s/V1//;s/V1//;s/ad/AD/;s/fa/FA/;s/md/MD/;s/rd/RD/;s/BRAVO.*in_native/Contralesional/;s/ALM/Ipsilesional/;s/DTI/MeasureName/;s/ROI/ROIName/' StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded.csv
 cp StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded.csv StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_Nov272019.csv
 # endregion
+
+# region simple minded size thr Nov. 27, 2019.
+sed -i.bak 's/_nozfi.*withgrad//g;s/_in_bravo//g;s/Acute_Lesion_Mask_size_thr/ALM/g;s/_/,/;s/ID/ID,DTI/;s/_/,/;s/ROI/SID,ROI/;s/V1//;s/V1//;s/ad/AD/;s/fa/FA/;s/md/MD/;s/rd/RD/;s/BRAVO.*in_native/Contralesional/;s/ALM/Ipsilesional/;s/DTI/MeasureName/;s/ROI/ROIName/' StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_SizeThr.csv
+cp StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_SizeThr.csv StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_SizeThr_Nov272019.csv
+# endregion
