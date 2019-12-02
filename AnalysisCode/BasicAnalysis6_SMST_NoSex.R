@@ -181,9 +181,8 @@ p = csv %>% mutate(SID = ID) %>%
                         left = 'both') +
       labs(
         y = 'DTI measure name',
-        x = 'DTI measure value'
-        #,
-        #title = paste('Subject', unique(.$SID))
+        x = 'DTI measure value',
+        title = paste('Subject', unique(.$SID))
       ),
     filename = paste('DTIDistributions_Laplace_SMST_Nov272019', unique(.$SID),
                      sep = '_') %>% trimws
@@ -201,14 +200,13 @@ p = csv %>% mutate(SID = ID) %>%
 
 
 # Visualizing (MASY) plots with KLD =====
-# excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
-excludelist = c('')
+excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
 kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplaceFiltered_SMST_Nov272019.csv'))
 p = kcsvlong %>%
   na.omit() %>%
-  filter(!(ID %in% excludelist)) %>%
-  group_by(MeasureName, ClinicalMeasureName, Gender) %>%
-  mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
+  filter(!(ID %in% excludelist) & Gender == 'Male') %>%
+  group_by(MeasureName, ClinicalMeasureName) %>%
+  mutate(SampleSize = paste0('n = ', n())
          %>% as.factor) %>% ungroup %>%
   group_by(MeasureName, ClinicalMeasureName) %>%
   do(
@@ -216,11 +214,11 @@ p = kcsvlong %>%
       data = .,
       aes(x = ClinicalMeasureValue,
           y = kldiv,
-          color = GenderSampleSize)
+          color = SampleSize)
     ) +
       geom_point(size = 1.5, alpha = 0.8) +
       geom_smooth(
-        aes(fill = GenderSampleSize),
+        aes(fill = SampleSize),
         alpha = 0.2,
         method = 'lm'
       ) +
@@ -228,12 +226,10 @@ p = kcsvlong %>%
                         left = 'both'),
     pvalue = tidy(
       lm(
-        kldiv ~ ClinicalMeasureValue +
-          Gender +
-          ClinicalMeasureValue:Gender,
+        kldiv ~ ClinicalMeasureValue,
         data = .
       )
-    )$p.value[[4]] %>%
+    )$p.value[[2]] %>%
       round(digits = 3),
     Name = paste(unique(.$ClinicalMeasureName),
                  unique(.$MeasureName),
@@ -270,7 +266,7 @@ p = kcsvlong %>%
       theme(legend.position = c(0.7, 0.9)) +
       labs(x = .$xlabelName,
            y = .$ylabelName),
-    filename = paste('MASYLaplaceSMST', .$Name,
+    filename = paste('MASYLaplaceSMSTOverall', .$Name,
                      sep = '_') %>% trimws
   ) %>%
   rowwise() %>%
@@ -285,8 +281,7 @@ p = kcsvlong %>%
   )
 
 # Visualizing (IpsiMean) plots with baseline mean =====
-# excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
-excludelist = c('')
+excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
 kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanLongFiltered_SMST_Nov272019.csv'))
 p = kcsvlong %>%
   na.omit() %>%
@@ -373,12 +368,11 @@ p = kcsvlong %>%
   )
 
 # Visualizing (ContraMean) plots with baseline mean =====
-# excluelist = c('SS035', 'SS036', 'SS067', 'SS022')
-excludelist = c('')
+excluelist = c('SS035', 'SS036', 'SS067', 'SS022')
 kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanLongFiltered_SMST_Nov272019.csv'))
 p = kcsvlong %>%
   na.omit() %>%
-  filter(ROIName == 'Contralesional' & !(ID %in% excludelist)) %>%
+  filter(ROIName == 'Contralesional' & !(ID %in% excluelist)) %>%
   group_by(MeasureName, ClinicalMeasureName, Gender) %>%
   mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
          %>% as.factor) %>% ungroup %>%
@@ -461,8 +455,7 @@ p = kcsvlong %>%
   )
 
 # Visualizing (MeanDiff) plots with baseline mean diff =====
-#excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
-excludelist = c('')
+excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
 kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
 p = kcsvlong %>%
   na.omit() %>%
@@ -546,294 +539,3 @@ p = kcsvlong %>%
     y = print(.$plotsanno),
     z = dev.off()
   )
-
-# Basic info ====
-imgcsv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTIDemo_SMST_Nov272019.csv'))
-imgids = imgcsv %>% select(ID) %>% distinct() %>% pull
-democsv = read.csv(paste0(csvroot, 'BasicDemographicsNov152019.csv'))
-democsv %>% 
-  filter(SubjectID %in% imgids) %>% 
-  summarise(MeanAge = mean(AgeAtVisit), 
-            MeanYoE = mean(YearsOfEducation, na.rm = T))
-
-
-# Age effect on KLD =====
-kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplace_SMST_Nov272019.csv'))
-mdl = kcsvlong %>% 
-  filter(ClinicalMeasureName == 'AgeAtVisit') %>% 
-  group_by(MeasureName) %>%
-  do(
-    pval = (lm(kldiv ~ 
-               ClinicalMeasureValue,
-             data = .) %>% tidy())$p.value[[2]]
-  )
-
-kcsvlong %>% 
-  filter(ClinicalMeasureName == 'AgeAtVisit') %>% 
-  ggplot(data = ., aes(x = ClinicalMeasureValue, 
-                       y = kldiv)) + 
-  geom_point() + 
-  geom_smooth(method = 'lm') +
-  facet_rep_grid(.~MeasureName) +
-  gtheme + labs(x = 'Age at visit',
-                y = 'MASY')
-
-
-# Gender effect on KLD =====
-kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplace_SMST_Nov272019.csv'))
-mdl = kcsvlong %>% 
-  filter(ClinicalMeasureName == 'AgeAtVisit') %>% 
-  group_by(MeasureName) %>%
-  do(
-    pval = (lm(kldiv ~ 
-                 Gender,
-               data = .) %>% tidy())$p.value[[2]]
-  )
-
-kcsvlong %>% 
-  filter(ClinicalMeasureName == 'AgeAtVisit') %>% 
-  ggplot(data = ., aes(x = kldiv, 
-                       color = Gender,
-                       fill = Gender)) + 
-  geom_density(alpha = 0.2) + 
-  facet_rep_grid(.~MeasureName) +
-  gtheme + labs(x = 'MASY',
-                y = 'Density of samples')
-
-
-# Verbal effect on MASY separately by gender =====
-excludelist = c('')
-kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplaceFiltered_SMST_Nov272019.csv'))
-
-p = kcsvlong %>%
-  na.omit() %>%
-  filter(!(ID %in% excludelist)) %>%
-  group_by(MeasureName, ClinicalMeasureName, Gender) %>%
-  mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
-         %>% as.factor) %>% ungroup %>%
-  group_by(MeasureName, ClinicalMeasureName, GenderSampleSize) %>%
-  do(
-    plots = ggplot(
-      data = .,
-      aes(x = ClinicalMeasureValue,
-          y = kldiv,
-          color = GenderSampleSize)
-    ) +
-      geom_point(size = 1.5, alpha = 0.8) +
-      geom_smooth(
-        aes(fill = GenderSampleSize),
-        alpha = 0.2,
-        method = 'lm'
-      ) +
-      coord_capped_cart(bottom = 'both',
-                        left = 'both'),
-    pvalue = tidy(
-      lm(
-        kldiv ~ ClinicalMeasureValue,
-        data = .
-      )
-    )$p.value[[2]] %>%
-      round(digits = 3),
-    Name = paste(unique(.$ClinicalMeasureName),
-                 unique(.$MeasureName),
-                 sep = '_'),
-    xlabelName = plyr::mapvalues(
-      .$ClinicalMeasureName,
-      c('VerbalFluencyNormed',
-        'NormAcuteTimePeriod'),
-      c('Normalized verbal fluency',
-        'Normalized acute time period')
-    ),
-    ylabelName = paste0('MASY [',
-                        .$MeasureName,
-                        ']'),
-    xpos = case_when(
-      .$ClinicalMeasureName == 'VerbalFluencyNormed' ~ -2,
-      .$ClinicalMeasureName == 'NormAcuteTimePeriod' ~ 0.05
-    )
-  ) %>%
-  rowwise() %>%
-  do(
-    plotsanno = .$plots +
-      geom_text(
-        x = -Inf,
-        y = -Inf,
-        hjust = -0.1,
-        vjust = -1.0,
-        label = paste('p:',
-                      .$pvalue),
-        inherit.aes = F,
-        size = 6
-      ) +
-      gtheme +
-      theme(legend.position = c(0.7, 0.9)) +
-      labs(x = .$xlabelName,
-           y = .$ylabelName),
-    filename = paste('MASYLaplaceSMST', .$Name,
-                     sep = '_') %>% trimws
-  ) %>%
-  rowwise() %>%
-  do(
-    x = pdf(
-      paste0(figroot, gsub("/", "", .$filename), '.pdf'),
-      width = 5.0,
-      height = 4.15
-    ),
-    y = print(.$plotsanno),
-    z = dev.off()
-  )
-
-
-# One sampled t-tests (MASY) =======
-kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
-mdls = kcsvkld %>% 
-  group_by(MeasureName) %>%
-  do(
-    name = unique(.$MeasureName),
-    htest = t.test(.$kldiv)
-  ) %>%
-  do(
-    name = .$name,
-    pval = .$htest$p.value,
-    est = .$htest$estimate,
-    ci = .$htest$conf.int
-  )
-mdls$name %<>% unlist %<>% as.factor
-mdls$pval %<>% unlist
-mdls$est %<>% unlist
-tmp = mdls$ci %>% unlist
-mdls$cimin = tmp[seq(1, 8, 2)]
-mdls$cimax = tmp[seq(2, 8, 2)]
-p = ggplot(mdls,
-       aes(x = name,
-           y = est,
-           color = name,
-           fill = name)) +
-  geom_bar(stat = 'identity',
-           alpha = 0.2) +
-  geom_errorbar(aes(ymin = cimin,
-                    ymax = cimax),
-                width = 0.2) +
-  guides(fill = F, color =F) +
-  gtheme +
-  geom_text(aes(x = name, 
-                y = -Inf,
-                angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
-  labs(x = '',
-       y = TeX('MASY'))
-p
-pdf(paste0(figroot, '/MASYOnly.pdf'), width = 3.65, height = 3.45)
-print(p)
-dev.off()
-
-# One sampled t-test (meandiff) =======
-kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
-mdls = kcsvmeandiff %>%
-  filter(grepl('Acute', ClinicalMeasureName)) %>%
-  group_by(MeasureName) %>%
-  do(
-    name = unique(.$MeasureName),
-    htest = t.test(.$MeanDiff)
-  ) %>%
-  do(
-    name = .$name,
-    pval = .$htest$p.value,
-    est = .$htest$estimate,
-    ci = .$htest$conf.int
-  )
-mdls$name %<>% unlist %<>% as.factor
-mdls$pval %<>% unlist
-mdls$est %<>% unlist
-tmp = mdls$ci %>% unlist
-mdls$cimin = tmp[seq(1, 8, 2)]
-mdls$cimax = tmp[seq(2, 8, 2)]
-p = ggplot(mdls,
-       aes(x = name,
-           y = est,
-           color = name,
-           fill = name)) +
-  geom_bar(stat = 'identity',
-           alpha = 0.2) +
-  geom_errorbar(aes(ymin = cimin,
-                    ymax = cimax),
-                width = 0.2) +
-  guides(fill = F, color =F) +
-  gtheme +
-  geom_text(aes(x = name, 
-                y = Inf, 
-                angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
-  labs(x = '',
-       y = TeX('$\\Delta$(Ipsi - Contra)'))
-
-p
-pdf(paste0(figroot, '/DeltaOnly.pdf'), width = 3.65, height = 3.45)
-print(p)
-dev.off()
-
-# Two sampled t-test mean ======
-kcsvmean = read.csv(paste0(csvroot, 'StrokeDTIMean_SMST_Nov272019.csv'))
-mdls = kcsvmean %>%
-  mutate(ROIName = fct_relevel(ROIName, 'Contralesional', after = 1)) %>%
-  group_by(MeasureName) %>%
-  do(
-    name = unique(.$MeasureName),
-    htest = t.test(MeanValue ~ ROIName, data = .,
-                   paired = F)
-  ) %>%
-  do(
-    name = .$name,
-    pval = .$htest$p.value,
-    est = .$htest$estimate,
-    ci = .$htest$conf.int
-  )
-mdls$name %<>% unlist %<>% as.factor
-mdls$pval %<>% unlist
-tmp = mdls$est %>% unlist
-mdls$estipsi = tmp[seq(1, 8, 2)]
-mdls$estcontra = tmp[seq(2, 8, 2)]
-mdls$delta = mdls$estipsi - mdls$estcontra
-tmp = mdls$ci %>% unlist
-mdls$cimin = tmp[seq(1, 8, 2)]
-mdls$cimax = tmp[seq(2, 8, 2)]
-p = ggplot(mdls,
-           aes(x = name,
-               y = delta,
-               color = name,
-               fill = name)) +
-  geom_bar(stat = 'identity',
-           alpha = 0.2) +
-  geom_errorbar(aes(ymin = cimin,
-                    ymax = cimax),
-                width = 0.2) +
-  guides(fill = F, color =F) +
-  gtheme +
-  geom_text(aes(x = name, 
-                y = Inf, 
-                angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
-  labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
-
-p
-pdf(paste0(figroot, '/MeanOnly.pdf'), width = 3.65, height = 3.45)
-print(p)
-dev.off()
-# roughwork =====
-kcsvmean %>% ggplot(aes(x = MeanValue, 
-                        color = ROIName, fill = ROIName)) + 
-  geom_density(alpha = 0.2) + 
-  facet_rep_grid(.~MeasureName) + gtheme
-
-mdls = kcsvmean %>% 
-  group_by(MeasureName) %>% 
-  do(h = t.test(MeanValue ~ ROIName, 
-                data = ., paired = F))
-md
