@@ -284,6 +284,226 @@ p = kcsvlong %>%
     z = dev.off()
   )
 
+# Visualizing (MASY subset) plots with KLD =====
+includelist = read.csv(paste0(csvroot, 'VerbalInfluence.csv'))
+kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplaceFiltered_SMST_Nov272019.csv'))
+p = kcsvlong %>%
+  na.omit() %>%
+  filter((ID %in% includelist$ID)) %>%
+  group_by(MeasureName, ClinicalMeasureName, Gender) %>%
+  mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
+         %>% as.factor) %>% ungroup %>%
+  group_by(MeasureName, ClinicalMeasureName) %>%
+  do(
+    plots = ggplot(
+      data = .,
+      aes(x = ClinicalMeasureValue,
+          y = kldiv,
+          color = GenderSampleSize)
+    ) +
+      geom_point(size = 1.5, alpha = 0.8) +
+      geom_smooth(
+        aes(fill = GenderSampleSize),
+        alpha = 0.2,
+        method = 'lm'
+      ) +
+      coord_capped_cart(bottom = 'both',
+                        left = 'both'),
+    pvalue = tidy(
+      lm(
+        kldiv ~ ClinicalMeasureValue +
+          Gender +
+          ClinicalMeasureValue:Gender,
+        data = .
+      )
+    )$p.value[[4]] %>%
+      round(digits = 3),
+    Name = paste(unique(.$ClinicalMeasureName),
+                 unique(.$MeasureName),
+                 sep = '_'),
+    xlabelName = plyr::mapvalues(
+      .$ClinicalMeasureName,
+      c('VerbalFluencyNormed',
+        'NormAcuteTimePeriod'),
+      c('Normalized verbal fluency',
+        'Normalized acute time period')
+    ),
+    ylabelName = paste0('MASY [',
+                        .$MeasureName,
+                        ']'),
+    xpos = case_when(
+      .$ClinicalMeasureName == 'VerbalFluencyNormed' ~ -2,
+      .$ClinicalMeasureName == 'NormAcuteTimePeriod' ~ 0.05
+    )
+  ) %>%
+  rowwise() %>%
+  do(
+    plotsanno = .$plots +
+      geom_text(
+        x = -Inf,
+        y = -Inf,
+        hjust = -0.1,
+        vjust = -1.0,
+        label = paste('p:',
+                      .$pvalue),
+        inherit.aes = F,
+        size = 6
+      ) +
+      gtheme +
+      theme(legend.position = c(0.7, 0.9)) +
+      labs(x = .$xlabelName,
+           y = .$ylabelName),
+    filename = paste('MASYLaplaceSMSTSubset', .$Name,
+                     sep = '_') %>% trimws
+  ) %>%
+  rowwise() %>%
+  do(
+    x = pdf(
+      paste0(figroot, gsub("/", "", .$filename), '.pdf'),
+      width = 5.0,
+      height = 4.15
+    ),
+    y = print(.$plotsanno),
+    z = dev.off()
+  )
+
+# Visualizing (MASY raw verbal) plots with KLD =====
+includelist = read.csv(paste0(csvroot, 'VerbalInfluence.csv'))
+kcsv = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+p = kcsv %>%
+  na.omit() %>%
+  filter((ID %in% includelist$ID)) %>%
+  group_by(MeasureName, Gender) %>%
+  mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
+         %>% as.factor) %>% ungroup %>%
+  group_by(MeasureName) %>%
+  do(
+    plots = ggplot(
+      data = .,
+      aes(x = VerbalFluencyRaw,
+          y = kldiv,
+          color = GenderSampleSize)
+    ) +
+      geom_point(size = 1.5, alpha = 0.8) +
+      geom_smooth(
+        aes(fill = GenderSampleSize),
+        alpha = 0.2,
+        method = 'lm'
+      ) +
+      coord_capped_cart(bottom = 'both',
+                        left = 'both'),
+    pvalue = tidy(
+      lm(
+        kldiv ~ VerbalFluencyRaw +
+          Gender +
+          VerbalFluencyRaw:Gender,
+        data = .
+      )
+    )$p.value[[4]] %>%
+      round(digits = 3),
+    Name = paste('VerbalFluencyRaw',
+                 unique(.$MeasureName),
+                 sep = '_'),
+    xlabelName = 'Raw verbal fluency',
+    ylabelName = paste0('MASY [',
+                        .$MeasureName,
+                        ']')
+  ) %>%
+  rowwise() %>%
+  do(
+    plotsanno = .$plots +
+      geom_text(
+        x = -Inf,
+        y = -Inf,
+        hjust = -0.1,
+        vjust = -1.0,
+        label = paste('p:',
+                      .$pvalue),
+        inherit.aes = F,
+        size = 6
+      ) +
+      gtheme +
+      theme(legend.position = c(0.7, 0.9)) +
+      labs(x = .$xlabelName,
+           y = .$ylabelName),
+    filename = paste('MASYLaplaceSMSTSubsetVerbalRaw', .$Name,
+                     sep = '_') %>% trimws
+  ) %>%
+  rowwise() %>%
+  do(
+    x = pdf(
+      paste0(figroot, gsub("/", "", .$filename), '.pdf'),
+      width = 5.0,
+      height = 4.15
+    ),
+    y = print(.$plotsanno),
+    z = dev.off()
+  )
+
+# Visualizing (MASY median split) plots with KLD =====
+includelist = read.csv(paste0(csvroot, 'VerbalInfluence.csv'))
+kcsv = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+p = kcsv %>%
+  na.omit() %>%
+  filter((ID %in% includelist$ID)) %>%
+  mutate(VerbalBehavior = VerbalFluencyRaw > median(VerbalFluencyRaw)) %>%
+  group_by(MeasureName, Gender) %>%
+  mutate(GenderSampleSize = paste0(Gender, ' (n = ', n(), ')')
+         %>% as.factor) %>% ungroup %>%
+  group_by(MeasureName) %>%
+  do(
+    plots = ggplot(
+      data = .,
+      aes(x = kldiv,
+        color = VerbalBehavior,
+        fill = VerbalBehavior)
+    ) +
+      geom_density(alpha = 0.2) +
+      coord_capped_cart(bottom = 'both',
+                        left = 'both'),
+    pvalue = tidy(
+      t.test(kldiv ~ VerbalBehavior, data = .)
+    )$p.value %>%
+      round(digits = 3),
+    Name = paste('VerbalFluencyRaw',
+                 unique(.$MeasureName),
+                 sep = '_'),
+    xlabelName = 'Raw verbal fluency',
+    ylabelName = paste0('MASY [',
+                        .$MeasureName,
+                        ']')
+  ) %>%
+  rowwise() %>%
+  do(
+    plotsanno = .$plots +
+      geom_text(
+        x = -Inf,
+        y = -Inf,
+        hjust = -0.1,
+        vjust = -1.0,
+        label = paste('p:',
+                      .$pvalue),
+        inherit.aes = F,
+        size = 6
+      ) +
+      gtheme +
+      theme(legend.position = c(0.7, 0.9)) +
+      labs(x = .$xlabelName,
+           y = .$ylabelName),
+    filename = paste('MASYLaplaceSMSTSubsetVerbalRawMedianSplit', .$Name,
+                     sep = '_') %>% trimws
+  ) %>%
+  rowwise() %>%
+  do(
+    x = pdf(
+      paste0(figroot, gsub("/", "", .$filename), '.pdf'),
+      width = 5.0,
+      height = 4.15
+    ),
+    y = print(.$plotsanno),
+    z = dev.off()
+  )
+
 # Visualizing (IpsiMean) plots with baseline mean =====
 # excludelist = c('SS035', 'SS036', 'SS067', 'SS022')
 excludelist = c('')
@@ -590,7 +810,7 @@ mdl = kcsvlong %>%
                data = .) %>% tidy())$p.value[[2]]
   )
 
-kcsvlong %>% 
+p = kcsvlong %>% 
   filter(ClinicalMeasureName == 'AgeAtVisit') %>% 
   ggplot(data = ., aes(x = kldiv, 
                        color = Gender,
@@ -599,6 +819,70 @@ kcsvlong %>%
   facet_rep_grid(.~MeasureName) +
   gtheme + labs(x = 'MASY',
                 y = 'Density of samples')
+pdf(paste0(figroot, '/GenderMASY.pdf'),
+    width = 5.75,
+    height = 3.25)
+print(p)
+dev.off()
+
+# Gender effect Delta =====
+excludelist = c('')
+kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
+mdl = kcsvlong %>% 
+  filter(ClinicalMeasureName == 'NormAcuteTimePeriod') %>% 
+  group_by(MeasureName) %>%
+  do(
+    pval = (lm(MeanDiff ~ 
+                 Gender,
+               data = .) %>% tidy())$p.value[[2]]
+  )
+
+p = kcsvlong %>% 
+  filter(ClinicalMeasureName == 'NormAcuteTimePeriod') %>% 
+  ggplot(data = ., aes(x = MeanDiff, 
+                       color = Gender,
+                       fill = Gender)) + 
+  geom_density(alpha = 0.2) + 
+  facet_rep_grid(.~MeasureName) +
+  gtheme + labs(x = TeX('$\\Delta$(Ipsi - contra)'),
+                y = 'Density of samples') +
+  theme(axis.text.x = element_text(angle = 90))
+p
+pdf(paste0(figroot, '/GenderDelta.pdf'),
+    width = 5.75,
+    height = 3.25)
+print(p)
+dev.off()
+
+# Gender difference mean ipsi =======
+kcsvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanLongFiltered_SMST_Nov272019.csv'))
+mdl = kcsvlong %>% 
+  filter(ClinicalMeasureName == 'NormAcuteTimePeriod' &
+           ROIName == 'Ipsilesional') %>% 
+  group_by(MeasureName) %>%
+  do(
+    pval = (lm(MeanValue ~ 
+                 Gender,
+               data = .) %>% tidy())$p.value[[2]]
+  )
+
+p = kcsvlong %>% 
+  filter(ClinicalMeasureName == 'NormAcuteTimePeriod') %>% 
+  ggplot(data = ., aes(x = MeanValue, 
+                       color = Gender,
+                       fill = Gender)) + 
+  geom_density(alpha = 0.2) + 
+  facet_rep_grid(.~MeasureName) +
+  gtheme + labs(x = 'Mean (Ipsi)',
+                y = 'Density of samples') +
+  theme(axis.text.x = element_text(angle = 90))
+p
+pdf(paste0(figroot, '/GenderIpsi.pdf'),
+    width = 5.75,
+    height = 3.25)
+print(p)
+dev.off()
+
 
 
 # Verbal effect on MASY separately by gender =====
@@ -683,14 +967,13 @@ p = kcsvlong %>%
     z = dev.off()
   )
 
-
 # One sampled t-tests (MASY) =======
 kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
 mdls = kcsvkld %>% 
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
-    htest = t.test(.$kldiv)
+    htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
@@ -728,6 +1011,195 @@ p
 pdf(paste0(figroot, '/MASYOnly.pdf'), width = 3.65, height = 3.45)
 print(p)
 dev.off()
+
+
+# One sampled t-tests (MASY by Male) =======
+kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+mdls = kcsvkld %>% 
+  filter(Gender == 'Male') %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$kldiv, alternative = 'greater')
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = -Inf,
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = -0.5, color = 'black') +
+  labs(x = '',
+       y = TeX('MASY'))
+p
+pdf(paste0(figroot, '/MASYOnly_Male.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+
+# One sampled t-tests (MASY by Female) =======
+kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+mdls = kcsvkld %>% 
+  filter(Gender == 'Female') %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$kldiv, alternative = 'greater')
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = -Inf,
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = -0.5, color = 'black') +
+  labs(x = '',
+       y = TeX('MASY'))
+p
+pdf(paste0(figroot, '/MASYOnly_Female.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+
+# One sampled t-tests (MASY by Low verbal) =======
+kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+mdls = kcsvkld %>% 
+  filter(VerbalFluencyRaw < median(VerbalFluencyRaw)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$kldiv, alternative = 'greater')
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = -Inf,
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = -0.5, color = 'black') +
+  labs(x = '',
+       y = TeX('MASY'))
+p
+pdf(paste0(figroot, '/MASYOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+
+# One sampled t-tests (MASY by High verbal) =======
+kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
+mdls = kcsvkld %>% 
+  filter(VerbalFluencyRaw >= median(VerbalFluencyRaw)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$kldiv, alternative = 'greater')
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = -Inf,
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = -0.5, color = 'black') +
+  labs(x = '',
+       y = TeX('MASY'))
+p
+pdf(paste0(figroot, '/MASYOnly_HighVerbal.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
 
 # One sampled t-test (meandiff) =======
 kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
@@ -773,6 +1245,150 @@ p = ggplot(mdls,
 
 p
 pdf(paste0(figroot, '/DeltaOnly.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+# One sampled t-test (meandiff by Male) =======
+kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
+mdls = kcsvmeandiff %>%
+  filter(grepl('Acute', ClinicalMeasureName) &
+           Gender == 'Male') %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$MeanDiff)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('$\\Delta$(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/DeltaOnly_Male.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+# One sampled t-test (meandiff by Female) =======
+kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
+mdls = kcsvmeandiff %>%
+  filter(grepl('Acute', ClinicalMeasureName) &
+           Gender == 'Female') %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$MeanDiff)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('$\\Delta$(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/DeltaOnly_Female.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+
+# One sampled t-test (meandiff by Low verbal) =======
+kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
+mdls = kcsvmeandiff %>%
+  filter(grepl('Acute', ClinicalMeasureName) &
+           Gender == 'Female') %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(.$MeanDiff)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('$\\Delta$(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/DeltaOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
 print(p)
 dev.off()
 
@@ -824,6 +1440,210 @@ p = ggplot(mdls,
 
 p
 pdf(paste0(figroot, '/MeanOnly.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+# Two sampled t-test mean (Male) ======
+kcsvmean = read.csv(paste0(csvroot, 'StrokeDTIMean_SMST_Nov272019.csv'))
+mdls = kcsvmean %>%
+  filter(Gender == 'Male') %>%
+  mutate(ROIName = fct_relevel(ROIName, 'Contralesional', after = 1)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(MeanValue ~ ROIName, data = .,
+                   paired = F)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+tmp = mdls$est %>% unlist
+mdls$estipsi = tmp[seq(1, 8, 2)]
+mdls$estcontra = tmp[seq(2, 8, 2)]
+mdls$delta = mdls$estipsi - mdls$estcontra
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = delta,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/MeanOnly_Male.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+# Two sampled t-test mean (Female) ======
+kcsvmean = read.csv(paste0(csvroot, 'StrokeDTIMean_SMST_Nov272019.csv'))
+mdls = kcsvmean %>%
+  filter(Gender == 'Female') %>%
+  mutate(ROIName = fct_relevel(ROIName, 'Contralesional', after = 1)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(MeanValue ~ ROIName, data = .,
+                   paired = F)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+tmp = mdls$est %>% unlist
+mdls$estipsi = tmp[seq(1, 8, 2)]
+mdls$estcontra = tmp[seq(2, 8, 2)]
+mdls$delta = mdls$estipsi - mdls$estcontra
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = delta,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/MeanOnly_Female.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+# Two sampled t-test mean (Low verbal) ======
+kcsvmean = read.csv(paste0(csvroot, 'StrokeDTIMean_SMST_Nov272019.csv'))
+mdls = kcsvmean %>%
+  filter(VerbalFluencyRaw < median(VerbalFluencyRaw)) %>%
+  mutate(ROIName = fct_relevel(ROIName, 'Contralesional', after = 1)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(MeanValue ~ ROIName, data = .,
+                   paired = F)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+tmp = mdls$est %>% unlist
+mdls$estipsi = tmp[seq(1, 8, 2)]
+mdls$estcontra = tmp[seq(2, 8, 2)]
+mdls$delta = mdls$estipsi - mdls$estcontra
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = delta,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/MeanOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
+print(p)
+dev.off()
+# Two sampled t-test mean (High verbal) ======
+kcsvmean = read.csv(paste0(csvroot, 'StrokeDTIMean_SMST_Nov272019.csv'))
+mdls = kcsvmean %>%
+  filter(VerbalFluencyRaw >= median(VerbalFluencyRaw)) %>%
+  mutate(ROIName = fct_relevel(ROIName, 'Contralesional', after = 1)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    htest = t.test(MeanValue ~ ROIName, data = .,
+                   paired = F)
+  ) %>%
+  do(
+    name = .$name,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+tmp = mdls$est %>% unlist
+mdls$estipsi = tmp[seq(1, 8, 2)]
+mdls$estcontra = tmp[seq(2, 8, 2)]
+mdls$delta = mdls$estipsi - mdls$estcontra
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = delta,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = paste0('p=', 
+                               formatC(pval, format = 'e', digits = 2))), 
+            hjust = 1.5, color = 'black') +
+  labs(x = '',
+       y = TeX('(Ipsi - Contra)'))
+
+p
+pdf(paste0(figroot, '/MeanOnly_HighVerbal.pdf'), width = 3.65, height = 3.45)
 print(p)
 dev.off()
 # roughwork =====
