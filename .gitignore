@@ -7,7 +7,7 @@
 *.log
 *.out
 *.lib
-
+deepmedic
 # Matlab data files
 *.mat
 *.asv
