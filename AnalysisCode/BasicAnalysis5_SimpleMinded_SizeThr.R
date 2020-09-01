@@ -1,4 +1,5 @@
-source('H:/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
+# source('H:/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
+source('C:/Users/nadluru/uwstrokeproject/AnalysisCode/RSNATheme.R')
 
 # Merging with basic demographics ====
 imgcsv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTI_MNIFlipped_SimpleMinded_SizeThr_Nov272019.csv'))
@@ -61,6 +62,19 @@ csvdiff = csvlong %>%
   filter(!is.na(MeanDiff))
 
 csvdiff %>% write.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'),
+                      row.names = F)
+
+# CSVs for baseline comparisons (mean diff unfiltered) ======
+csvlong = read.csv(paste0(csvroot, 'StrokeDTIMeanLong_SMST_Nov272019.csv'))
+csvdiff = csvlong %>%
+  group_by(ID, Gender, ClinicalMeasureName,
+           MeasureName) %>%
+  arrange(ROIName, .by_group = T) %>%
+  mutate(MeanDiff = MeanValue - lag(MeanValue),
+         DiffName = paste0(ROIName, '-', lag(ROIName))) %>%
+  filter(!is.na(MeanDiff))
+
+csvdiff %>% write.csv(paste0(csvroot, 'StrokeDTIMeanDiffUnfiltered_SMST_Nov272019.csv'),
                       row.names = F)
 
 # Computing KLD (Laplace) between lesion and contra lesion distributions ======
@@ -973,16 +987,19 @@ mdls = kcsvkld %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1004,11 +1021,16 @@ p = ggplot(mdls,
                 angle = 90,
                 label = paste0('p=', 
                                formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
+            hjust = -0.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('MASY'))
+       y = TeX('MASY'),
+       title = 'Full sample (n = 27)') +
+  theme(plot.title = element_text(hjust = 0.5))
 p
-pdf(paste0(figroot, '/MASYOnly.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MASYOnly.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
@@ -1020,16 +1042,19 @@ mdls = kcsvkld %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1049,13 +1074,17 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = -Inf,
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
+                label = round(pval, digits = 6)), 
+            hjust = -0.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('MASY'))
+       y = TeX('MASY'),
+       title = 'Male (n = 16)') +
+  theme(plot.title = element_text(hjust = 0.5))
 p
-pdf(paste0(figroot, '/MASYOnly_Male.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MASYOnly_Male.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
@@ -1067,16 +1096,19 @@ mdls = kcsvkld %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1096,16 +1128,19 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = -Inf,
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = -0.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('MASY'))
+       y = TeX('MASY'),
+       title = 'Female (n = 11)') +
+  theme(plot.title = element_text(hjust = 0.5))
 p
-pdf(paste0(figroot, '/MASYOnly_Female.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MASYOnly_Female.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
-
 
 # One sampled t-tests (MASY by Low verbal) =======
 kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
@@ -1114,16 +1149,19 @@ mdls = kcsvkld %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1143,16 +1181,19 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = -Inf,
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = -0.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('MASY'))
+       y = TeX('MASY'),
+       title = 'Low verbal fluency (n = 13)') +
+  theme(plot.title = element_text(hjust = 0.5))
 p
-pdf(paste0(figroot, '/MASYOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MASYOnly_LowVerbal.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
-
 
 # One sampled t-tests (MASY by High verbal) =======
 kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLaplace_SMST_Nov272019.csv'))
@@ -1161,16 +1202,19 @@ mdls = kcsvkld %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$kldiv, alternative = 'greater')
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1190,16 +1234,19 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = -Inf,
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = -0.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = -0.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('MASY'))
+       y = TeX('MASY'),
+       title = 'High verbal fluency (n = 14)') +
+  theme(plot.title = element_text(hjust = 0.5))
 p
-pdf(paste0(figroot, '/MASYOnly_HighVerbal.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MASYOnly_HighVerbal.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
-
 
 # One sampled t-test (meandiff) =======
 kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
@@ -1208,16 +1255,19 @@ mdls = kcsvmeandiff %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$MeanDiff)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1239,12 +1289,17 @@ p = ggplot(mdls,
                 angle = 90,
                 label = paste0('p=', 
                                formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+            hjust = 1.5, 
+            size= 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('$\\Delta$(Ipsi - Contra)'))
+       y = TeX('$\\Delta$(Ipsi - Contra)'),
+       title = 'Full sample (n = 27)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/DeltaOnly.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'DeltaOnly.pdf'),
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
@@ -1256,16 +1311,19 @@ mdls = kcsvmeandiff %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$MeanDiff)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1285,14 +1343,18 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('$\\Delta$(Ipsi - Contra)'))
+       y = TeX('$\\Delta$(Ipsi - Contra)'),
+       title = 'Male (n = 16)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/DeltaOnly_Male.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'DeltaOnly_Male.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
@@ -1304,16 +1366,19 @@ mdls = kcsvmeandiff %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$MeanDiff)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1333,35 +1398,42 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('$\\Delta$(Ipsi - Contra)'))
+       y = TeX('$\\Delta$(Ipsi - Contra)'),
+       title = 'Female (n = 11)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/DeltaOnly_Female.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'DeltaOnly_Female.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
 # One sampled t-test (meandiff by Low verbal) =======
-kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
+kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiffUnfiltered_SMST_Nov272019.csv'))
 mdls = kcsvmeandiff %>%
-  filter(grepl('Acute', ClinicalMeasureName) &
-           Gender == 'Female') %>%
+  filter(ClinicalMeasureName == 'VerbalFluencyRaw') %>%
+  filter(ClinicalMeasureValue < median(ClinicalMeasureValue)) %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.),
     htest = t.test(.$MeanDiff)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 mdls$est %<>% unlist
 tmp = mdls$ci %>% unlist
 mdls$cimin = tmp[seq(1, 8, 2)]
@@ -1381,14 +1453,73 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('$\\Delta$(Ipsi - Contra)'))
+       y = TeX('$\\Delta$(Ipsi - Contra)'),
+       title = 'Low verbal fluency (n = 13)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/DeltaOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'DeltaOnly_LowVerbal.pdf'), 
+    width = 5.65, height = 5.45)
+print(p)
+dev.off()
+
+# One sampled t-test (meandiff by High verbal) =======
+kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiffUnfiltered_SMST_Nov272019.csv'))
+mdls = kcsvmeandiff %>%
+  filter(ClinicalMeasureName == 'VerbalFluencyRaw') %>%
+  filter(ClinicalMeasureValue >= median(ClinicalMeasureValue)) %>%
+  group_by(MeasureName) %>%
+  do(
+    name = unique(.$MeasureName),
+    samplesize = nrow(.),
+    htest = t.test(.$MeanDiff)
+  ) %>%
+  do(
+    name = .$name,
+    samplesize = .$samplesize,
+    pval = .$htest$p.value,
+    est = .$htest$estimate,
+    ci = .$htest$conf.int
+  )
+mdls$name %<>% unlist %<>% as.factor
+mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
+mdls$est %<>% unlist
+tmp = mdls$ci %>% unlist
+mdls$cimin = tmp[seq(1, 8, 2)]
+mdls$cimax = tmp[seq(2, 8, 2)]
+p = ggplot(mdls,
+           aes(x = name,
+               y = est,
+               color = name,
+               fill = name)) +
+  geom_bar(stat = 'identity',
+           alpha = 0.2) +
+  geom_errorbar(aes(ymin = cimin,
+                    ymax = cimax),
+                width = 0.2) +
+  guides(fill = F, color =F) +
+  gtheme +
+  geom_text(aes(x = name, 
+                y = Inf, 
+                angle = 90,
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
+  labs(x = '',
+       y = TeX('$\\Delta$(Ipsi - Contra)'),
+       title = 'High verbal fluency (n = 14)') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+pdf(paste0(figroot, 'DeltaOnly_HighVerbal.pdf'),
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 
@@ -1399,17 +1530,20 @@ mdls = kcsvmean %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.)/2,
     htest = t.test(MeanValue ~ ROIName, data = .,
                    paired = F)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 tmp = mdls$est %>% unlist
 mdls$estipsi = tmp[seq(1, 8, 2)]
 mdls$estcontra = tmp[seq(2, 8, 2)]
@@ -1434,12 +1568,17 @@ p = ggplot(mdls,
                 angle = 90,
                 label = paste0('p=', 
                                formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
+       y = TeX('(Ipsi - Contra)'),
+       title = 'Full sample (n = 27)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/MeanOnly.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MeanOnly.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 # Two sampled t-test mean (Male) ======
@@ -1450,17 +1589,20 @@ mdls = kcsvmean %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.) / 2,
     htest = t.test(MeanValue ~ ROIName, data = .,
                    paired = F)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 tmp = mdls$est %>% unlist
 mdls$estipsi = tmp[seq(1, 8, 2)]
 mdls$estcontra = tmp[seq(2, 8, 2)]
@@ -1483,14 +1625,18 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, digits = 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
+       y = TeX('(Ipsi - Contra)'),
+       title = 'Male (n = 16)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/MeanOnly_Male.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MeanOnly_Male.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 # Two sampled t-test mean (Female) ======
@@ -1501,17 +1647,20 @@ mdls = kcsvmean %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.) / 2,
     htest = t.test(MeanValue ~ ROIName, data = .,
                    paired = F)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 tmp = mdls$est %>% unlist
 mdls$estipsi = tmp[seq(1, 8, 2)]
 mdls$estcontra = tmp[seq(2, 8, 2)]
@@ -1534,14 +1683,18 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
+       y = TeX('(Ipsi - Contra)'),
+       title = 'Female (n = 11)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/MeanOnly_Female.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MeanOnly_Female.pdf'), 
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 # Two sampled t-test mean (Low verbal) ======
@@ -1552,17 +1705,20 @@ mdls = kcsvmean %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.) / 2,
     htest = t.test(MeanValue ~ ROIName, data = .,
                    paired = F)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 tmp = mdls$est %>% unlist
 mdls$estipsi = tmp[seq(1, 8, 2)]
 mdls$estcontra = tmp[seq(2, 8, 2)]
@@ -1585,14 +1741,18 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
+       y = TeX('(Ipsi - Contra)'),
+       title = 'Low verbal fluency (n = 13)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/MeanOnly_LowVerbal.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MeanOnly_LowVerbal.pdf'),
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 # Two sampled t-test mean (High verbal) ======
@@ -1603,17 +1763,20 @@ mdls = kcsvmean %>%
   group_by(MeasureName) %>%
   do(
     name = unique(.$MeasureName),
+    samplesize = nrow(.) / 2,
     htest = t.test(MeanValue ~ ROIName, data = .,
                    paired = F)
   ) %>%
   do(
     name = .$name,
+    samplesize = .$samplesize,
     pval = .$htest$p.value,
     est = .$htest$estimate,
     ci = .$htest$conf.int
   )
 mdls$name %<>% unlist %<>% as.factor
 mdls$pval %<>% unlist
+mdls$samplesize %<>% unlist
 tmp = mdls$est %>% unlist
 mdls$estipsi = tmp[seq(1, 8, 2)]
 mdls$estcontra = tmp[seq(2, 8, 2)]
@@ -1636,14 +1799,18 @@ p = ggplot(mdls,
   geom_text(aes(x = name, 
                 y = Inf, 
                 angle = 90,
-                label = paste0('p=', 
-                               formatC(pval, format = 'e', digits = 2))), 
-            hjust = 1.5, color = 'black') +
+                label = round(pval, 6)), 
+            hjust = 1.5, 
+            size = 9,
+            color = 'black') +
   labs(x = '',
-       y = TeX('(Ipsi - Contra)'))
+       y = TeX('(Ipsi - Contra)'),
+       title = 'High verbal fluency (n = 14)') +
+  theme(plot.title = element_text(hjust = 0.5))
 
 p
-pdf(paste0(figroot, '/MeanOnly_HighVerbal.pdf'), width = 3.65, height = 3.45)
+pdf(paste0(figroot, 'MeanOnly_HighVerbal.pdf'),
+    width = 5.65, height = 5.45)
 print(p)
 dev.off()
 # roughwork =====
