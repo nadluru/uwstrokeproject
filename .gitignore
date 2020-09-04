@@ -11,6 +11,7 @@ deepmedic
 # Matlab data files
 *.mat
 *.asv
+.idea
 
 # Some CSV files
 *DIPA.csv
