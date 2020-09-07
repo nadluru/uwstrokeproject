@@ -12,7 +12,7 @@ deepmedic
 *.mat
 *.asv
 .idea
-
+.*.m
 # Some CSV files
 *DIPA.csv
 Weights*.csv
