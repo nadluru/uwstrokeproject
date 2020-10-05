@@ -32,8 +32,9 @@ library(LaplacesDemon)
 # Initializing variables =====
 rm(list = ls(all = TRUE))
 # computer = 'waislin'
-# computer = 'waiswin'
-computer = 'rvivek'
+computer = 'waiswin'
+# computer = 'rvivek'
+# computer = 'rvivek-mac'
 homedir = case_when(
   computer %>% str_detect(regex('waiswin', 
                                 ignore_case = T)) ~ 'H:/adluru/',
@@ -42,7 +43,9 @@ homedir = case_when(
   computer %>% str_detect(regex('bender',
                                 ignore_case = T)) ~ '/home/nadluru/',
   computer %>% str_detect(regex('rvivek',
-                               ignore_case = T)) ~ 'C:/Users/nadluru/'
+                               ignore_case = T)) ~ 'C:/Users/nadluru/',
+  computer %>% str_detect(regex('rvivek-mac',
+                                ignore_case = T)) ~ '/Users/nadluru/home/adluru/StrokeAndDiffusionProject/'
 )
 study = case_when(
   computer %>% str_detect(regex('waiswin', ignore_case = T)) ~ 'Y:/',
@@ -52,10 +55,11 @@ scratch = case_when(
   computer %>% str_detect(regex('waiswin', ignore_case = T)) ~ 'X:/',
   computer %>% str_detect(regex('waislin', ignore_case = T)) ~ '/scratch/'
 )
-#csvroot = paste0(homedir, 'StrokeAndDiffusionProject/uwstrokeproject/CSVs/')
-csvroot = paste0(homedir, 'uwstrokeproject/CSVs/')
+csvroot = paste0(homedir, 'StrokeAndDiffusionProject/uwstrokeproject/CSVs/')
+#csvroot = paste0(homedir, 'uwstrokeproject/CSVs/')
 # figroot = paste0(study, 'utaut2/T1WIAnalysisNA/RSNA2019FinalSetForAnalysis/Figures/')
-figroot = paste0(homedir, 'uwstrokeproject/Figures/')
+#figroot = paste0(homedir, 'uwstrokeproject/Figures/')
+figroot = paste0(homedir, 'StrokeAndDiffusionProject/uwstrokeproject/Figures/')
 # figroot = paste0(scratch, 'adluru/ProductionFiguresJournal/')
 
 # ggplot theme ====
