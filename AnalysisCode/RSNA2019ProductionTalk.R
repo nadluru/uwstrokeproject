@@ -1,4 +1,5 @@
 source('H:/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
+source('/Users/nadluru/home/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
 
 # Merging with basic demographics ====
 imgcsv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTINov152019.csv'))
@@ -112,7 +113,8 @@ kcsvlong %>%
             row.names = F)
 
 # Visualizing basic plots of distributions =======
-csv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTIDemo.csv'))
+csv = read.csv(paste0(csvroot, 'StrokeVoxelwiseDTIDemo.csv')) %>% 
+  filter(ID == 'SS032')
 p = csv %>% group_by(ID) %>%
   do(
     plots = ggplot(

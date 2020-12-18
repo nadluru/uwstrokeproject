@@ -1,4 +1,4 @@
-# source('H:/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
+source('H:/adluru/StrokeAndDiffusionProject/uwstrokeproject/AnalysisCode/RSNATheme.R')
 source('C:/Users/nadluru/uwstrokeproject/AnalysisCode/RSNATheme.R')
 
 # Merging with basic demographics ====
@@ -141,6 +141,7 @@ kcsvmeandiff = read.csv(paste0(csvroot, 'StrokeDTIMeanDiff_SMST_Nov272019.csv'))
 kcsvkld = read.csv(paste0(csvroot, 'StrokeDTIKLDLongLaplaceFiltered_SMST_Nov272019.csv'))
 p = csv %>% mutate(SID = ID) %>%
   select(-ID) %>%
+  mutate(MeasureName = as.factor(MeasureName)) %>% 
   group_by(SID) %>%
   do(
     plots = ggplot(
@@ -156,7 +157,8 @@ p = csv %>% mutate(SID = ID) %>%
                           scale = 1.25) +
       geom_segment(
         data = subset(kcsvmean,
-                      ID == unique(.$SID)),
+                      ID == unique(.$SID)) %>% 
+          mutate(MeasureName = as.factor(MeasureName)),
         aes(
           x = MeanValue,
           xend = MeanValue,
@@ -168,7 +170,8 @@ p = csv %>% mutate(SID = ID) %>%
       geom_text(
         data = subset(kcsvmean,
                       ID == unique(.$SID)) %>%
-          mutate(y_pos = rep(c(0.1, 0.8), n() / 2)),
+          mutate(y_pos = rep(c(0.1, 0.8), n() / 2)) %>% 
+          mutate(MeasureName = as.factor(MeasureName)),
         aes(
           x = MeanValue,
           y = as.numeric(MeasureName) + y_pos,
@@ -180,7 +183,8 @@ p = csv %>% mutate(SID = ID) %>%
         data = merge(
           subset(kcsvkld, ID == unique(.$SID)),
           subset(kcsvmeandiff, ID == unique(.$SID))
-        ),
+        ) %>% 
+          mutate(MeasureName = as.factor(MeasureName)),
         aes(
           x = 1.75,
           y = as.numeric(MeasureName) + 0.25,

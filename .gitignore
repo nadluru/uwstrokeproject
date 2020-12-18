@@ -12,7 +12,13 @@ deepmedic
 *.mat
 *.asv
 .idea
+<<<<<<< HEAD
 .*.m
+=======
+.*m
+.*DS*Store
+R01VCID2020
+>>>>>>> uw
 # Some CSV files
 *DIPA.csv
 Weights*.csv
