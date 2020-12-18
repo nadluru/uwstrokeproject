@@ -12,6 +12,7 @@ deepmedic
 *.mat
 *.asv
 .idea
+BtensorProcessing_fromJan2
 <<<<<<< HEAD
 .*.m
 =======
