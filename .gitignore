@@ -12,7 +12,7 @@ deepmedic
 *.mat
 *.asv
 .idea
-
+.*.m
 # Some CSV files
 *DIPA.csv
 Weights*.csv
@@ -21,7 +21,8 @@ CSVs
 *.bak*
 # Mathematica CDF files
 *.cdf
-
+.DS_Store
+._.DS_Store
 # Executables
 *.exe*
 *.mex*
